@@ -1,0 +1,68 @@
+<script setup lang="ts">
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination, Autoplay } from 'swiper/modules';
+const modules = [Pagination, Autoplay]
+import { useServicesPage } from './composable';
+const { services } = useServicesPage()
+</script>
+<template>
+  <div class="container mx-auto px-5">
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">Our services</p>
+    <swiper :slidesPerView="3" :spaceBetween="30" :pagination="{
+      clickable: true,
+    }" :modules="modules" class="mySwiper" :autoplay="{
+  delay: 2000,
+  disableOnInteraction: false,
+}">
+      <swiper-slide v-for="(service, index) in services" :key="index">
+        <div class="flex items-center gap-5 pb-5">
+          <div class="w-[100px] h-[100px] object-cover"><img :src="service.icon" alt="" /></div>
+          <p class="text-[#252525] font-[semibold] text-3xl">{{ service.name }}</p>
+        </div>
+        <div class="scrollbarActive overflow-scroll">
+          <p class="text-[#252525]  h-[150px] text-[18px]">{{ service.num }}</p>
+        </div>
+      </swiper-slide>
+    </swiper>
+  </div>
+</template>
+<style scoped>
+.scrollbarActive::-webkit-scrollbar {
+  @apply ease-in duration-300;
+  width: 2px;
+  height: 0;
+  /* display: none; */
+  opacity: 0;
+}
+
+.scrollbarActive::-webkit-scrollbar-track {
+  @apply bg-inherit opacity-0;
+}
+
+.scrollbarActive::-webkit-scrollbar-thumb {
+  @apply dark:bg-[#252525] bg-slate-400 hover:bg-slate-500 hover:dark:bg-slate-600 opacity-0 ease-in duration-300 transition rounded-md cursor-pointer;
+}
+
+.swiper-slide {
+  @apply h-[300px] bg-[#252525] shadow-xl overflow-hidden p-2
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px 40px 20px;
+}
+
+.swiper-slide {
+  @apply bg-white
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
