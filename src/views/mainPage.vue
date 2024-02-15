@@ -9,26 +9,26 @@ import Advices from './advices.vue'
 <template>
   <div>
     <BaseHeader />
-    <div class="pt-24">
+    <div class="pt-24" id="home">
       <div
         class="bg-[url(/main.jpg)] w-full h-[90vh] bg-no-repeat bg-center bg-cover overflow-hidden relative flex justify-start flex-cols items-center">
-        <div class=" diagonal-bg w-[40%] bg-white/65 h-[200vh] absolute left-[10%]"></div>
+        <div class=" diagonal-bg lg:w-[40%] w-[200%] left-[-200px] sm:w-[70%] select-none bg-white/65 h-[200vh] absolute md:left-[4%]  lg:left-[5%] 2xl:left-[10%]"></div>
         <div class="container relative mx-auto px-5 select-none">
-          <p class="text-6xl text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  w-3/5">empower your
+          <p class="2xl:text-6xl lg:text-4xl  text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl  lg:pl-10 2xl:pl-0">empower your
             business with us</p>
-          <p class="text-xl text-[#252525] font-[montserrat500] pb-5">We know how large objects will act, but things on a
+          <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">We know how large objects will act, but things on a
             small scale.</p>
           <button
-            class="mainButton uppercase font-[semibold] border-2 border-solid border-[#252525] px-3 py-2 rounded-xl select-none">Learn
+            class="mainButton lg:left-16 2xl:left-0 uppercase font-[semibold] border-2 border-solid border-[#252525] px-3 py-2 rounded-xl select-none">Learn
             more</button>
         </div>
       </div>
     </div>
     <div class="bg-[#fafafa] py-11">
-      <BusinessPage />
-      <BaseCards />
-      <Advices />
-      <ContactPage />
+      <BusinessPage id="product"/>
+      <BaseCards id="services"/>
+      <Advices id="advice"/>
+      <ContactPage id="contact"/>
     </div>
     <BaseFooter />
   </div>
