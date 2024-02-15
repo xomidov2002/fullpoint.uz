@@ -13,7 +13,7 @@ const { navLinks } = store
           <span>est. 2022</span>
         </p>
       </div>
-      <div class="flex gap-5 pt-5 w-full">
+      <div class="flex flex-col items-center sm:flex-row gap-5 pt-5 w-full">
         <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
           <p class="text-lg text-white 2xl:text-xl  font-[montserrat500]"><a :href="navlink.route">{{ navlink.name }}</a></p>
         </div>

@@ -43,7 +43,7 @@ const sendMessage = async () => {
 <template>
   <div class="container mx-auto px-5 py-11">
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-5">Get in touch</p>
-    <div class="w-full h-auto p-5 shadow-xl flex justify-evenly contact items-center">
+    <div class="w-full h-auto p-5 shadow-xl flex flex-wrap lg:flex-nowrap justify-center lg:justify-evenly contact items-center">
       <div>
         <p class="font-[semibold] text-2xl tracking-widest pb-11">Contact us</p>
         <div class="flex gap-5">

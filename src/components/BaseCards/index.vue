@@ -8,9 +8,51 @@ import { useServicesPage } from './composable';
 const { services } = useServicesPage()
 </script>
 <template>
-  <div class="container mx-auto px-5">
+  <div class="container mx-auto px-5 hidden lg:block">
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">Our services</p>
     <swiper :slidesPerView="3" :spaceBetween="30" :pagination="{
+      clickable: true,
+    }" :modules="modules" class="mySwiper" :autoplay="{
+  delay: 2000,
+  disableOnInteraction: false,
+}">
+      <swiper-slide v-for="(service, index) in services" :key="index">
+        <div class="flex items-center gap-5 pb-5">
+          <div class="w-[100px] h-[100px] object-cover"><img :src="service.icon" alt="" /></div>
+          <p class="text-[#252525] font-[semibold] text-3xl">{{ service.name }}</p>
+        </div>
+        <div class="scrollbarActive overflow-scroll">
+          <p class="text-[#252525]  h-[150px] text-[18px]">{{ service.num }}</p>
+        </div>
+      </swiper-slide>
+    </swiper>
+  </div>
+
+
+  <div class="container mx-auto px-5 hidden md:block lg:hidden">
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">Our services</p>
+    <swiper :slidesPerView="2" :spaceBetween="30" :pagination="{
+      clickable: true,
+    }" :modules="modules" class="mySwiper" :autoplay="{
+  delay: 2000,
+  disableOnInteraction: false,
+}">
+      <swiper-slide v-for="(service, index) in services" :key="index">
+        <div class="flex items-center gap-5 pb-5">
+          <div class="w-[100px] h-[100px] object-cover"><img :src="service.icon" alt="" /></div>
+          <p class="text-[#252525] font-[semibold] text-3xl">{{ service.name }}</p>
+        </div>
+        <div class="scrollbarActive overflow-scroll">
+          <p class="text-[#252525]  h-[150px] text-[18px]">{{ service.num }}</p>
+        </div>
+      </swiper-slide>
+    </swiper>
+  </div>
+
+
+  <div class="container mx-auto px-5 block md:hidden">
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">Our services</p>
+    <swiper :slidesPerView="1" :spaceBetween="30" :pagination="{
       clickable: true,
     }" :modules="modules" class="mySwiper" :autoplay="{
   delay: 2000,
