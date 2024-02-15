@@ -5,7 +5,7 @@ const { navLinks } = store
 
 import { ref } from 'vue';
 
-const isActive = ref(false);
+const isActive = ref(true);
 
 const toggleClass = () => {
   isActive.value = !isActive.value;
@@ -13,7 +13,7 @@ const toggleClass = () => {
 </script>
 <template>
   <div class="backdrop-blur-md bg-white nav">
-    <div class="hidden container mx-auto my-0 py-6 px-5">
+    <div class="md:block hidden container mx-auto my-0 py-6 px-5">
       <div>
         <div class="flex items-center justify-between">
           <!-- -------------------------LOGO---------------------------- -->
@@ -41,7 +41,7 @@ const toggleClass = () => {
     </div>
 
     <!-- ---------------------FOR MODILE--------------------- -->
-    <div class="relative">
+    <div class="block md:hidden relative">
       <div class="container mx-auto px-5 py-5 flex justify-between">
         <div class="cursor-pointer select-none flex items-center gap-3">
           <div class="w-10 h-10">
@@ -57,8 +57,8 @@ const toggleClass = () => {
           </label>
         </div>
       </div>
-      <div :class="{ 'right-0': !isActive, 'right-[-500px]': isActive }"
-        class="bg-white transition-all w-[500px] h-[90vh] absolute flex justify-center items-center flex-col gap-5">
+      <div :class="{ 'right-0': !isActive, '-right-2/3': isActive }"
+        class="bg-white transition-all w-2/3 h-[90vh] absolute flex justify-center items-center flex-col gap-5">
         <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
           <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]"><a :href="navlink.route">{{
             navlink.name }}</a></p>
