@@ -5,6 +5,7 @@ interface SubMenu{
 export interface NavLink {
   id: number,
   name: string,
+  path: string,
   route: string
 }
 export interface Services {

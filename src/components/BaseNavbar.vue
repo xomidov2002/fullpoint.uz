@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import { useHeaderStore } from '@/stores'
+import BaseSelect from '@/components/BaseSelect/index.vue'
+import BaseIcon from '@/components/Icons/index.vue'
 const store: any = useHeaderStore()
 const { navLinks } = store
 
@@ -10,31 +12,52 @@ const isActive = ref(true);
 const toggleClass = () => {
   isActive.value = !isActive.value;
 };
+const languages = [
+  {
+    id: 1,
+    title: 'UZB',
+    icon: 'uzb'
+  },
+  {
+    id: 2,
+    title: 'ENG',
+    icon: 'eng'
+  },
+  {
+    id: 3,
+    title: 'RUS',
+    icon: 'rus'
+  }
+]
+function testt(val: any) {
+  console.log(val);
+}
 </script>
+
 <template>
   <div class="backdrop-blur-md bg-white nav">
     <div class="md:block hidden container mx-auto my-0 py-6 px-5">
       <div>
         <div class="flex items-center justify-between">
           <!-- -------------------------LOGO---------------------------- -->
-          <div class="cursor-pointer select-none flex items-center gap-3">
-            <div class="w-10 h-10">
-              <img src="/logo-1.png" class="object-cover w-full" alt="">
+          <RouterLink to="/">
+            <div class="cursor-pointer select-none flex items-center gap-3">
+              <div class="w-10 h-10">
+                <img src="/logo-1.png" class="object-cover w-full" alt="">
+              </div>
+              <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">Full Point Consult</span>
             </div>
-            <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">Full Point Consult</span>
-          </div>
+          </RouterLink>
           <!-- --------------------------MENUS------------------------------ -->
           <div class="flex gap-8 menus">
+
             <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
-              <p class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]"><a :href="navlink.route">{{
-                navlink.name }}</a></p>
+              <RouterLink :to="navlink.path">
+                <p class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]"><a :href="navlink.route">{{ navlink.name }}</a></p>
+              </RouterLink>
             </div>
-            <select class="p-1 outline-none rounded-md text-md 2xl:text-xl font-semibold border-none bg-none" name=""
-              id="">
-              <option value="1">UZB</option>
-              <option value="1">RUS</option>
-              <option value="1">ENG</option>
-            </select>
+
+            <BaseSelect :options="languages" @select="testt" />
           </div>
         </div>
       </div>
@@ -60,8 +83,9 @@ const toggleClass = () => {
       <div :class="{ 'right-0': !isActive, '-right-2/3': isActive }"
         class="bg-white transition-all w-2/3 h-[90vh] absolute flex justify-center items-center flex-col gap-5">
         <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
-          <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]"><a :href="navlink.route">{{
-            navlink.name }}</a></p>
+          <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]"><a
+              :href="navlink.route">{{
+              navlink.name }}</a></p>
         </div>
         <select class="p-1 outline-none rounded-md text-md 2xl:text-xl font-semibold border-none bg-none" name="" id="">
           <option value="1">UZB</option>
@@ -72,6 +96,7 @@ const toggleClass = () => {
     </div>
   </div>
 </template>
+
 <style scoped>
 .active-class {
   @apply right-0

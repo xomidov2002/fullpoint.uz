@@ -7,7 +7,16 @@ const router = createRouter({
       path: '/',
       name: 'about',
       component: () => import('../views/mainPage.vue')
-      // component: () => import('@/components/Spinner.vue')
+    },
+    {
+      path: '/clients',
+      name: 'clients',
+      component: () => import('@/views/clients/index.vue')
+    },
+    {
+      path: '/marketing',
+      name: 'marketing',
+      component: () => import('@/views/clients/marketing.vue')
     }
   ]
 })

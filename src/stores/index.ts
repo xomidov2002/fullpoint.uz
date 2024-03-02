@@ -16,27 +16,38 @@ export const useHeaderStore = defineStore('header', {
         {
           id: 1,
           name: 'Home',
+          path: '/',
           route: '#home'
         },
         {
           id: 2,
           name: 'Product',
+          path: '/',
           route: '#product'
         },
         {
           id: 3,
           name: 'Services',
+          path: '/',
           route: '#services'
         },
         {
           id: 4,
           name: 'Practice advice',
+          path: '/',
           route: '#advice'
         },
         {
           id: 5,
           name: 'contact',
+          path: '/',
           route: '#contact'
+        },
+        {
+          id: 6,
+          name: 'Our clients',
+          path: '/clients',
+          route: 'clients'
         }
       ]
     }
