@@ -1,4 +1,4 @@
-<script stup lang="ts">
+<script setup lang="ts">
 import { RouterLink } from 'vue-router';
 </script>
 
