@@ -5,18 +5,34 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'about',
-      component: () => import('../views/mainPage.vue')
+      name: 'home',
+      component: () => import('../views/index.vue'),
+      children: [
+        {
+          path: '',
+          name: 'about',
+          component: () => import('../views/home/mainPage.vue')
+        },
+        {
+          path: 'clients',
+          name: 'Our clients',
+          component: () => import('@/views/clients/index.vue')
+        },
+        {
+          path: 'services',
+          name: 'Services',
+          component: () => import('@/views/services/index.vue')
+        },
+        {
+          path: 'contact',
+          name: 'Contact us',
+          component: () => import('@/views/home/contact.vue')
+        }
+      ]
     },
     {
-      path: '/clients',
-      name: 'clients',
-      component: () => import('@/views/clients/index.vue')
-    },
-    {
-      path: '/marketing',
-      name: 'marketing',
-      component: () => import('@/views/clients/marketing.vue')
+      path: '/:pathMatch(.*)',
+      component: () => import('@/views/notFoundPage.vue')
     }
   ]
 })

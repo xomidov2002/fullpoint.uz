@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import BaseButton from '@/components/BaseButton/index.vue'
 const email = ref('');
 const phone = ref('');
 const name = ref('');
@@ -78,7 +79,7 @@ const sendMessage = async () => {
               <label for="textarea">How Can We Help You?</label>
               <textarea v-model="message" required cols="50" rows="10" id="textarea" name="textarea">          </textarea>
             </div>
-            <button @click="sendMessage" class="form-submit-btn">Submit</button>
+            <BaseButton @click="sendMessage" name="Submit"/>
           </div>
         </div>
       </div>
@@ -177,33 +178,5 @@ const sendMessage = async () => {
 .form-container .form-group textarea:focus {
   outline: none;
   border-color: #252525;
-}
-
-.form-container .form-submit-btn {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  align-self: flex-start;
-  font-family: inherit;
-  color: #ffffff;
-  font-weight: 600;
-  width: 40%;
-  background: #313131;
-  border: 1px solid #414141;
-  padding: 12px 16px;
-  font-size: inherit;
-  gap: 8px;
-  margin-top: 8px;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.form-container .form-submit-btn:hover {
-  background-color: #fff;
-  border-color: #fff;
-  color: #252525;
-}
-.form-container .form-submit-btn:hover{
-  @apply shadow-xl
 }
 </style>

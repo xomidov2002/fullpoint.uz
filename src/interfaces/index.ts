@@ -6,7 +6,6 @@ export interface NavLink {
   id: number,
   name: string,
   path: string,
-  route: string
 }
 export interface Services {
   id: number,
@@ -31,4 +30,11 @@ export interface IntouchCards {
   hoverIcon: string,
   subtitle: string,
   title: string
+}
+export interface ServiceCard {
+  img: string,
+  title: string,
+  subtitle: string,
+  btn: string,
+  route: string
 }

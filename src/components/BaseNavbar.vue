@@ -53,7 +53,7 @@ function testt(val: any) {
 
             <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
               <RouterLink :to="navlink.path">
-                <p class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]"><a :href="navlink.route">{{ navlink.name }}</a></p>
+                <p class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]">{{ navlink.name }}</p>
               </RouterLink>
             </div>
 
@@ -83,9 +83,9 @@ function testt(val: any) {
       <div :class="{ 'right-0': !isActive, '-right-2/3': isActive }"
         class="bg-white transition-all w-2/3 h-[90vh] absolute flex justify-center items-center flex-col gap-5">
         <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
-          <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]"><a
-              :href="navlink.route">{{
-              navlink.name }}</a></p>
+          <RouterLink :to="navlink.path">
+            <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]">{{ navlink.name }}</p>
+          </RouterLink>
         </div>
         <select class="p-1 outline-none rounded-md text-md 2xl:text-xl font-semibold border-none bg-none" name="" id="">
           <option value="1">UZB</option>
