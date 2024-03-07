@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import { usePracticePage } from './composable';
 import BaseServiceCard from '@/components/BaseServiceCard/index.vue'
-const { serviceCard } = usePracticePage()
+const { serviceCard } = usePracticePage();
 </script>
+
 <template>
   <div
     class="bg-[url(/main.jpg)] w-full h-[60vh] bg-no-repeat bg-center bg-cover overflow-hidden relative flex justify-start flex-cols items-center">
@@ -18,7 +19,7 @@ const { serviceCard } = usePracticePage()
     </div>
   </div>
   <div class="container mx-auto px-5 select-none py-10 2xl:py-20">
-    <BaseServiceCard v-for="(card, index) in serviceCard" :key="index" :card-data="card"/>
+    <BaseServiceCard v-for="(card, index) in serviceCard" :key="index" :card-data="card" />
   </div>
 </template>
 

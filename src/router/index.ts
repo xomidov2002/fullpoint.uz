@@ -21,7 +21,7 @@ const router = createRouter({
         {
           path: 'services',
           name: 'Services',
-          component: () => import('@/views/services/index.vue')
+          component: () => import('@/views/services/index.vue'),
         },
         {
           path: 'contact',

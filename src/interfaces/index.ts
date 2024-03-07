@@ -32,9 +32,15 @@ export interface IntouchCards {
   title: string
 }
 export interface ServiceCard {
+  id: number,
   img: string,
   title: string,
   subtitle: string,
   btn: string,
   route: string
+}
+export interface Templates {
+  id: number,
+  img: string,
+  name: string 
 }

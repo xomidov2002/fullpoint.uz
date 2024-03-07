@@ -20,8 +20,8 @@ export const useHeaderStore = defineStore('header', {
         },
         {
           id: 2,
-          name: 'Product',
-          path: '/product',
+          name: 'Projects',
+          path: '/projects',
         },
         {
           id: 3,
