@@ -21,7 +21,42 @@ const router = createRouter({
         {
           path: 'services',
           name: 'Services',
-          component: () => import('@/views/services/index.vue'),
+          component: () => import('@/views/services/main.vue'),
+          children: [
+            {
+              path: '',
+              name: 'main',
+              component: () => import('@/views/services/index.vue')
+            },
+            {
+              path: 'marketing',
+              component: () => import('@/views/services/serviceName/marketing.vue')
+            },
+            {
+              path: 'moliya',
+              component: () => import('@/views/services/serviceName/moliya.vue')
+            },
+            {
+              path: 'buxgalteriya',
+              component: () => import('@/views/services/serviceName/buxgalteriya.vue')
+            },
+            {
+              path: 'arxitektura',
+              component: () => import('@/views/services/serviceName/arxitektura.vue')
+            },
+            {
+              path: 'qurilish',
+              component: () => import('@/views/services/serviceName/qurilish.vue')
+            },
+            {
+              path: 'it',
+              component: () => import('@/views/services/serviceName/it.vue')
+            },
+            {
+              path: 'boshqa_servislar',
+              component: () => import('@/views/services/serviceName/boshqa_servislar.vue')
+            }
+          ]
         },
         {
           path: 'contact',

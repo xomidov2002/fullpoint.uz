@@ -9,7 +9,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "'/template/' + card.id"
+      route: "/services/marketing"
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "'/template/' + card.id"
+      route: "/services/moliya"
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "'/template/' + card.id"
+      route: "/services/buxgalteriya"
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "'/template/' + card.id"
+      route: "/services/arxitektura"
     },
     {
       id: 5,
@@ -45,7 +45,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "'/template/' + card.id"
+      route: "/services/qurilish"
     },
     {
       id: 6,
@@ -54,7 +54,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "'/template/' + card.id"
+      route: "/services/it"
     },
     {
       id: 7,
@@ -63,37 +63,10 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "'/template/' + card.id"
+      route: "/services/boshqa_servislar"
     }
   ])
   return {
     serviceCard
-  }
-}
-export function useTemplatePage() {
-  const templates = ref<Templates[]>([
-    {
-      id: 1,
-      img: '/images.jpg',
-      name: 'something'
-    },
-    {
-      id: 2,
-      img: '/images.jpg',
-      name: 'something'
-    },
-    {
-      id: 3,
-      img: '/images.jpg',
-      name: 'something'
-    },
-    {
-      id: 4,
-      img: '/images.jpg',
-      name: 'something'
-    }
-  ])
-  return {
-    templates
   }
 }

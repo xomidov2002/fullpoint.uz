@@ -7,6 +7,7 @@ const props = defineProps({
     required: true
   }
 })
+
 </script>
 <template>
   <div class="contact mt-10 w-full p-5 rounded-[20px] flex sm:flex-no-wrap flex-wrap  gap-5 justify-between">
