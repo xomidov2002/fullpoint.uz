@@ -59,6 +59,15 @@ export function usePracticePage() {
     {
       id: 7,
       img: '/main.jpg',
+      title: "Kamera o'rnatish",
+      subtitle:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
+      btn: 'Batafsil',
+      route: "/services/kamera"
+    },
+    {
+      id: 7,
+      img: '/main.jpg',
       title: 'Boshqa servislar',
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',

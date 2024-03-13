@@ -40,6 +40,12 @@ export function useServicesPage() {
       name: 'IT'
     },
     {
+      id: 6,
+      icon: '/services/camera.png',
+      num: 'Vebsayt yaratish, Internet magazin, reklama sayti, (Frontend, Backend, Dizayn)',
+      name: "Kamera o'rnatish"
+    },
+    {
       id: 7,
       icon: '/services/service.png',
       num: 'When using shadows on a colored background, colored shadows can often look more natural than the default black-based shadows, which tend to appear gray and washed-out.',

@@ -53,6 +53,10 @@ const router = createRouter({
               component: () => import('@/views/services/serviceName/it.vue')
             },
             {
+              path: 'kamera',
+              component: () => import('@/views/services/serviceName/kamera.vue')
+            },
+            {
               path: 'boshqa_servislar',
               component: () => import('@/views/services/serviceName/boshqa_servislar.vue')
             }
