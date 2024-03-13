@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BaseTable from '@/components/BaseTable/index.vue'
+</script>
 <template>
   <div
     class="bg-[url(/main.jpg)] w-full h-[60vh] bg-no-repeat bg-center bg-cover overflow-hidden relative flex justify-start flex-cols items-center">
@@ -12,6 +14,8 @@
       <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">We are
         providing best services for our clients</p>
     </div>
+  </div>
+  <div class="container mx-auto px-5">
   </div>
 </template>
 <style scoped>

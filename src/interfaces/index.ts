@@ -44,3 +44,9 @@ export interface Templates {
   img: string,
   name: string 
 }
+export interface TableCard {
+  id: number, 
+  work: string,
+  name: string,
+  date: string
+}

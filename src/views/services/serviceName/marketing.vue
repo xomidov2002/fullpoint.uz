@@ -1,4 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useMarketingTable } from './composable';
+const { marketingWorks } = useMarketingTable()
+</script>
 <template>
   <div
     class="bg-[url(/main.jpg)] w-full h-[60vh] bg-no-repeat bg-center bg-cover overflow-hidden relative flex justify-start flex-cols items-center">
@@ -13,9 +16,44 @@
         providing best services for our clients</p>
     </div>
   </div>
+  <div class="container mx-auto px-5 py-11">
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">Bizning mijozlar</p>
+    <div>
+      <table class="">
+        <thead>
+          <tr>
+            <th>N</th>
+            <th>Наименование предмета товара (работ, услуг)</th>
+            <th>Наименование заказчика</th>
+            <th>Дата доставки</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(marketingWork, index) in marketingWorks">
+            <td>{{ marketingWork.id }}</td>
+            <td>{{ marketingWork.work }}</td>
+            <td>{{ marketingWork.name }}</td>
+            <td>{{ marketingWork.date }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </template>
 <style scoped>
 .diagonal-bg {
   transform: rotate(15deg)
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  @apply border py-[15px] px-10 border-gray-500 border-opacity-20 text-[#252B42] text-opacity-95 text-base font-extrabold leading-[25px] bg-gray-500 bg-opacity-10
+}
+
+td {
+  @apply border py-[15px] px-10 border-gray-500 border-opacity-20 text-gray-500 text-sm font-medium leading-[25px]
 }
 </style>
