@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import BaseTable from '@/components/BaseTable/index.vue'
 </script>
 <template>
   <div
