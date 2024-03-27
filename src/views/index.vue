@@ -5,7 +5,7 @@ import TheFooter from '@/components/BaseFooter.vue';
 </script>
 <template>
   <div>
-    <TheHeader />
+    <TheHeader/>
     <div class="pt-24">
       <RouterView></RouterView>
     </div>

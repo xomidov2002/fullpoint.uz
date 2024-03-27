@@ -22,7 +22,16 @@ export function useMarketingTable() {
       date: '2023 сентябрь'
     }
   ])
+  const openStudentsModal = ref<boolean>(false)
+  function clickModal (val:string){
+      if(val == 'close') {
+        openStudentsModal.value = false
+        console.log('closed')
+      }
+  }
   return{
-    marketingWorks
+    marketingWorks,
+    clickModal,
+    openStudentsModal
   }
 }

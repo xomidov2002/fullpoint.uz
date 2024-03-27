@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import BaseModal from '@/components/BaseModal/index.vue'
 import { useMarketingTable } from './composable';
-const { marketingWorks } = useMarketingTable()
+import { ref } from 'vue';
+const {  marketingWorks, openStudentsModal } = useMarketingTable()
+function toggleVariable() {
+  openStudentsModal.value = !openStudentsModal.value  
+}
 </script>
 <template>
   <div
@@ -16,7 +21,12 @@ const { marketingWorks } = useMarketingTable()
         providing best services for our clients</p>
     </div>
   </div>
+  <div>
+    <BaseModal :isOpen="openStudentsModal"  @handleClicked="toggleVariable"/>
+  </div>
   <div class="container mx-auto px-5 py-11">
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">Biz haqimizda</p>
+    <p class="mb-10 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maxime excepturi aperiam amet vel reprehenderit nisi quo placeat atque velit vitae sapiente debitis, nobis tempore deleniti explicabo assumenda dolorem temporibus sint aut in esse incidunt nam. Consequatur velit nisi repudiandae molestiae dicta, voluptatibus officia corporis harum! Doloribus magnam explicabo optio!</p>
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">Bizning mijozlar</p>
     <div>
       <table class="">
@@ -26,6 +36,7 @@ const { marketingWorks } = useMarketingTable()
             <th>Наименование предмета товара (работ, услуг)</th>
             <th>Наименование заказчика</th>
             <th>Дата доставки</th>
+            <th>galereya</th>
           </tr>
         </thead>
         <tbody>
@@ -34,6 +45,7 @@ const { marketingWorks } = useMarketingTable()
             <td>{{ marketingWork.work }}</td>
             <td>{{ marketingWork.name }}</td>
             <td>{{ marketingWork.date }}</td>
+            <td @click="toggleVariable()"><img class="w-10 h-10 cursor-pointer" src="/icons/galery.png" alt="click here"></td>
           </tr>
         </tbody>
       </table>

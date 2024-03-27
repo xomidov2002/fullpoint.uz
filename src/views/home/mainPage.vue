@@ -20,9 +20,6 @@ import Advices from './advices.vue'
         <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">We know how
           large objects will act, but things on a
           small scale.</p>
-        <button
-          class="mainButton lg:left-16 2xl:left-0 uppercase font-[semibold] border-2 border-solid border-[#252525] px-3 py-2 rounded-xl select-none">Learn
-          more</button>
       </div>
     </div>
   </div>

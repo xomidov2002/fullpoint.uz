@@ -15,7 +15,9 @@ const { navLinks } = store
       </div>
       <div class="flex flex-col items-center sm:flex-row gap-5 pt-5 w-full">
         <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
-          <p class="text-lg text-white 2xl:text-xl  font-[montserrat500]"><a :href="navlink.route">{{ navlink.name }}</a></p>
+          <RouterLink :to="navlink.path">
+            <p class="text-lg text-white 2xl:text-xl  font-[montserrat500]">{{ navlink.name }}</p>
+          </RouterLink>
         </div>
       </div>
       <div class="icons flex justify-evenly pt-5">
