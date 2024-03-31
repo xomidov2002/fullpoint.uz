@@ -2,9 +2,21 @@
 import BaseModal from '@/components/BaseModal/index.vue'
 import { useMarketingTable } from './composable';
 import { ref } from 'vue';
-const {  marketingWorks, openStudentsModal } = useMarketingTable()
+const { marketingWorks, openStudentsModal } = useMarketingTable()
 function toggleVariable() {
-  openStudentsModal.value = !openStudentsModal.value  
+  openStudentsModal.value = !openStudentsModal.value
+}
+const marketingTable = ref<any>({})
+function getEachMarketingInfo(id: number) {
+  for (let i = 0; i < marketingWorks.value.length; i++) {
+    if (marketingWorks.value[i].id === id) {
+      marketingTable.value = marketingWorks.value[i]
+
+      toggleVariable()
+      console.log(marketingWorks.value[i].id)
+      break
+    }
+  }
 }
 </script>
 <template>
@@ -21,12 +33,12 @@ function toggleVariable() {
         providing best services for our clients</p>
     </div>
   </div>
-  <div>
-    <BaseModal :isOpen="openStudentsModal"  @handleClicked="toggleVariable"/>
-  </div>
   <div class="container mx-auto px-5 py-11">
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">Biz haqimizda</p>
-    <p class="mb-10 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maxime excepturi aperiam amet vel reprehenderit nisi quo placeat atque velit vitae sapiente debitis, nobis tempore deleniti explicabo assumenda dolorem temporibus sint aut in esse incidunt nam. Consequatur velit nisi repudiandae molestiae dicta, voluptatibus officia corporis harum! Doloribus magnam explicabo optio!</p>
+    <p class="mb-10 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maxime excepturi aperiam
+      amet vel reprehenderit nisi quo placeat atque velit vitae sapiente debitis, nobis tempore deleniti explicabo
+      assumenda dolorem temporibus sint aut in esse incidunt nam. Consequatur velit nisi repudiandae molestiae dicta,
+      voluptatibus officia corporis harum! Doloribus magnam explicabo optio!</p>
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">Bizning mijozlar</p>
     <div>
       <table class="">
@@ -45,7 +57,12 @@ function toggleVariable() {
             <td>{{ marketingWork.work }}</td>
             <td>{{ marketingWork.name }}</td>
             <td>{{ marketingWork.date }}</td>
-            <td @click="toggleVariable()"><img class="w-10 h-10 cursor-pointer" src="/icons/galery.png" alt="click here"></td>
+            <td @click="getEachMarketingInfo(marketingWork.id)"><img class="w-10 h-10 cursor-pointer"
+                src="/icons/galery.png" alt="click here"></td>
+            <div>
+              <BaseModal :cardData="marketingTable.images" :isOpen="openStudentsModal"
+                @handleClicked="toggleVariable" />
+            </div>
           </tr>
         </tbody>
       </table>

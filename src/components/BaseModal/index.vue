@@ -16,7 +16,7 @@ const props = defineProps({
     default: false
   },
   cardData: {
-    type: Object,
+    type: Array,
     required: true
   }
 })
@@ -37,7 +37,9 @@ function tedt(val: string) {
       <swiper :slidesPerView="1" :spaceBetween="30" :loop="true" :pagination="{
         clickable: true,
       }" :navigation="true" :modules="modules" class="mySwiper">
-        <swiper-slide v-for="(product, index) in props.cardData" :key="index">{{ product.image }}</swiper-slide>
+        <swiper-slide v-for="product in props.cardData">
+          {{ product }}
+        </swiper-slide>
       </swiper>
     </div>
   </div>

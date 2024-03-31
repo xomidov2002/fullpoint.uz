@@ -48,5 +48,6 @@ export interface TableCard {
   id: number, 
   work: string,
   name: string,
-  date: string
+  date: string,
+  images: string[]
 }
