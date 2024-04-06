@@ -1,22 +1,16 @@
 <script setup lang="ts">
-import BaseModal from '@/components/BaseModal/index.vue'
+import { useRouter } from 'vue-router'
+import { storeToRefs } from 'pinia'
+import { useAnnouncementStore } from '@/views/services/serviceName/store'
 import { useMarketingTable } from './composable';
-import { ref } from 'vue';
-const { marketingWorks, openStudentsModal } = useMarketingTable()
-function toggleVariable() {
-  openStudentsModal.value = !openStudentsModal.value
-}
-const marketingTable = ref<any>({})
-function getEachMarketingInfo(id: number) {
-  for (let i = 0; i < marketingWorks.value.length; i++) {
-    if (marketingWorks.value[i].id === id) {
-      marketingTable.value = marketingWorks.value[i]
-
-      toggleVariable()
-      console.log(marketingWorks.value[i].id)
-      break
-    }
-  }
+const store = useAnnouncementStore()
+const {newsId} = storeToRefs(store)
+const router = useRouter()
+const { marketingWorks } = useMarketingTable()
+function handleClicked(id:any){
+  router.push({name: 'one of  upcoming-event', params:{id: id}})
+  newsId.value = id
+  console.log(id)
 }
 </script>
 <template>
@@ -52,17 +46,14 @@ function getEachMarketingInfo(id: number) {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(marketingWork, index) in marketingWorks">
+          <tr v-for="(marketingWork, index) in marketingWorks" :key="index">
             <td>{{ marketingWork.id }}</td>
             <td>{{ marketingWork.work }}</td>
             <td>{{ marketingWork.name }}</td>
             <td>{{ marketingWork.date }}</td>
-            <td @click="getEachMarketingInfo(marketingWork.id)"><img class="w-10 h-10 cursor-pointer"
-                src="/icons/galery.png" alt="click here"></td>
-            <div>
-              <BaseModal :cardData="marketingTable.images" :isOpen="openStudentsModal"
-                @handleClicked="toggleVariable" />
-            </div>
+            <td @click="handleClicked(marketingWork?.id)">
+              <p class="cursor-pointer hover:border-b hover:text-[#252B42]">Batafsil</p>
+            </td>
           </tr>
         </tbody>
       </table>

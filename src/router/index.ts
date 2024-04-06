@@ -30,7 +30,19 @@ const router = createRouter({
             },
             {
               path: 'marketing',
-              component: () => import('@/views/services/serviceName/marketing.vue')
+              component: () => import('@/views/services/serviceName/marketingMain.vue'),
+              children: [
+                {
+                  path: '',
+                  name: 'Marketing main',
+                  component: () => import('@/views/services/serviceName/marketing.vue')
+                },
+                {
+                  path: ':id',
+                  name: 'one of  upcoming-event',
+                  component: () => import('@/views/services/serviceName/baseInfo.vue')
+                }
+              ]
             },
             {
               path: 'moliya',
