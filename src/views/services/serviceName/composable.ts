@@ -9,7 +9,7 @@ export function useMarketingTable() {
       name: "АО «O’ZOG’IRSANOATLOYIHA»",
       date: '2023 май',
       images: ['/advices/1.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/4.jpg'],
-      info: 'dkfdjfkdfjkdjfkdjfkdjfkdjfkdjfdkfjdkfjkejdekfjdkfjdkfjdkfjdkfjkjfk dkfdjfkdfjkdjfkdjfkdjfkdjfkdjfdkfjdkfjkejdekfjdkfjdkfjdkfjdkfjkjfk dkfdjfkdfjkdjfkdjfkdjfkdjfkdjfdkfjdkfjkejdekfjdkfjdkfjdkfjdkfjkjfk'
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus temporibus sit officia, in enim repellendus illum iusto. Numquam voluptatum dicta fuga ad quibusdam distinctio molestiae quidem cumque? Numquam tempora quis ipsam debitis dolores excepturi sint delectus mollitia eaque saepe."
     },
     {
       id: 2,
@@ -17,15 +17,23 @@ export function useMarketingTable() {
       name: 'АО «O’ZOG’IRSANOATLOYIHA»',
       date: '2023 сентябрь',
       images: ['/advices/2.jpg', '/advices/1.jpg', '/advices/3.jpg', '/advices/4.jpg'],
-      info: 'dkfdjfkdfjkdjfkdjfkdjfkdjfkdjfdkfjdkfjkejdekfjdkfjdkfjdkfjdkfjkjfk dkfdjfkdfjkdjfkdjfkdjfkdjfkdjfdkfjdkfjkejdekfjdkfjdkfjdkfjdkfjkjfk dkfdjfkdfjkdjfkdjfkdjfkdjfkdjfdkfjdkfjkejdekfjdkfjdkfjdkfjdkfjkjfk'
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus temporibus sit officia, in enim repellendus illum iusto. Numquam voluptatum dicta fuga ad quibusdam distinctio molestiae quidem cumque? Numquam tempora quis ipsam debitis dolores excepturi sint delectus mollitia eaque saepe."
     },
     {
       id: 3,
       work: "«Организация производства автомобилей на новых источниках энергии» ",
       name: "АО «O’ZOG’IRSANOATLOYIHA»",
       date: '2023 сентябрь',
+      images: ['/advices/3.jpg', '/advices/2.jpg', '/advices/4.jpg', '/advices/1.jpg'],
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus temporibus sit officia, in enim repellendus illum iusto. Numquam voluptatum dicta fuga ad quibusdam distinctio molestiae quidem cumque? Numquam tempora quis ipsam debitis dolores excepturi sint delectus mollitia eaque saepe."
+    },
+    {
+      id: 4,
+      work: "«Организация производства автомобилей на новых источниках энергии» ",
+      name: "АО «O’ZOG’IRSANOATLOYIHA»",
+      date: '2023 сентябрь',
       images: ['/advices/4.jpg', '/advices/2.jpg', '/advices/3.jpg', '/advices/1.jpg'],
-      info: 'dkfdjfkdfjkdjfkdjfkdjfkdjfkdjfdkfjdkfjkejdekfjdkfjdkfjdkfjdkfjkjfk dkfdjfkdfjkdjfkdjfkdjfkdjfkdjfdkfjdkfjkejdekfjdkfjdkfjdkfjdkfjkjfk dkfdjfkdfjkdjfkdjfkdjfkdjfkdjfdkfjdkfjkejdekfjdkfjdkfjdkfjdkfjkjfk'
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit minus temporibus sit officia, in enim repellendus illum iusto. Numquam voluptatum dicta fuga ad quibusdam distinctio molestiae quidem cumque? Numquam tempora quis ipsam debitis dolores excepturi sint delectus mollitia eaque saepe."
     }
   ])
   return{
