@@ -3,14 +3,21 @@ import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useAnnouncementStore } from '@/views/services/serviceName/store'
 import { useMarketingTable } from './composable';
+import { ref } from 'vue';
 const store = useAnnouncementStore()
 const {newsId} = storeToRefs(store)
 const router = useRouter()
 const { marketingWorks } = useMarketingTable()
+const hasReloaded = ref(false);
 function handleClicked(id:any){
   router.push({name: 'one of  upcoming-event', params:{id: id}})
   newsId.value = id
-  console.log(id)
+  if (!hasReloaded.value) {
+    hasReloaded.value = true;
+    setTimeout(() => {
+      window.location.reload();
+    }, 1);
+  }
 }
 </script>
 <template>
