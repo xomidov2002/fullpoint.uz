@@ -5,24 +5,21 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const modules = [Autoplay, Pagination, Navigation]
-import { storeToRefs } from 'pinia';
-import { useAnnouncementStore } from '@/views/services/serviceName/store'
-const store = useAnnouncementStore()
-const { newsId } = storeToRefs(store)
-import { useMarketingTable } from '@/views/services/serviceName/composable'
-const { marketingWorks } = useMarketingTable()
 
-const props = defineProps({
-  options: {
-    type: Object,
-    required: true
-  }
-})
+import { ref, onMounted } from 'vue';
+import { useMarketingTable } from '@/views/services/serviceName/composable'
+
+const { marketingWorks } = useMarketingTable()
+const currentNewsId = ref<number>(parseInt(localStorage.getItem('newsId') || '0'));
+
+onMounted(() => {
+  currentNewsId.value = parseInt(localStorage.getItem('newsId') || '0');
+});
 </script>
 <template>
   <div class="container mx-auto px-5">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ marketingWorks[newsId].name }}</p>
-    <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ marketingWorks[newsId].info }}</p>
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ marketingWorks[currentNewsId].name }}</p>
+    <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ marketingWorks[currentNewsId].info }}</p>
     <div class="mb-11">
       <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{
       delay: 2500,
@@ -30,7 +27,7 @@ const props = defineProps({
     }" :pagination="{
       clickable: true,
     }" :navigation="true" :modules="modules" class="mySwiper">
-        <swiper-slide class="rounded-[20px] overflow-hidden" v-for="(image, index) in marketingWorks[newsId].images" :key="index">
+        <swiper-slide class="rounded-[20px] overflow-hidden" v-for="(image, index) in marketingWorks[currentNewsId].images" :key="index">
           <img :src="image" alt="">
         </swiper-slide>
       </swiper>

@@ -3,13 +3,19 @@ import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useAnnouncementStore } from '@/views/services/serviceName/store'
 import { useMarketingTable } from './composable';
+
 const store = useAnnouncementStore()
-const {newsId} = storeToRefs(store)
+const { newsId } = storeToRefs(store)
 const router = useRouter()
 const { marketingWorks } = useMarketingTable()
-function handleClicked(id:any){
-  router.push({name: 'one of  upcoming-event', params:{id: id}})
+
+function handleClicked(id: any) {
+  localStorage.setItem('newsId', id);
   newsId.value = id
+  router.push({ name: 'one of  upcoming-event', params: { id: id } })
+  // setTimeout(() => {
+  //   window.location.reload();
+  // }, 100);
 }
 </script>
 <template>
@@ -50,7 +56,7 @@ function handleClicked(id:any){
             <td>{{ marketingWork.work }}</td>
             <td>{{ marketingWork.name }}</td>
             <td>{{ marketingWork.date }}</td>
-            <td @click="handleClicked(marketingWork?.id)">
+            <td @click="handleClicked(marketingWork.id)">
               <p class="cursor-pointer hover:border-b hover:text-[#252B42]">Batafsil</p>
             </td>
           </tr>
