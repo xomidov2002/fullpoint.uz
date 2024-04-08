@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
-import { useAnnouncementStore } from '@/views/services/serviceName/store'
+import { useAnnouncementStore } from '@/views/projects/projectName/store'
 import { useServiceTable } from '../composable';
 
 const store = useAnnouncementStore()
-const { kameraId } = storeToRefs(store)
+const { itId } = storeToRefs(store)
 const router = useRouter()
-const { kameraWorks } = useServiceTable()
+const { dasturlashWorks } = useServiceTable()
 
 function handleClicked(id: any) {
-  localStorage.setItem('kameraId', id);
-  kameraId.value = id
-  router.push({ name: 'one of camera', params: { id: id } })
+  localStorage.setItem('itId', id);
+  itId.value = id
+  router.push({ name: 'one of  it', params: { id: id } })
 }
 </script>
 <template>
@@ -24,7 +24,7 @@ function handleClicked(id: any) {
     <div class="container relative mx-auto px-5 select-none">
       <p
         class="2xl:text-6xl lg:text-4xl  text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl  lg:pl-10 2xl:pl-0">
-        Kamera o'rnatish</p>
+        IT</p>
       <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">We are
         providing best services for our clients</p>
     </div>
@@ -48,7 +48,7 @@ function handleClicked(id: any) {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(marketingWork, index) in kameraWorks" :key="index">
+          <tr v-for="(marketingWork, index) in dasturlashWorks" :key="index">
             <td>{{ marketingWork.id }}</td>
             <td>{{ marketingWork.work }}</td>
             <td>{{ marketingWork.name }}</td>

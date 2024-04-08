@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
-import { useAnnouncementStore } from '@/views/services/serviceName/store'
+import { useAnnouncementStore } from '@/views/projects/projectName/store'
 import { useServiceTable } from '../composable';
 
 const store = useAnnouncementStore()
-const { qurilishId } = storeToRefs(store)
+const { arxitekturaId } = storeToRefs(store)
 const router = useRouter()
-const { qurilishWorks } = useServiceTable()
+const { arxitekturaWorks } = useServiceTable()
 
 function handleClicked(id: any) {
-  localStorage.setItem('qurilishId', id);
-  qurilishId.value = id
-  router.push({ name: 'one of construction', params: { id: id } })
+  localStorage.setItem('arxitekturaId', id);
+  arxitekturaId.value = id
+  router.push({ name: 'one of architecture', params: { id: id } })
 }
 </script>
 <template>
@@ -24,7 +24,7 @@ function handleClicked(id: any) {
     <div class="container relative mx-auto px-5 select-none">
       <p
         class="2xl:text-6xl lg:text-4xl  text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl  lg:pl-10 2xl:pl-0">
-        Qurilish</p>
+        Arxitektura</p>
       <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">We are
         providing best services for our clients</p>
     </div>
@@ -48,12 +48,12 @@ function handleClicked(id: any) {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(marketingWork, index) in qurilishWorks" :key="index">
-            <td>{{ marketingWork.id }}</td>
-            <td>{{ marketingWork.work }}</td>
-            <td>{{ marketingWork.name }}</td>
-            <td>{{ marketingWork.date }}</td>
-            <td @click="handleClicked(marketingWork.id)">
+          <tr v-for="(arxitekturaWork, index) in arxitekturaWorks" :key="index">
+            <td>{{ arxitekturaWork.id }}</td>
+            <td>{{ arxitekturaWork.work }}</td>
+            <td>{{ arxitekturaWork.name }}</td>
+            <td>{{ arxitekturaWork.date }}</td>
+            <td @click="handleClicked(arxitekturaWork.id)">
               <p class="cursor-pointer hover:border-b hover:text-[#252B42]">Batafsil</p>
             </td>
           </tr>
@@ -66,7 +66,6 @@ function handleClicked(id: any) {
 .diagonal-bg {
   transform: rotate(15deg)
 }
-
 table {
   border-collapse: collapse;
 }

@@ -7,7 +7,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const modules = [Autoplay, Pagination, Navigation]
 
 import { ref, onMounted } from 'vue';
-import { useServiceTable } from '@/views/services/serviceName/composable'
+import { useServiceTable } from '@/views/projects/projectName/composable'
 
 const { arxitekturaWorks } = useServiceTable()
 const currentNewsId = ref<number>(parseInt(localStorage.getItem('arxitekturaId') || '0'));

@@ -9,7 +9,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "/services/marketing"
+      route: "/projects/marketing"
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "/services/moliya"
+      route: "/projects/moliya"
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "/services/buxgalteriya"
+      route: "/projects/buxgalteriya"
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "/services/arxitektura"
+      route: "/projects/arxitektura"
     },
     {
       id: 5,
@@ -45,7 +45,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "/services/qurilish"
+      route: "/projects/qurilish"
     },
     {
       id: 6,
@@ -54,7 +54,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "/services/it"
+      route: "/projects/it"
     },
     {
       id: 7,
@@ -63,7 +63,7 @@ export function usePracticePage() {
       subtitle:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
       btn: 'Batafsil',
-      route: "/services/kamera"
+      route: "/projects/kamera"
     }
   ])
   return {

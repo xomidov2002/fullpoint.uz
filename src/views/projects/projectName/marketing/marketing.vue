@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
-import { useAnnouncementStore } from '@/views/services/serviceName/store'
+import { useAnnouncementStore } from '@/views/projects/projectName/store'
 import { useServiceTable } from '../composable';
 
 const store = useAnnouncementStore()

@@ -7,19 +7,19 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const modules = [Autoplay, Pagination, Navigation]
 
 import { ref, onMounted } from 'vue';
-import { useServiceTable } from '@/views/services/serviceName/composable'
+import { useServiceTable } from '@/views/projects/projectName/composable'
 
-const { dasturlashWorks } = useServiceTable()
-const currentNewsId = ref<number>(parseInt(localStorage.getItem('itId') || '0'));
+const { qurilishWorks } = useServiceTable()
+const currentNewsId = ref<number>(parseInt(localStorage.getItem('qurilishId') || '0'));
 
 onMounted(() => {
-  currentNewsId.value = parseInt(localStorage.getItem('itId') || '0');
+  currentNewsId.value = parseInt(localStorage.getItem('qurilishId') || '0');
 });
 </script>
 <template>
   <div class="container mx-auto px-5">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ dasturlashWorks[currentNewsId].name }}</p>
-    <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ dasturlashWorks[currentNewsId].info }}</p>
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ qurilishWorks[currentNewsId].name }}</p>
+    <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ qurilishWorks[currentNewsId].info }}</p>
     <div class="mb-11">
       <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{
       delay: 2500,
@@ -27,7 +27,7 @@ onMounted(() => {
     }" :pagination="{
       clickable: true,
     }" :navigation="true" :modules="modules" class="mySwiper">
-        <swiper-slide class="rounded-[20px] overflow-hidden" v-for="(image, index) in dasturlashWorks[currentNewsId].images" :key="index">
+        <swiper-slide class="rounded-[20px] overflow-hidden" v-for="(image, index) in qurilishWorks[currentNewsId].images" :key="index">
           <img :src="image" alt="">
         </swiper-slide>
       </swiper>
