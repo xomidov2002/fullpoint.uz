@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BaseCard from '@/components/BaseCard.vue';
+import BaseCard from '@/components/BaseCard/BaseCard.vue';
 import { usePracticePage } from '@/views/composable'
 const { practiceCards } = usePracticePage()
 </script>
