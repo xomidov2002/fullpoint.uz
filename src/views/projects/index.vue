@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseContact from '@/views/home/contact.vue'
 import { usePracticePage } from './composable';
 import BaseServiceCard from '@/components/BaseServiceCard/index.vue'
 const { serviceCard } = usePracticePage();
@@ -20,6 +21,7 @@ const { serviceCard } = usePracticePage();
   </div>
   <div class="container mx-auto px-5 select-none py-10 2xl:py-20">
     <BaseServiceCard v-for="(card, index) in serviceCard" :key="index" :card-data="card"/>
+    <BaseContact />
   </div>
 </template>
 

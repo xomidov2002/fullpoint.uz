@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseContact from '@/views/home/contact.vue'
 </script>
 
 <template>
@@ -15,6 +16,9 @@
         <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">We are
           providing best services for our clients</p>
       </div>
+    </div>
+    <div class="container mx-auto px-5">
+      <BaseContact />
     </div>
   </div>
 </template>
