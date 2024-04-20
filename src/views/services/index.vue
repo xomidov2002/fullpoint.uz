@@ -9,7 +9,7 @@ const { serviceCards } = useServiceCard()
 const store = useServiceStore()
 const { serviceId } = storeToRefs(store)
 const router = useRouter()
-function handleClicked(id: any) {
+function clicking(id: any) {
   localStorage.setItem('serviceId', id);
   serviceId.value = id
   router.push({ name: 'one of service card', params: { id: id } })
@@ -34,7 +34,7 @@ function handleClicked(id: any) {
         <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-10">Bizning xizmatlarimiz</p>
         <div class="flex justify-center flex-wrap gap-10">
           <div  v-for="(item, index) in serviceCards" :key="index">
-          <BaseServiceCardInfo @by-info-appeal="handleClicked(item.id)"  :-card-data="item" />
+          <BaseServiceCardInfo @by-info-appeal="clicking(item.id)"  :-card-data="item" />
         </div>
         </div>
       </div>

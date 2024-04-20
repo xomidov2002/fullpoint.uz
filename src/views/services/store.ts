@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-export const useServiceStore = defineStore('announcement', {
+export const useServiceStore = defineStore('service', {
 
   state: () => {
     return {

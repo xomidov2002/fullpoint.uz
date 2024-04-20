@@ -1,16 +1,25 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useHeaderStore } from '@/stores'
-import BaseSelect from '@/components/BaseSelect/index.vue'
+import { useHeader } from './composable'
+import { useI18n } from 'vue-i18n'
+const { locales } = useHeader()
 const store: any = useHeaderStore()
 const { navLinks } = store
-
-import { ref } from 'vue';
-
+const { t, locale, setLocaleMessage } = useI18n()
+const selectedLanguage = ref(locale.value)
 const isActive = ref(true);
-
+const changeLanguage = async () => {
+  await setLocaleMessage(
+    selectedLanguage.value,
+    await import(`@/locale/${selectedLanguage.value}.json`)
+  )
+  locale.value = selectedLanguage.value
+}
 const toggleClass = () => {
   isActive.value = !isActive.value;
 };
+
 const languages = [
   {
     id: 1,
@@ -28,6 +37,7 @@ const languages = [
     icon: 'rus'
   }
 ]
+
 function testt(val: any) {
   console.log(val);
 }
@@ -44,7 +54,7 @@ function testt(val: any) {
               <div class="w-10 h-10">
                 <img src="/logo-1.png" class="object-cover w-full" alt="">
               </div>
-              <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">Full Point Consult</span>
+              <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">{{ t('brandName') }}</span>
             </div>
           </RouterLink>
           <!-- --------------------------MENUS------------------------------ -->
@@ -56,42 +66,47 @@ function testt(val: any) {
               </RouterLink>
             </div>
 
-            <BaseSelect :options="languages" @select="testt" />
+            <select class="custom-select bg-[#f7f7f7]" v-model="selectedLanguage" @change="changeLanguage">
+              <option v-for="(locale, index) in locales" :key="index" :value="locale">
+                {{ locale.toUpperCase() }}
+              </option>
+            </select>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- ---------------------FOR MODILE--------------------- -->
-    <div class="block md:hidden relative">
-      <div class="container mx-auto px-5 py-5 flex justify-between">
-        <div class="cursor-pointer select-none flex items-center gap-3">
-          <div class="w-10 h-10">
-            <img src="/logo-1.png" class="object-cover w-full" alt="">
-          </div>
-          <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">FPC</span>
+  <!-- ---------------------FOR MODILE--------------------- -->
+  <div class="block md:hidden relative">
+    <div class="container mx-auto px-5 py-5 flex justify-between">
+      <div class="cursor-pointer select-none flex items-center gap-3">
+        <div class="w-10 h-10">
+          <img src="/logo-1.png" class="object-cover w-full" alt="">
         </div>
-        <div @click="toggleClass">
-          <label class="burger" for="burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </div>
+        <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">FPC</span>
       </div>
-      <div :class="{ 'right-0': !isActive, '-right-2/3': isActive }"
-        class="bg-white transition-all w-2/3 h-[90vh] absolute flex justify-center items-center flex-col gap-5">
-        <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
-          <RouterLink :to="navlink.path">
-            <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]">{{ navlink.name }}</p>
-          </RouterLink>
-        </div>
-        <select class="p-1 outline-none rounded-md text-md 2xl:text-xl font-semibold border-none bg-none" name="" id="">
-          <option value="1">UZB</option>
-          <option value="1">RUS</option>
-          <option value="1">ENG</option>
-        </select>
+      <div @click="toggleClass">
+        <label class="burger" for="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
       </div>
+    </div>
+    <div :class="{ 'right-0': !isActive, '-right-2/3': isActive }"
+      class="bg-white transition-all w-2/3 h-[90vh] absolute flex justify-center items-center flex-col gap-5">
+      <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
+        <RouterLink :to="navlink.path">
+          <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]">{{
+            navlink.name }}</p>
+        </RouterLink>
+      </div>
+      <select class="p-1 outline-none rounded-md text-md 2xl:text-xl font-semibold border-none bg-none" name="" id="">
+        <option value="1">UZB</option>
+        <option value="1">RUS</option>
+        <option value="1">ENG</option>
+      </select>
     </div>
   </div>
 </template>

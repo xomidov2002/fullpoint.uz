@@ -10,7 +10,25 @@ onMounted(() => {
 </script>
 <template>
   <div >
-    {{ serviceCards[currentServiceId].id }}
+    <div
+      class="bg-[url(/main.jpg)] w-full h-[60vh] bg-no-repeat bg-center bg-cover overflow-hidden relative flex justify-start flex-cols items-center">
+      <div
+        class=" diagonal-bg lg:w-[40%] w-[200%] left-[-200px] sm:w-[70%] select-none bg-white/65 h-[200vh] absolute md:left-[4%]  lg:left-[5%] 2xl:left-[10%]">
+      </div>
+      <div class="container relative mx-auto px-5 select-none">
+        <p
+          class="2xl:text-6xl lg:text-4xl  text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl  lg:pl-10 2xl:pl-0">
+          {{ serviceCards[currentServiceId].title }}</p>
+      </div>
+    </div>
+    <div class="container mx-auto px-5 my-11">
+      <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-10"> {{ serviceCards[currentServiceId].title }} xizmatimiz</p>
+      <p class="text-lg font-[montserrat400] pt-5 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam deserunt quisquam temporibus et inventore cupiditate maiores illum vel magnam? Est unde quam aut, id dolore nihil culpa dicta, ipsum voluptas velit nemo placeat sint provident perspiciatis recusandae libero nam ratione expedita harum quas nulla reiciendis. Reiciendis quas eum aliquid repudiandae beatae. Est odio vitae in architecto perferendis eum animi magnam ducimus enim nam quasi id asperiores, illo voluptatibus maxime atque possimus dolorem aliquid expedita vel tempore commodi. Alias soluta illum cumque placeat distinctio! Accusamus deserunt nihil tempora recusandae provident aperiam perferendis, voluptas minima enim, quae perspiciatis id delectus. Laudantium?</p>
+    </div>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+.diagonal-bg {
+  transform: rotate(15deg)
+}
+</style>
