@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 <template>
   <div class="container mx-auto px-5 pb-14">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">We are providing best business service</p>
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">Biz eng yaxshi biznes xizmatini taqdim etamiz</p>
     <p class="text-lg font-[montserrat400] pt-5 w-full md:w-1/2">Problems trying to resolve the conflict between the two major
       realms of Classical physics: Newtonian mechanics</p>
     <div class="flex flex-wrap md:flex-nowrap items-center pt-11">

@@ -15,9 +15,21 @@ export const routers = [
         component: () => import('@/views/clients/index.vue')
       },
       {
-        path: 'services',
+        path: '',
         name: 'Services',
-        component: () => import('@/views/services/index.vue')
+        component: () => import('@/views/services/main.vue'),
+        children: [
+          {
+            path: 'services',
+            name: 'Service main',
+            component: () => import('@/views/services/index.vue')
+          },
+          {
+            path: ':id',
+            name: 'one of service card',
+            component: () => import('@/views/services/baseInfo.vue')
+          }
+        ]
       },
       {
         path: 'projects',
@@ -63,12 +75,14 @@ export const routers = [
           },
           {
             path: 'buxgalteriya',
-            component: () => import('@/views/projects/projectName/buxgalteriya/buxgalteriyaMain.vue'),
+            component: () =>
+              import('@/views/projects/projectName/buxgalteriya/buxgalteriyaMain.vue'),
             children: [
               {
                 path: '',
                 name: 'Buxgalteriya main',
-                component: () => import('@/views/projects/projectName/buxgalteriya/buxgalteriya.vue')
+                component: () =>
+                  import('@/views/projects/projectName/buxgalteriya/buxgalteriya.vue')
               },
               {
                 path: ':id',
@@ -146,7 +160,7 @@ export const routers = [
       {
         path: 'contact',
         name: 'Contact us',
-        component: () => import('@/views/home/contact.vue')
+        component: () => import('@/views/contact/index.vue')
       }
     ]
   },

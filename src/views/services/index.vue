@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import BaseContact from '@/views/home/contact.vue'
+import BaseServiceCardInfo from '@/components/BaseServiceCradInfo/index.vue';
+import { useServiceStore } from './store'
+import { useServiceCard } from './composable';
+import { storeToRefs } from 'pinia';
+import { useRouter } from 'vue-router';
+const { serviceCards } = useServiceCard()
+const store = useServiceStore()
+const { serviceId } = storeToRefs(store)
+const router = useRouter()
+function handleClicked(id: any) {
+  localStorage.setItem('serviceId', id);
+  serviceId.value = id
+  router.push({ name: 'one of service card', params: { id: id } })
+}
 </script>
 <template>
   <div
@@ -15,9 +29,17 @@ import BaseContact from '@/views/home/contact.vue'
           providing best services for our clients</p>
       </div>
     </div>
-    <div class="cobtainer mx-auto px-5">
-      <BaseContact />
+    <div class="container mx-auto px-5">
+      <div class="mt-10">
+        <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-10">Bizning xizmatlarimiz</p>
+        <div class="flex justify-center flex-wrap gap-10">
+          <div  v-for="(item, index) in serviceCards" :key="index">
+          <BaseServiceCardInfo @by-info-appeal="handleClicked(item.id)"  :-card-data="item" />
+        </div>
+        </div>
+      </div>
     </div>
+    <BaseContact />
 </template>
 <style scoped>
 .diagonal-bg {

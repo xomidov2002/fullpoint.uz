@@ -52,3 +52,8 @@ export interface TableCard {
   images: string[],
   info: string
 }
+export interface ServiceInfo {
+  id: number,
+  title: string,
+  subtitle: string
+}

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useHeaderStore } from '@/stores'
 import BaseSelect from '@/components/BaseSelect/index.vue'
-import BaseIcon from '@/components/Icons/index.vue'
 const store: any = useHeaderStore()
 const { navLinks } = store
 

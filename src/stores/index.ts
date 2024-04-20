@@ -15,27 +15,27 @@ export const useHeaderStore = defineStore('header', {
       navLinks: [
         {
           id: 1,
-          name: 'Home',
+          name: 'Bosh sahifa',
           path: '/',
         },
         {
           id: 2,
-          name: 'Projects',
+          name: 'Loyihalar',
           path: '/projects',
         },
         {
           id: 3,
-          name: 'Services',
+          name: 'Xizmatlar',
           path: '/services',
         },
         {
           id: 4,
-          name: 'Our clients',
+          name: 'Mijozlarimiz',
           path: '/clients',
         },
         {
           id: 5,
-          name: 'contact',
+          name: "Bog'lanish",
           path: '/contact',
         }
       ]
