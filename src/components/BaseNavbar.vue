@@ -2,10 +2,11 @@
 import { ref } from 'vue';
 import { useHeaderStore } from '@/stores'
 import { useHeader } from './composable'
-import { useI18n } from 'vue-i18n'
 const { locales } = useHeader()
 const store: any = useHeaderStore()
 const { navLinks } = store
+
+import { useI18n } from 'vue-i18n'
 const { t, locale, setLocaleMessage } = useI18n()
 const selectedLanguage = ref(locale.value)
 const isActive = ref(true);
@@ -54,7 +55,7 @@ function testt(val: any) {
               <div class="w-10 h-10">
                 <img src="/logo-1.png" class="object-cover w-full" alt="">
               </div>
-              <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">{{ t('brandName') }}</span>
+              <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">Full Point Consult</span>
             </div>
           </RouterLink>
           <!-- --------------------------MENUS------------------------------ -->

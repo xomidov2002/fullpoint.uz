@@ -1,20 +1,19 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
+</script>
 <template>
   <div class="container mx-auto px-5 pb-14">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">Biz eng yaxshi biznes xizmatini taqdim etamiz</p>
-    <p class="text-lg font-[montserrat400] pt-5 w-full md:w-1/2">Problems trying to resolve the conflict between the two major
-      realms of Classical physics: Newtonian mechanics</p>
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.businessTitle') }}</p>
+    <p class="text-lg font-[montserrat400] pt-5 w-full md:w-1/2">{{ t('mainPage.businessSubtitle') }}</p>
     <div class="flex flex-wrap md:flex-nowrap items-center pt-11">
       <div class="md:w-3/5 w-full   h-auto">
         <img class="object-cover" src="/business/cover.jpg" alt="">
       </div>
       <div class="md:w-2/5 w-full md:ml-32">
-        <p class=" text-4xl font-bold tracking-widest text-[#252B42]">Most trusted in
-          our field</p>
-        <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">Most calendars are designed for teams.
-          Slate
-          is designed for freelancers who want a
-          simple way to plan their schedule.</p>
+        <p class=" text-4xl font-bold tracking-widest text-[#252B42]">{{ t('mainPage.businessMain') }}</p>
+        <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ t('mainPage.businessText') }}</p>
         <div>
           <div class="flex gap-3">
             <img src="/business/human.svg" alt="">

@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { useI18n } from 'vue-i18n';
 import { type NavLink } from '@/interfaces'
 interface StateHeader {
   ipadNavs: boolean
@@ -8,6 +9,7 @@ interface StateHeader {
 }
 export const useHeaderStore = defineStore('header', {
   state: (): StateHeader => {
+    const { t } = useI18n();
     return {
       phoneView: 1,
       ipadNavs: false,
@@ -15,27 +17,27 @@ export const useHeaderStore = defineStore('header', {
       navLinks: [
         {
           id: 1,
-          name: 'Bosh sahifa',
+          name: t('navbar.mainPage'),
           path: '/',
         },
         {
           id: 2,
-          name: 'Loyihalar',
+          name: t('navbar.projects'),
           path: '/projects',
         },
         {
           id: 3,
-          name: 'Xizmatlar',
+          name: t('navbar.services'),
           path: '/services',
         },
         {
           id: 4,
-          name: 'Mijozlarimiz',
+          name: t('navbar.clients'),
           path: '/clients',
         },
         {
           id: 5,
-          name: "Bog'lanish",
+          name: t('navbar.contact'),
           path: '/contact',
         }
       ]

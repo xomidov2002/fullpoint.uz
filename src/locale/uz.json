@@ -1,3 +1,18 @@
 {
-  "brandName": "uz"
+  "navbar":{
+    "brandName": "uz",
+    "mainPage": "Bosh sahifa",
+    "projects": "Loyihalar",
+    "services": "Xizmatlar",
+    "clients": "Mijozlarimiz",
+    "contact": "Bog'lanish"
+  },
+  "mainPage": {
+    "mainTitle" : "biznesingizni biz bilan mustahkamlang",
+    "mainSubtitle" : "Bajarilgan ishlarning yuqori sifati uchun mas'ul bo'lgan yuqori malakali mutaxassislarga ega tez rivojlanayotgan kompaniya! Biz bilan ishonchli!",
+    "businessTitle" : "Biz eng yaxshi biznes xizmatini taqdim etamiz",
+    "businessSubtitle" : "Biz rasman, shartnoma asosida ishlaymiz, shuningdek, qonun doirasida to'liq javob beramiz, bu sizga kafolat va xotirjamlik beradi!",
+    "businessMain" : "Bizning sohada eng ishonchli",
+    "businessText" : "Biz har bir mijozga alohida yondashamiz, kelajakda buxgalteriya hisobi haqida o'ylamasligingiz uchun barcha masalalarni eng kichik detallarigacha o'rganamiz!"
+  }
 }

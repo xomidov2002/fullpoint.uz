@@ -3,6 +3,9 @@ import BusinessPage from '@/views/home/business.vue'
 import BaseCards from '@/components/BaseCards/index.vue'
 import ContactPage from '@/views/home/contact.vue'
 import Advices from './advices.vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 </script>
 
 <template>
@@ -15,10 +18,8 @@ import Advices from './advices.vue'
       <div class="container relative mx-auto px-5 select-none">
         <p
           class="2xl:text-6xl lg:text-4xl  text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl  lg:pl-10 2xl:pl-0">
-          biznesingizni biz bilan mustahkamlang</p>
-        <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">We know how
-          large objects will act, but things on a
-          small scale.</p>
+          {{ t('mainPage.mainTitle') }}</p>
+        <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">{{ t('mainPage.mainSubtitle') }}</p>
       </div>
     </div>
   </div>
