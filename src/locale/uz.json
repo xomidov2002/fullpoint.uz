@@ -13,6 +13,21 @@
     "businessTitle" : "Biz eng yaxshi biznes xizmatini taqdim etamiz",
     "businessSubtitle" : "Biz rasman, shartnoma asosida ishlaymiz, shuningdek, qonun doirasida to'liq javob beramiz, bu sizga kafolat va xotirjamlik beradi!",
     "businessMain" : "Bizning sohada eng ishonchli",
-    "businessText" : "Biz har bir mijozga alohida yondashamiz, kelajakda buxgalteriya hisobi haqida o'ylamasligingiz uchun barcha masalalarni eng kichik detallarigacha o'rganamiz!"
+    "businessText" : "Biz har bir mijozga alohida yondashamiz, kelajakda buxgalteriya hisobi haqida o'ylamasligingiz uchun barcha masalalarni eng kichik detallarigacha o'rganamiz!",
+    "businessser1" : "agar bosh buxgalter g'oyib bo'lgan bo'lsa va nima qilishni bilmasangiz;",
+    "businessser2" : "agar buxgalteriya hisobi bir yil davomida o'tkazilmagan bo'lsa va hamma narsani zudlik bilan tiklash kerak bo'lsa.",
+    "practiceTitle" : "Amaliy maslahatlar",
+    "practiceSubtitle" : "Biz kichik va o'rta biznes uchun buxgalteriya hisobini yuritamiz, buxgalteriya hisobini tiklaymiz, soliq va moliyaviy hisobotlarni tayyorlaymiz va taqdim etamiz.",
+    "serviceTitle" : "bizning xizmatlarimiz",
+    "contact" : "Biz bilan bog'laning",
+    "contactMail" : "Kompaniya yoki sizning elektron pochtangiz",
+    "contactName" : "FISH",
+    "contactNumber" : "Telefon raqamingiz",
+    "contactText" : "Qanday yordam bera olamiz ?",
+    "Submit" : "Yuborish"
+  },
+  
+  "ourServices" : {
+    "marketing" : "Marketing"
   }
 }

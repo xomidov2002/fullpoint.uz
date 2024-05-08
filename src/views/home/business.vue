@@ -18,16 +18,14 @@ const { t } = useI18n()
           <div class="flex gap-3">
             <img src="/business/human.svg" alt="">
             <div>
-              <p class="text-base font-bold text-[#252B42] tracking-wider">the quick fox jumps over the lazy
-                dog</p>
+              <p class="text-base font-bold text-[#252B42] tracking-wider">{{ t('mainPage.businessser1') }}</p>
               <p class="text-sm font-semibold text-[#737373]">Things on a very small scale ...</p>
             </div>
           </div>
           <div class="flex gap-3 mt-8">
             <img src="/business/speed.svg" alt="">
             <div>
-              <p class="text-base font-bold text-[#252B42] tracking-wider">the quick fox jumps over the lazy
-                dog</p>
+              <p class="text-base font-bold text-[#252B42] tracking-wider">{{ t('mainPage.businessser2') }}</p>
               <p class="text-sm font-semibold text-[#737373]">Things on a very small scale ...</p>
             </div>
           </div>

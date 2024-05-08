@@ -1,13 +1,15 @@
 import { type Services } from '@/interfaces'
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 export function useServicesPage() {
+  const { t } = useI18n()
   const services = ref<Services[]> ([
     {
       id: 1,
       icon: '/services/marketing.png',
       num: "Investitsiyalar va moliyalashtirishni jalb qilish, savdoni moliyalashtirish xizmatlari, eksport-import operatsiyalari, Tenderlarni qo'llab quvvatlash va xorijiy kompaniyalar manfaatlarini ifodalash",
-      name: 'Marketing'
+      name: t('ourServices.marketing')
     },
     {
       id: 2,

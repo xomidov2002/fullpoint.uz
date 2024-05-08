@@ -6,10 +6,12 @@ import { Pagination, Autoplay } from 'swiper/modules';
 const modules = [Pagination, Autoplay]
 import { useServicesPage } from './composable';
 const { services } = useServicesPage()
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 </script>
 <template>
   <div class="container mx-auto px-5 hidden lg:block">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">Our services</p>
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.serviceTitle') }}</p>
     <swiper :slidesPerView="3" :spaceBetween="30" :pagination="{
       clickable: true,
     }" :modules="modules" class="mySwiper" :autoplay="{
