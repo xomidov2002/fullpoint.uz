@@ -5,8 +5,11 @@
     "projects": "Loyihalar",
     "services": "Xizmatlar",
     "clients": "Mijozlarimiz",
-    "contact": "Bog'lanish"
+    "contact": "Bog'lanish",
+    "subTitle" : "Biz mijozlarimiz uchun eng yaxshi xizmatlarni taqdim etamiz"
   },
+  
+
   "mainPage": {
     "mainTitle" : "biznesingizni biz bilan mustahkamlang",
     "mainSubtitle" : "Bajarilgan ishlarning yuqori sifati uchun mas'ul bo'lgan yuqori malakali mutaxassislarga ega tez rivojlanayotgan kompaniya! Biz bilan ishonchli!",
@@ -27,7 +30,38 @@
     "Submit" : "Yuborish"
   },
   
+
   "ourServices" : {
-    "marketing" : "Marketing"
+    "marketing" : "Marketing",
+    "marketingTitle" : "Investitsiyalar va moliyalashtirishni jalb qilish, savdoni moliyalashtirish xizmatlari, eksport-import  operatsiyalari, Tenderlarni qo'llab quvvatlash va xorijiy kompaniyalar manfaatlarini ifodalash",
+    "moliya" : "Moliya",
+    "moliyaTitle" : "Moliyaviy modellashtirish, kompaniyaning moliyaviy holati tahlili xizmatlari bor",
+    "buxgalteriya" : "Buxgalteriya",
+    "buxgalteriyaTitle" : "Buxgalteriya hisobini yo'lga qo'yish, buxgalteriya hisobini tiklash, hisobotlarni topshirish",
+    "arxitektura" : "Arxitektura",
+    "arxitekturaTitle" : "Arxitektura-dizayn xizmatlari, me'moriy loyihalash, landshaft dizayni xizmatlari, fasadni bezatish, loyiha-smeta hujjatlarini tayyorlash va ishlab chiqish",
+    "qurilish" : "Qurilish",
+    "qurilishTitle" : "Ta'mirlash-qurilish xizmatlari, sanoat obyektlarini qurish, loyiha-qurilish xizmatlari, ko'chmas mulkni obodonlashtirish, boshqa qurilish xizmatlari",
+    "it" : "IT",
+    "itTitle" : "Vebsayt yaratish, Internet magazin, reklama sayti, (Frontend, Backend, Dizayn)",
+    "kamera" : "Kamera o'rnatish",
+    "kameraTitle" : "Bino, uy va boshqa joylarga sifatli kuzatuv kameralar o'rnatish xizmati"
+  },
+
+
+  "advices" : {
+    "first" : "Ishonchli xizmlatlardan biri",
+    "firstTitle" : "Hujjatlaringizni, soliqlaringizni va pul oqimlarini tartibga solishga yordam beramiz.",
+    "second" : "Eng tez tashkil etish",
+    "secondTitle" : "FullPointConsult-Ozbekistondagi buxgalterlar va boshqa xizmat ko'rsatuvchi prefessional jamoa",
+    "third" : "Harakat qilishning eng tez yo'li",
+    "thirdTitle" : "Hisobotlarni soliq idorasiga o'z vaqtida jo'natib, biz foydali soliqni optimallashtirish tizimini taklif qilamiz.",
+    "fourth" : "Birgalikda yaxshi ishlaymiz",
+    "fourthTitle" : "Biz sizning biznesingiz uchun foydali va ishonchli foydalanishni taklif qilamiz"
+  },
+
+
+  "projects" : {
+    
   }
 }

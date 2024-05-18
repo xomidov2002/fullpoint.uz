@@ -1,67 +1,62 @@
 import { type ServiceCard, type Templates } from '@/interfaces'
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 export function usePracticePage() {
+  const { t } = useI18n()
   const serviceCard = ref<ServiceCard[]>([
     {
       id: 1,
       img: '/main.jpg',
-      title: 'Marketing',
-      subtitle:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
+      title: t('ourServices.marketing'),
+      subtitle: t('ourServices.marketingTitle'),
       btn: 'Batafsil',
       route: "/projects/marketing"
     },
     {
       id: 2,
       img: '/main.jpg',
-      title: 'Moliya',
-      subtitle:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
+      title: t('ourServices.moliya'),
+      subtitle: t('ourServices.moliyaTitle'),
       btn: 'Batafsil',
       route: "/projects/moliya"
     },
     {
       id: 3,
       img: '/main.jpg',
-      title: 'Buxgalteriya',
-      subtitle:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
+      title: t('ourServices.buxgalteriya'),
+      subtitle: t('ourServices.buxgalteriyaTitle'),
       btn: 'Batafsil',
       route: "/projects/buxgalteriya"
     },
     {
       id: 4,
       img: '/main.jpg',
-      title: 'Arxitektura',
-      subtitle:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
+      title: t('ourServices.arxitektura'),
+      subtitle: t('ourServices.arxitekturaTitle'),
       btn: 'Batafsil',
       route: "/projects/arxitektura"
     },
     {
       id: 5,
       img: '/main.jpg',
-      title: 'Qurilish',
-      subtitle:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
+      title: t('ourServices.qurilish'),
+      subtitle: t('ourServices.qurilishTitle'),
       btn: 'Batafsil',
       route: "/projects/qurilish"
     },
     {
       id: 6,
       img: '/main.jpg',
-      title: 'IT',
-      subtitle:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
+      title: t('ourServices.it'),
+      subtitle: t('ourServices.itTitle'),
       btn: 'Batafsil',
       route: "/projects/it"
     },
     {
       id: 7,
       img: '/main.jpg',
-      title: "Kamera o'rnatish",
-      subtitle:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus dolores quo necessitatibus consectetur deserunt quasi autem nisi quia? Dolor eligendi assumenda repellat distinctio ut, animi voluptatum excepturi quisquam, libero iusto nesciunt natus illum beatae quod tempora necessitatibus cupiditate, facilis autem.',
+      title: t('ourServices.kamera'),
+      subtitle: t('ourServices.kameraTitle'),
       btn: 'Batafsil',
       route: "/projects/kamera"
     }

@@ -4,10 +4,55 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
 const modules = [Pagination, Autoplay]
-import { useServicesPage } from './composable';
-const { services } = useServicesPage()
 import { useI18n } from 'vue-i18n'
+import { computed } from 'vue';
 const { t } = useI18n()
+const services = computed(()=> {
+    return[
+      {
+            id: 1,
+            icon: '/services/marketing.png',
+            num: t('ourServices.marketingTitle'),
+            name: t('ourServices.marketing')
+          },
+          {
+            id: 2,
+            icon: '/services/finance.png',
+            num: t('ourServices.moliyaTitle'),
+            name: t('ourServices.moliya'),
+          },
+          {
+            id: 3,
+            icon: '/services/accounting.png',
+            num: t('ourServices.buxgalteriyaTitle'),
+            name: t('ourServices.buxgalteriya')
+          },
+          {
+            id: 4,
+            icon: '/services/architecture.png',
+            num: t('ourServices.arxitekturaTitle'),
+            name: t('ourServices.arxitektura')
+          },
+          {
+            id: 5,
+            icon: '/services/construction.png',
+            num: t('ourServices.qurilishTitle'),
+            name: t('ourServices.qurilish')
+          },
+          {
+            id: 6,
+            icon: '/services/it.png',
+            num: t('ourServices.itTitle'),
+            name: t('ourServices.it')
+          },
+          {
+            id: 6,
+            icon: '/services/camera.png',
+            num: t('ourServices.kameraTitle'),
+            name: t('ourServices.kamera')
+          }
+    ]
+  })
 </script>
 <template>
   <div class="container mx-auto px-5 hidden lg:block">

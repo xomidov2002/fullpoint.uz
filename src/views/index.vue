@@ -6,7 +6,7 @@ import TheFooter from '@/components/BaseFooter.vue';
 <template>
   <div>
     <TheHeader/>
-    <div class="pt-24">
+    <div class="md:pt-24">
       <RouterView></RouterView>
       <div class="fixed bottom-10 right-10 sm:w-16 sm:h-16 w-10 h-10 z-50 cursor-pointer">
         <routerLink to="/contact">

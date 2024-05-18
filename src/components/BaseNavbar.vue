@@ -1,47 +1,74 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useHeaderStore } from '@/stores'
+import { computed, reactive, ref } from 'vue';
 import { useHeader } from './composable'
+import BaseSelect from '@/components/BaseSelect/index.vue'
 const { locales } = useHeader()
-const store: any = useHeaderStore()
-const { navLinks } = store
+
 
 import { useI18n } from 'vue-i18n'
 const { t, locale, setLocaleMessage } = useI18n()
 const selectedLanguage = ref(locale.value)
-const isActive = ref(true);
+const isActive = ref(false);
 const changeLanguage = async () => {
   await setLocaleMessage(
     selectedLanguage.value,
     await import(`@/locale/${selectedLanguage.value}.json`)
   )
   locale.value = selectedLanguage.value
+
 }
 const toggleClass = () => {
   isActive.value = !isActive.value;
 };
-
-const languages = [
+const navLinks = computed(() => {
+  return [
+    {
+      id: 1,
+      name: t('navbar.mainPage'),
+      path: '/',
+    },
+    {
+      id: 2,
+      name: t('navbar.projects'),
+      path: '/projects',
+    },
+    {
+      id: 3,
+      name: t('navbar.services'),
+      path: '/services',
+    },
+    {
+      id: 4,
+      name: t('navbar.clients'),
+      path: '/clients',
+    },
+    {
+      id: 5,
+      name: t('navbar.contact'),
+      path: '/contact',
+    }
+  ]
+})
+interface language {
+  id: number,
+  title: string,
+  icon: string,
+  value: string
+}
+const langs = reactive<language[]>([
   {
     id: 1,
-    title: 'UZB',
-    icon: 'uzb'
+    title: 'UZ',
+    icon: 'uzb',
+    value: 'uz'
   },
   {
     id: 2,
-    title: 'ENG',
-    icon: 'eng'
-  },
-  {
-    id: 3,
-    title: 'RUS',
-    icon: 'rus'
+    title: 'RU',
+    icon: 'rus',
+    value: 'ru'
   }
-]
-
-function testt(val: any) {
-  console.log(val);
-}
+])
 </script>
 
 <template>
@@ -66,12 +93,7 @@ function testt(val: any) {
                 <p class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]">{{ navlink.name }}</p>
               </RouterLink>
             </div>
-
-            <select class="custom-select bg-[#f7f7f7]" v-model="selectedLanguage" @change="changeLanguage">
-              <option v-for="(locale, index) in locales" :key="index" :value="locale">
-                {{ locale.toUpperCase() }}
-              </option>
-            </select>
+            <BaseSelect color="black" :options="langs" v-model="$i18n.locale" @change="changeLanguage"/>
           </div>
         </div>
       </div>
@@ -79,13 +101,17 @@ function testt(val: any) {
   </div>
 
   <!-- ---------------------FOR MODILE--------------------- -->
-  <div class="block md:hidden relative">
-    <div class="container mx-auto px-5 py-5 flex justify-between">
+  <div class="block md:hidden fixed top-0 right-0 w-full z-50 bg-white">
+    <div class="container mx-auto px-5 py-5 flex justify-between items-center">
       <div class="cursor-pointer select-none flex items-center gap-3">
-        <div class="w-10 h-10">
-          <img src="/logo-1.png" class="object-cover w-full" alt="">
-        </div>
-        <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">FPC</span>
+        <RouterLink to="/">
+          <div class="cursor-pointer select-none flex items-center gap-3">
+            <div class="w-10 h-10">
+              <img src="/logo-1.png" class="object-cover w-full" alt="">
+            </div>
+            <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">FPC</span>
+          </div>
+        </RouterLink>
       </div>
       <div @click="toggleClass">
         <label class="burger" for="burger">
@@ -95,24 +121,48 @@ function testt(val: any) {
         </label>
       </div>
     </div>
-    <div :class="{ 'right-0': !isActive, '-right-2/3': isActive }"
-      class="bg-white transition-all w-2/3 h-[90vh] absolute flex justify-center items-center flex-col gap-5">
-      <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
-        <RouterLink :to="navlink.path">
-          <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]">{{
-            navlink.name }}</p>
-        </RouterLink>
+    <Transition>
+      <div v-if="isActive"
+        class="fixed top-0 left-0 w-[70%] h-[100vh] bg-white z-50 p-10 gap-5 flex flex-col pb-16 justify-start">
+        <div class="flex justify-between items-center">
+          <RouterLink to="/">
+            <div class="cursor-pointer select-none flex items-center gap-3">
+              <div class="w-10 h-10">
+                <img src="/logo-1.png" class="object-cover w-full" alt="">
+              </div>
+              <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">FPC</span>
+            </div>
+          </RouterLink>
+          <BaseSelect color="black" :options="langs" v-model="$i18n.locale" @change="changeLanguage"/>
+        </div>
+        <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
+          <RouterLink :to="navlink.path">
+            <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]">{{
+              navlink.name }}</p>
+          </RouterLink>
+        </div>
       </div>
-      <select class="p-1 outline-none rounded-md text-md 2xl:text-xl font-semibold border-none bg-none" name="" id="">
-        <option value="1">UZB</option>
-        <option value="1">RUS</option>
-        <option value="1">ENG</option>
-      </select>
+    </Transition>
+    <div @click="isActive = !isActive" v-if="isActive" class="absolute top-0 left-0 bg-black/50 w-full h-[100vh] z-40">
     </div>
   </div>
 </template>
 
 <style scoped>
+.clip-path {
+  clip-path: polygon(7% 0, 93% 0, 100% 100%, 0% 100%);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
 .active-class {
   @apply right-0
 }
@@ -163,8 +213,8 @@ option {
 
 .burger {
   position: relative;
-  width: 40px;
-  height: 30px;
+  width: 30px;
+  height: 20px;
   background: transparent;
   cursor: pointer;
   display: block;
