@@ -60,8 +60,34 @@
     "fourthTitle" : "Biz sizning biznesingiz uchun foydali va ishonchli foydalanishni taklif qilamiz"
   },
 
+  "table" : {
+    "first" : "Tovar (ishlar, xizmatlar) ob'ektining nomi",
+    "second" : "Mijoz nomi",
+    "third" : "Yetkazib berish sanasi",
+    "fourth" : "Batafsil ma'lumot",
+    "info" : "Batafsil"
+  },
 
   "projects" : {
-    
+    "aboutUs" : "Biz haqimizda",
+    "clients" : "Bizning mijozlar",
+    "marketing" : "Biz bozorlarni diagnostik tadqiq etishda, rejalashtirishda, marketing kontseptsiyalarini ishlab chiqishda, shuningdek kompaniyalarda marketingni boshqarishda yordam beramiz, jumladan: Tadqiqot va tahlil;     Marketing strategiyasi; Marketing auditi; Marketing tizimini tashkil etish; Reklama va PR kampaniyalari; Amalga oshirish, nazorat qilish va qo’llab-quvvatlash; Bozor tadqiqoti, strategiyalarni ishlab chiqish.",
+    "moliya" : "Hozirgi kunda mamalakatimizda yuzaga kelgan kuchli raqobatchilik davrida har bir korxona kamroq sarf harajat qilib ko'proq daromad olgan holda o'z raqibidan oldin yurishni xohlaydi. Moliyaviy xizmat ham aynan shu maqsadlarda amalga oshiriladi, ya'ni harajatlarni optimallashtirish, rejalashtirish, kompaniyaning byudjetini to'g'ri taqsimlash, soliqlarni optimallashtirish va boshqalar. Bugungi kunda bunday xizmatga yanada talab oshmoqda. Nazariy jihatdan olib qaraganda, biznes g'oyaning muvaffaqiyatini uni rejalashtirish bosqichidayoq aniqlasa bo'ladi, lekin hamma ham buni aniq tahlil qila olmaydi.",
+    "kamera" : "IP va HD, FULL HD KAMERA video kuzatuvi har qanday murakkablikdagi eshik telefonlarini o'rnatish (har qanday hajmdagi, kvartiralardan fabrikalargacha). Ilgari o'rnatilgan uskunani demontaj qilish. Telefoningiz va planshet kompyuteringizda kameraning ONLAYN ko'rish ulanishi simsiz Wi-Fi xonadonlar, kottejlar, ofislar, omborlar, banklar, do'konlar, ko'chalar kabi har qanday murakkablikdagi ob'ektlarda raqamli video kuzatuv tizimlari va kompleks qo'riqlash tizimlarini individual loyihalash, o'rnatish va texnik xizmat ko'rsatish bo'yicha to'liq xizmatlarni taqdim etadi. shuningdek, avtomobillar va qurilish mashinalari uchun video kuzatuv.",
+    "arxitek" : "O'zbekiston bo'yicha Arxitektura-dizayn va loyihalash xizmatlari. <<Fulll Point Consult>> loyihasi O'zbekiston bo'yicha Arxitektura-dizayn va loyihalash xizmatlari xizmatlarini buyurtma qilish istagidagilar uchun eng maqbul yechimdir. Arxitektura-dizayn va loyihalash xizmatlari bo’yicha xizmatlar O'zbekiston bo'yichagi arzon narxlar va  yetakchi kompaniyalardan keng tanlov bizning katalogda.",
+    "buxgalteriya" : {
+      "begin" : "Bizga ishonishadi va bizni tavsiya qilishadi. Biz sizninig vaqtingizni, asablaringizni va albatta pulingizni himoya qilamiz!",
+      "first" : "Hisobotlar qanday bo’lishi kerak va ular nima uchun kerak?",
+      "second" : "O’z hisobchingizni qanday tekshirishingiz mumkin? Yoki, hamma hujjatlarni topshirish xavfsizmi?",
+      "third" : "Nimani hisobiga pulingizni tejashingiz mumkin?",
+      "fourth" : "Qanday qilib to’lovlarni kamaytirish mumkin? (To’lovlarni qanday kamaytirish mumkin?)",
+      "fifth" : "Hujjatdagi xatoliklar sababli yuzga kelgan mijoz noroziligidan qanday qochish mumkin?",
+      "sixth" : "Jarimaga tortilmaslik uchun Qanday? Qayerga? va Qancha? soliq to’lash kereak?",
+      "last" : "Shu va shu kabi savollarga javob topishingiz mumkin"
+    },
+    "it" : "Web sahifa, internet do'kon, xizmat ko'rsatish saytlari, ma'lumot beruvchi saytlar yaratish, optimallashtirish kabi xizmatlar mavjud ",
+    "qurilish" : {
+      "begin" : "O'zbekiston bo'yicha Qurilish xizmatlari xizmatlarini buyurtma qilish istagidagilar uchun eng maqbul yechimdir. Qurilish xizmatlari bo’yicha xizmatlar O'zbekiston bo'yichagi arzon narxlar va  yetakchi kompaniyalardan keng tanlov bizning katalogda."
+    }
   }
 }

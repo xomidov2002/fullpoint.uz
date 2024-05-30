@@ -5,10 +5,12 @@ import { useServiceStore } from './store'
 import { useServiceCard } from './composable';
 import { storeToRefs } from 'pinia';
 import { useRouter } from 'vue-router';
+import { useI18n } from 'vue-i18n';
 const { serviceCards } = useServiceCard()
 const store = useServiceStore()
 const { serviceId } = storeToRefs(store)
 const router = useRouter()
+const {t} = useI18n()
 function clicking(id: any) {
   localStorage.setItem('serviceId', id);
   serviceId.value = id
@@ -24,14 +26,13 @@ function clicking(id: any) {
       <div class="container relative mx-auto px-5 select-none">
         <p
           class="2xl:text-6xl lg:text-4xl  text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl  lg:pl-10 2xl:pl-0">
-          Services</p>
-        <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">We are
-          providing best services for our clients</p>
+          {{ t('navbar.services') }}</p>
+        <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">{{ t('navbar.subTitle') }}</p>
       </div>
     </div>
     <div class="container mx-auto px-5">
       <div class="mt-10">
-        <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-10">Bizning xizmatlarimiz</p>
+        <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-10">{{ t('mainPage.serviceTitle') }}</p>
         <div class="flex justify-center flex-wrap gap-10">
           <div  v-for="(item, index) in serviceCards" :key="index">
           <BaseServiceCardInfo @by-info-appeal="clicking(item.id)"  :-card-data="item" />

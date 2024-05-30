@@ -3,7 +3,8 @@ import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useAnnouncementStore } from '@/views/projects/projectName/store'
 import { useServiceTable } from '../composable';
-
+import { useI18n } from 'vue-i18n';
+const {t} = useI18n()
 const store = useAnnouncementStore()
 const { qurilishId } = storeToRefs(store)
 const router = useRouter()
@@ -24,18 +25,13 @@ function handleClicked(id: any) {
     <div class="container relative mx-auto px-5 select-none">
       <p
         class="2xl:text-6xl lg:text-4xl  text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl  lg:pl-10 2xl:pl-0">
-        Qurilish</p>
-      <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">We are
-        providing best services for our clients</p>
+        {{t('ourServices.qurilish')}}</p>
     </div>
   </div>
   <div class="container mx-auto px-5 py-11">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">Biz haqimizda</p>
-    <p class="mb-10 text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maxime excepturi aperiam
-      amet vel reprehenderit nisi quo placeat atque velit vitae sapiente debitis, nobis tempore deleniti explicabo
-      assumenda dolorem temporibus sint aut in esse incidunt nam. Consequatur velit nisi repudiandae molestiae dicta,
-      voluptatibus officia corporis harum! Doloribus magnam explicabo optio!</p>
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">Bizning mijozlar</p>
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ t('projects.aboutUs') }}</p>
+    <p class="mb-10 text-xl">{{ t('projects.qurilish.begin') }}</p>
+    <!-- <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">Bizning mijozlar</p>
     <div>
       <table class="">
         <thead>
@@ -59,7 +55,7 @@ function handleClicked(id: any) {
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
   </div>
 </template>
 <style scoped>

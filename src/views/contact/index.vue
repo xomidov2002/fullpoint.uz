@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import BaseButton from '@/components/BaseButton/index.vue'
+import { useI18n } from 'vue-i18n';
 const email = ref('');
 const phone = ref('');
 const name = ref('');
 const message = ref('');
-
+const {t} =useI18n()
 const sendMessage = async () => {
   const url = 'https://api.telegram.org/bot6760739912:AAFVrqguAFvYZ1cDFjCCJyK2cFSoTTatgIM/sendMessage';
   const data = {
@@ -44,11 +45,11 @@ const sendMessage = async () => {
 <template>
   <div class="bg-[url('/images/contact.jfif')] bg-center bg-cover bg-no-repeat">
     <div class="container mx-auto px-5 py-11">
-      <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-white mb-5 text-white">Get in touch</p>
+      <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-white mb-5 text-white">{{ t('mainPage.contact') }}</p>
       <div
         class="backdrop-blur-md bg-white/40 w-full h-auto p-5 shadow-xl flex flex-wrap lg:flex-nowrap justify-center lg:justify-evenly contact items-center">
         <div>
-          <p class="font-[semibold] text-white text-2xl tracking-widest pb-11">Contact us</p>
+          <p class="font-[semibold] text-white text-2xl tracking-widest pb-11">{{ t('mainPage.contact') }}</p>
           <div class="flex gap-5">
             <div class="w-[30px]"><img src="@/assets/icons/email.png" alt=""></div>
             <p class="tracking-widest text-white">example@gmail.com</p>
@@ -66,23 +67,23 @@ const sendMessage = async () => {
           <div class="form-container">
             <div class="form">
               <div class="form-group">
-                <label for="email">Company Email</label>
+                <label for="email">{{ t('mainPage.contactMail') }}</label>
                 <input v-model="email" name="email" id="email" type="text">
               </div>
               <div class="form-group">
-                <label for="text">Full name</label>
+                <label for="text">{{ t('mainPage.contactName') }}</label>
                 <input v-model="name" required name="name" id="text" type="text">
               </div>
               <div class="form-group">
-                <label for="text">Your phone number</label>
+                <label for="text">{{ t('mainPage.contactNumber') }}</label>
                 <input required v-model="phone" name="phone" id="text" type="text">
               </div>
               <div class="form-group">
-                <label for="textarea">How Can We Help You?</label>
+                <label for="textarea">{{ t('mainPage.contactText') }}</label>
                 <textarea v-model="message" required cols="50" rows="10" id="textarea"
                   name="textarea">          </textarea>
               </div>
-              <BaseButton @click="sendMessage" name="Submit" />
+              <BaseButton @click="sendMessage" :name="t('mainPage.Submit')" />
             </div>
           </div>
         </div>

@@ -1,7 +1,36 @@
 <script setup lang="ts">
-import { useHeaderStore } from '@/stores'
-const store: any = useHeaderStore()
-const { navLinks } = store
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n()
+const navLinks = computed(() => {
+  return [
+    {
+      id: 1,
+      name: t('navbar.mainPage'),
+      path: '/',
+    },
+    {
+      id: 2,
+      name: t('navbar.projects'),
+      path: '/projects',
+    },
+    {
+      id: 3,
+      name: t('navbar.services'),
+      path: '/services',
+    },
+    {
+      id: 4,
+      name: t('navbar.clients'),
+      path: '/clients',
+    },
+    {
+      id: 5,
+      name: t('navbar.contact'),
+      path: '/contact',
+    }
+  ]
+})
 </script>
 <template>
   <div class="bg-[#252525] p-5 flex justify-center w-full ">

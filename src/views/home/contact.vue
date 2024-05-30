@@ -55,11 +55,11 @@ const sendMessage = async () => {
         </div>
         <div class="flex gap-5">
           <div class="w-[30px]"><img src="@/assets/icons/telephone.png" alt=""></div>
-          <p class="tracking-widest">+998 77 777 77 77</p>
+          <p class="tracking-widest">+998 93 378 63 61</p>
         </div>
         <div class="flex gap-5">
           <div class="w-[30px]"><img src="@/assets/icons/location.png" alt=""></div>
-          <p class="tracking-widest">Toshkent, Yunusobod</p>
+          <p class="tracking-widest">Toshkent, Chilonzor tumani Olmazor massivi 15/10</p>
         </div>
       </div>
       <div>
