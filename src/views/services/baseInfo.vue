@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import { useServiceCard } from './composable';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n()
 const { serviceCards } = useServiceCard()
 const currentServiceId = ref<number>(parseInt(localStorage.getItem('serviceId') || '1'))
 onMounted(() => {
@@ -22,8 +24,9 @@ onMounted(() => {
       </div>
     </div>
     <div class="container mx-auto px-5 my-11">
-      <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-10"> {{ serviceCards[currentServiceId].title }} xizmatimiz</p>
-      <p class="text-lg font-[montserrat400] pt-5 w-full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quibusdam deserunt quisquam temporibus et inventore cupiditate maiores illum vel magnam? Est unde quam aut, id dolore nihil culpa dicta, ipsum voluptas velit nemo placeat sint provident perspiciatis recusandae libero nam ratione expedita harum quas nulla reiciendis. Reiciendis quas eum aliquid repudiandae beatae. Est odio vitae in architecto perferendis eum animi magnam ducimus enim nam quasi id asperiores, illo voluptatibus maxime atque possimus dolorem aliquid expedita vel tempore commodi. Alias soluta illum cumque placeat distinctio! Accusamus deserunt nihil tempora recusandae provident aperiam perferendis, voluptas minima enim, quae perspiciatis id delectus. Laudantium?</p>
+      <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-10"> {{ serviceCards[currentServiceId].title }} {{ t('services.service') }} </p>
+      <p class="text-lg font-[montserrat400] pt-5 w-full"> <span class="font-bold">{{ serviceCards[currentServiceId].title }}</span> - {{ serviceCards[currentServiceId].info1 }}</p>
+      <p v-if="serviceCards[currentServiceId].info2" class="text-lg font-[montserrat400] pt-5 w-full">{{ serviceCards[currentServiceId].info2 }}</p>
     </div>
   </div>
 </template>

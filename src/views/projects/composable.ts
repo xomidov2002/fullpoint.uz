@@ -1,15 +1,17 @@
 import { type ServiceCard, type Templates } from '@/interfaces'
-import { ref } from 'vue'
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+
 export function usePracticePage() {
   const { t } = useI18n()
-  const serviceCard = ref<ServiceCard[]>([
+  
+  const serviceCard = computed(() => [
     {
       id: 1,
       img: '/main.jpg',
       title: t('ourServices.marketing'),
       subtitle: t('ourServices.marketingTitle'),
-      btn: 'Batafsil',
+      btn: t('table.info'),
       route: "/projects/marketing"
     },
     {
@@ -17,7 +19,7 @@ export function usePracticePage() {
       img: '/main.jpg',
       title: t('ourServices.moliya'),
       subtitle: t('ourServices.moliyaTitle'),
-      btn: 'Batafsil',
+      btn: t('table.info'),
       route: "/projects/moliya"
     },
     {
@@ -25,7 +27,7 @@ export function usePracticePage() {
       img: '/main.jpg',
       title: t('ourServices.buxgalteriya'),
       subtitle: t('ourServices.buxgalteriyaTitle'),
-      btn: 'Batafsil',
+      btn: t('table.info'),
       route: "/projects/buxgalteriya"
     },
     {
@@ -33,7 +35,7 @@ export function usePracticePage() {
       img: '/main.jpg',
       title: t('ourServices.arxitektura'),
       subtitle: t('ourServices.arxitekturaTitle'),
-      btn: 'Batafsil',
+      btn: t('table.info'),
       route: "/projects/arxitektura"
     },
     {
@@ -41,7 +43,7 @@ export function usePracticePage() {
       img: '/main.jpg',
       title: t('ourServices.qurilish'),
       subtitle: t('ourServices.qurilishTitle'),
-      btn: 'Batafsil',
+      btn: t('table.info'),
       route: "/projects/qurilish"
     },
     {
@@ -49,7 +51,7 @@ export function usePracticePage() {
       img: '/main.jpg',
       title: t('ourServices.it'),
       subtitle: t('ourServices.itTitle'),
-      btn: 'Batafsil',
+      btn: t('table.info'),
       route: "/projects/it"
     },
     {
@@ -57,11 +59,13 @@ export function usePracticePage() {
       img: '/main.jpg',
       title: t('ourServices.kamera'),
       subtitle: t('ourServices.kameraTitle'),
-      btn: 'Batafsil',
+      btn: t('table.info'),
       route: "/projects/kamera"
     }
   ])
+
   return {
     serviceCard
   }
 }
+
