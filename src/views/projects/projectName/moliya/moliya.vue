@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseCard from '@/components/BaseServiceCardDesign/index.vue'
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useAnnouncementStore } from '@/views/projects/projectName/store'
@@ -33,7 +34,7 @@ function handleClicked(id: any) {
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ t('projects.aboutUs') }}</p>
     <p class="mb-10 text-xl">{{ t('projects.moliya') }}</p>
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ t('projects.clients') }}</p>
-    <div>
+    <!-- <div>
       <table class="">
         <thead>
           <tr>
@@ -56,6 +57,9 @@ function handleClicked(id: any) {
           </tr>
         </tbody>
       </table>
+    </div> -->
+    <div class="flex justify-center flex-wrap gap-10 mt-24">
+      <BaseCard v-for="(work, index) in moliyaWorks" :key="index" :card-data="work" @click-by-id="handleClicked(work.id)"/>
     </div>
   </div>
 </template>

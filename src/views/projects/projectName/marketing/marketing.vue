@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseCard from '@/components/BaseServiceCardDesign/index.vue'
 import { useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useAnnouncementStore } from '@/views/projects/projectName/store'
@@ -25,14 +26,14 @@ function handleClicked(id: any) {
     <div class="container relative mx-auto px-5 select-none">
       <p
         class="2xl:text-6xl lg:text-4xl  text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl  lg:pl-10 2xl:pl-0">
-        {{t('ourServices.marketing')}}</p>
+        {{ t('ourServices.marketing') }}</p>
     </div>
   </div>
   <div class="container mx-auto px-5 py-11">
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ t('projects.aboutUs') }}</p>
     <p class="mb-10 text-xl">{{ t('projects.marketing') }}</p>
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ t('projects.clients') }}</p>
-    <div>
+    <!-- <div>
       <table class="">
         <thead>
           <tr>
@@ -55,6 +56,9 @@ function handleClicked(id: any) {
           </tr>
         </tbody>
       </table>
+    </div> -->
+    <div class="flex justify-center flex-wrap gap-10 mt-24">
+      <BaseCard v-for="(work, index) in marketingWorks" :key="index" :card-data="work" @click-by-id="handleClicked(work.id)"/>
     </div>
   </div>
 </template>
