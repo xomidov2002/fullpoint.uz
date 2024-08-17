@@ -8,10 +8,9 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="card">
+  <div :class="`bg-[url(${props.CardData.img})]`" class="card bg-cover bg-center">
     <div class="card-details">
-      <p class="text-title">{{ props.CardData.title }}</p>
-      <p class="text-body">{{ props.CardData.subtitle }}</p>
+      <p class="text-title text-center p-2">{{ props.CardData.title }}</p>
     </div>
     <button @click="$emit('byInfoAppeal')" class="card-button">Batafsil</button>
   </div>
@@ -21,12 +20,12 @@ const props = defineProps({
   width: 190px;
   height: 254px;
   border-radius: 20px;
-  background: #f5f5f5;
   position: relative;
   padding: 1.8rem;
   border: 2px solid #c3c6ce;
   transition: 0.5s ease-out;
   overflow: visible;
+  padding: 5px
 }
 
 .card-details {

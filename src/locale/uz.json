@@ -100,6 +100,22 @@
     "accounting" : {
       "info1" : "Biz bilan hamkorlik qilishning afzalliklari: Shubhasiz, bu buxgalteriya xizmatini amalga oshirishdagi ko'p yillik tajriba; Zarur ma'lumotga ega bo'lish, sifatli xizmat va tezkorlik; Soliqqa tortish sohasi bo'yicha himoyalanganlik hamda xodimlarimizning o'z vazifalarini bajarishda yuqori mas'uliyatliligi. Zarur ma'lumotga ega bo'lish, sifatli xizmat va tezkorlik; Soliqqa tortish sohasi bo'yicha himoyalanganlik hamda xodimlarimizning o'z vazifalarini bajarishda yuqori mas'uliyatliligi.",
       "info2" : "«Buxgalteriya xizmati» xizmat turiga nimalar kiradi: Buxgalteriya hujjatlarining yuritilishi, xodimlar bilan ishlash bo'yicha hujjatlarning yuritilishi, soliq va boshqa davlat organlariga tegishli hisobotlarning o'z vaqtida taqdim etilishi; Bankka oid hujjatlarning yuritilishi; Hujjatlarning saqlanishini ta'minlash hamda Sizning ruxsatingizsiz ularning mazmuni oshkor etilmasligi; Soliq inspeksiyalari va boshqa davlat organlari bilan o'zaro munosabatlarda buyurtmachining manfaatlarini himoya qilish."
+    },
+    "architecture" : {
+      "info1" : "Full Point kompaniyasi O'zbekistondagi mijozlar uchun arxitektura dizayn xizmatlarini taklif etadi. Xususiy uy, dacha, jamoat, savdo, ofis yoki sanoat binolarini qurish yoki rekonstruksiya qilish rejasini bizdan buyurtma qilishingiz mumkin. Kompaniyaning arxitektura xizmatlariga saytni chuqur o'rganish, kontseptual yechim va ishchi chizmalarni tayyorlash kiradi. Biz binolarga qo'yiladigan barcha talablarni hisobga olamiz va belgilangan vazifalarga erishish uchun maqbul echimlarni taklif qilamiz.",
+      "info2" : "Arxitektura ishlari portfeli turli xil murakkablikdagi loyihalar namunalarini taqdim etadi. Biz yashash, dam olish yoki mehnat vazifalarini bajarish uchun qanday qulay sharoit yaratishni bilamiz. Ishni boshlashda biz mavjud qonuniy talablar va sizning afzalliklaringizni hisobga olishimizga ishonch hosil qilamiz."
+    },
+    "construction" : {
+      "info1" : "",
+      "info2" : ""
+    },
+    "it" : {
+      "info1" : "Full Point loyihasi O'zbekiston bo'yicha IT-xizmatlar xizmatlarini buyurtma qilish istagidagilar uchun eng maqbul yechimdir. IT-xizmatlar bo’yicha xizmatlar O'zbekiston bo'yichagi arzon narxlar va  yetakchi kompaniyalardan keng tanlov bizning katalogda.",
+      "info2" : "Veb-saytlarni yaratish, yutirish va optimallashtirish, Dasturiy ta'minotni o'rnatish va sozlash"
+    },
+    "camera" : {
+      "info1": "",
+      "info2": ""
     }
   }
 }
