@@ -2,6 +2,7 @@
 import BusinessPage from '@/views/home/business.vue'
 import BaseCards from '@/components/BaseCards/index.vue'
 import ContactPage from '@/views/home/contact.vue'
+import ourProjects from '@/views/home/ourProjects.vue'
 import Advices from './advices.vue'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
@@ -27,6 +28,7 @@ const { t } = useI18n()
     <BusinessPage id="product" />
     <BaseCards id="services" />
     <Advices id="advice" />
+    <ourProjects />
     <ContactPage id="contact" />
   </div>
 </template>

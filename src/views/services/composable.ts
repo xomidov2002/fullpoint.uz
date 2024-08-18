@@ -48,8 +48,7 @@ export function useServiceCard() {
       id: 6,
       title: t('ourServices.kamera'),
       img: '/service',
-      info1: t('services.camera.info1'),
-      info2: t('services.camera.info2')
+      info1: t('services.camera.info1')
     }
   ])
   return{
