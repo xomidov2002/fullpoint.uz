@@ -18,8 +18,7 @@ const props = defineProps({
 
       <div class="face face2">
         <div class="content">
-          <p class="font-[bold] uppercase text-xl tracking-widest">{{ props.cardData.title }}</p>
-          <p class="font-[montserrat500] .subtitle">{{ props.cardData.subtitle }}
+          <p class="font-[bold] text-black uppercase text-xl tracking-widest">{{ props.cardData.title }}
           </p>
         </div>
       </div>

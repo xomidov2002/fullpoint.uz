@@ -11,53 +11,53 @@
   
 
   "mainPage": {
-    "mainTitle" : "biznesingizni biz bilan mustahkamlang",
+    "mainTitle" : "Sizning biznesingiz uchun keng qamrovli konsalting echimlari",
     "mainSubtitle" : "Bajarilgan ishlarning yuqori sifati uchun mas'ul bo'lgan yuqori malakali mutaxassislarga ega tez rivojlanayotgan kompaniya! Biz bilan ishonchli!",
+    "mainButton" : "Batafsil",
     "businessTitle" : "Biz eng yaxshi biznes xizmatini taqdim etamiz",
     "businessSubtitle" : "Biz rasman, shartnoma asosida ishlaymiz, shuningdek, qonun doirasida to'liq javob beramiz, bu sizga kafolat va xotirjamlik beradi!",
     "businessMain" : "Bizning sohada eng ishonchli",
     "businessText" : "Biz har bir mijozga alohida yondashamiz, kelajakda buxgalteriya hisobi haqida o'ylamasligingiz uchun barcha masalalarni eng kichik detallarigacha o'rganamiz!",
     "businessser1" : "agar bosh buxgalter g'oyib bo'lgan bo'lsa va nima qilishni bilmasangiz;",
     "businessser2" : "agar buxgalteriya hisobi bir yil davomida o'tkazilmagan bo'lsa va hamma narsani zudlik bilan tiklash kerak bo'lsa.",
-    "practiceTitle" : "Amaliy maslahatlar",
-    "practiceSubtitle" : "Biz kichik va o'rta biznes uchun buxgalteriya hisobini yuritamiz, buxgalteriya hisobini tiklaymiz, soliq va moliyaviy hisobotlarni tayyorlaymiz va taqdim etamiz.",
-    "serviceTitle" : "bizning xizmatlarimiz",
+    "practiceTitle" : "Qanday muammolarga duch kelyapsiz?",
+    "practiceSubtitle" : "Muammoingizni aniqlang va moslashtirilgan yechimni oling",
+    "serviceTitle" : "Biz nimani taklif qilamiz?",
     "contact" : "Biz bilan bog'laning",
     "contactMail" : "Kompaniya yoki sizning elektron pochtangiz",
     "contactName" : "FISH",
     "contactNumber" : "Telefon raqamingiz",
     "contactText" : "Qanday yordam bera olamiz ?",
-    "Submit" : "Yuborish"
+    "Submit" : "Yuborish",
+    "ourPro" : "Bizning mijozlarimiz nima deyishadi?",
+    "partners" : "Bizning hamkorlarimiz"
   },
   
 
   "ourServices" : {
     "marketing" : "Marketing",
-    "marketingTitle" : "Investitsiyalar va moliyalashtirishni jalb qilish, savdoni moliyalashtirish xizmatlari, eksport-import  operatsiyalari, Tenderlarni qo'llab quvvatlash va xorijiy kompaniyalar manfaatlarini ifodalash",
-    "moliya" : "Moliya",
-    "moliyaTitle" : "Moliyaviy modellashtirish, kompaniyaning moliyaviy holati tahlili xizmatlari bor",
-    "buxgalteriya" : "Buxgalteriya",
-    "buxgalteriyaTitle" : "Buxgalteriya hisobini yo'lga qo'yish, buxgalteriya hisobini tiklash, hisobotlarni topshirish",
-    "arxitektura" : "Arxitektura",
-    "arxitekturaTitle" : "Arxitektura-dizayn xizmatlari, me'moriy loyihalash, landshaft dizayni xizmatlari, fasadni bezatish, loyiha-smeta hujjatlarini tayyorlash va ishlab chiqish",
-    "qurilish" : "Qurilish",
-    "qurilishTitle" : "Ta'mirlash-qurilish xizmatlari, sanoat obyektlarini qurish, loyiha-qurilish xizmatlari, ko'chmas mulkni obodonlashtirish, boshqa qurilish xizmatlari",
-    "it" : "IT",
-    "itTitle" : "Vebsayt yaratish, Internet magazin, reklama sayti, (Frontend, Backend, Dizayn)",
-    "kamera" : "Kamera o'rnatish",
-    "kameraTitle" : "Bino, uy va boshqa joylarga sifatli kuzatuv kameralar o'rnatish xizmati"
+    "marketingTitle" : "Daromadingizni oshiradigan samarali strategiyalar.",
+    "moliya" : "Moliyaviy hisob va tahlil",
+    "moliyaTitle" : "Qaror qabul qilish uchun shaffof va aniq moliyaviy hisobotlar.",
+    "buxgalteriya" : "Buxgalteriya hisobi",
+    "buxgalteriyaTitle" : "Xatosiz va o'z vaqtida hisobot berish.",
+    "arxitektura" : "Texnik-iqtisodiy asosni yozish",
+    "arxitekturaTitle" : "Loyihalarning iqtisodiy maqsadga muvofiqligini ekspert baholash.",
+    "qurilish" : "Savdo bo'limini qurish",
+    "qurilishTitle" : "Haqiqatan ham sotadigan tizim.",
+    "it" : "Veb-sayt va ilovalarni ishlab chiqish",
+    "itTitle" : "Mijozlarni jalb qiladigan raqamli echimlar.",
+    "kamera" : "Biznesni tizimlashtirish va avtomatlashtirish",
+    "kameraTitle" : "Samaradorlikni oshirish uchun vositalar."
   },
 
 
   "advices" : {
-    "first" : "Ishonchli xizmlatlardan biri",
-    "firstTitle" : "Hujjatlaringizni, soliqlaringizni va pul oqimlarini tartibga solishga yordam beramiz.",
-    "second" : "Eng tez tashkil etish",
-    "secondTitle" : "FullPointConsult-Ozbekistondagi buxgalterlar va boshqa xizmat ko'rsatuvchi prefessional jamoa",
-    "third" : "Harakat qilishning eng tez yo'li",
-    "thirdTitle" : "Hisobotlarni soliq idorasiga o'z vaqtida jo'natib, biz foydali soliqni optimallashtirish tizimini taklif qilamiz.",
-    "fourth" : "Birgalikda yaxshi ishlaymiz",
-    "fourthTitle" : "Biz sizning biznesingiz uchun foydali va ishonchli foydalanishni taklif qilamiz"
+    "first" : "Sizning marketingingiz siz kutgan natijalarni bermayaptimi?",
+    "second" : "Moliyaviy buxgalteriya hisobi murakkab va foyda aniq emasmi?",
+    "third" : "Biznes jarayonlarini tizimlashtirish va avtomatlashtirish bilan bog'liq qiyinchiliklar?",
+    "fourth" : "Savdo bo'limi o'z maqsadlariga erishmayaptimi?",
+    "fifth" : "Samarali veb-sayt yoki mobil ilovangiz yo'qmi?"
   },
 
   "table" : {

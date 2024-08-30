@@ -35,23 +35,41 @@ const practiceCards = computed(() => {
 </script>
 <template>
   <div class="container mx-auto px-5 pt-14">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.practiceTitle') }}</p>
-    <p class="text-lg font-[montserrat400] pt-5 w-full md:w-1/2">{{ t('mainPage.practiceSubtitle') }}</p>
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.partners') }}</p>
     <swiper :slidesPerView="4" :spaceBetween="30" :pagination="{
       clickable: true,
     }" :modules="modules" class="mySwiper" :autoplay="{
       delay: 2000,
       disableOnInteraction: false,
     }">
-      <swiper-slide v-for="(card, index) in practiceCards" :key="index">
-        <BaseCard :card-data="card" />
-      </swiper-slide>
+      <swiper-slide>1</swiper-slide>
+      <swiper-slide>1</swiper-slide>
+      <swiper-slide>1</swiper-slide>
+      <swiper-slide>1</swiper-slide>
+      <swiper-slide>1</swiper-slide>
+      <swiper-slide>1</swiper-slide>
     </swiper>
-    <!-- <div class="flex flex-wrap lg:flex-nowrap gap-5 justify-center lg:justify-between pt-11">
-      <div v-for="(card, index) in practiceCards" :key="index">
-        <BaseCard :card-data="card" />
-      </div>
-    </div> -->
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+.swiper-slide {
+  @apply h-[200px] bg-[#252525] shadow-xl overflow-hidden p-2 border-l-4 border-l-[#FFA726]
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 40px 20px 40px 20px;
+}
+
+.swiper-slide {
+  @apply bg-[#f5f8f3]
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
