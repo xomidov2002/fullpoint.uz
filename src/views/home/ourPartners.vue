@@ -8,27 +8,28 @@ import { computed } from 'vue';
 import BaseCard from '@/components/BaseCard/BaseCard.vue';
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
-const practiceCards = computed(() => {
+const partners = computed(() => {
   return [
     {
-      title: t('advices.first'),
-      img: '/advices/1.jpg'
+      img: '/partners/1.jfif'
     },
     {
-      title: t('advices.second'),
-      img: '/advices/2.jpg'
+      img: '/partners/2.jfif'
     },
     {
-      title: t('advices.third'),
-      img: '/advices/3.jpg'
+      img: '/partners/3.jpg'
     },
     {
-      title: t('advices.fourth'),
-      img: '/advices/4.jpg'
+      img: '/partners/4.png'
     },
     {
-      title: t('advices.fifth'),
-      img: '/advices/4.jpg'
+      img: '/partners/5.svg'
+    },
+    {
+      img: '/partners/6.jfif'
+    },
+    {
+      img: '/partners/7.png'
     }
   ]
 })
@@ -42,18 +43,15 @@ const practiceCards = computed(() => {
       delay: 2000,
       disableOnInteraction: false,
     }">
-      <swiper-slide>1</swiper-slide>
-      <swiper-slide>1</swiper-slide>
-      <swiper-slide>1</swiper-slide>
-      <swiper-slide>1</swiper-slide>
-      <swiper-slide>1</swiper-slide>
-      <swiper-slide>1</swiper-slide>
+      <swiper-slide v-for="img in partners">
+        <img :src="img.img" alt="" class="object-cover object-center">
+      </swiper-slide>
     </swiper>
   </div>
 </template>
 <style scoped>
 .swiper-slide {
-  @apply h-[200px] bg-[#252525] shadow-xl overflow-hidden p-2 border-l-4 border-l-[#FFA726]
+  @apply h-[150px] bg-[#252525] shadow-xl overflow-hidden border-l-4 border-l-[#FFA726]
 }
 
 .swiper {
