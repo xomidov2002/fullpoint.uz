@@ -1,6 +1,60 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+import BaseUserCard from '@/components/BaseUserCard/index.vue'
 import { useI18n } from 'vue-i18n'
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import { FreeMode, Pagination } from 'swiper/modules';
+const modules = [FreeMode, Pagination]
 const { t } = useI18n()
+const partners = computed(() => {
+  return [
+    {
+      name: "Shamsiddinov Jo'rabek",
+      rank: 'direktor',
+      description: 'ddddddd'
+    },
+    {
+      name: "Xabibullayev Alisher",
+      rank: 'Menejer',
+      description: 'ddddddd'
+    },
+    {
+      name: "Кочуланов Александр Сергеевич",
+      rank: 'Mutaxassis',
+      description: 'ddddddd'
+    },
+    {
+      name: "Ismoilov Samar",
+      rank: 'Mutaxassis',
+      description: 'ddddddd'
+    },
+    {
+      name: "Mirzamaxmudov Jasur",
+      rank: 'Mutaxassis',
+      description: 'ddddddd'
+    },
+    {
+      name: "Xamidov Azizbek",
+      rank: 'Mutaxassis',
+      description: 'ddddddd'
+    },
+    {
+      name: "Xamidov Nurbek",
+      rank: 'Mutaxassis',
+      description: 'ddddddd'
+    },
+    {
+      name: "Xomidov Husniddin",
+      rank: 'Mutaxassis',
+      description: 'ddddddd'
+    }
+  ]
+})
+
+
 
 </script>
 <template>
@@ -30,6 +84,28 @@ const { t } = useI18n()
         </div>
       </div>
     </div>
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600  mt-10">Bizning jamoa</p>
+    <div class="mt-5">
+    <div class="flex gap-5 scrollbarActive overflow-scroll p-16" >
+      <BaseUserCard v-for="(person, index) in partners" :key="index" :cardData="person"/>
+    </div>
+    </div>
   </div>
 </template>
-<style scoped></style>
+<style scoped>
+.scrollbarActive::-webkit-scrollbar {
+    @apply ease-in duration-300;
+    width: 0;
+    height: 2px;
+    /* display: none; */
+    opacity: 0;
+}
+
+.scrollbarActive::-webkit-scrollbar-track {
+    @apply bg-inherit opacity-0;
+}
+
+.scrollbarActive::-webkit-scrollbar-thumb {
+    @apply dark:bg-[#252525] bg-slate-400 hover:bg-slate-500 hover:dark:bg-slate-600 opacity-0 ease-in duration-300 transition rounded-md cursor-pointer;
+}
+</style>
