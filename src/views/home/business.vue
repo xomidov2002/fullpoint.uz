@@ -1,59 +1,88 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import BaseUserCard from '@/components/BaseUserCard/index.vue'
+import BaseModal from '@/components/BaseModalCard/index.vue'
 import { useI18n } from 'vue-i18n'
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
-import { FreeMode, Pagination } from 'swiper/modules';
-const modules = [FreeMode, Pagination]
+import { Pagination } from 'swiper/modules';
+const modules = [Pagination]
 const { t } = useI18n()
 const partners = computed(() => {
   return [
     {
+      id: 1,
       name: "Shamsiddinov Jo'rabek",
       rank: 'direktor',
       description: 'ddddddd'
     },
     {
+      id: 2,
       name: "Xabibullayev Alisher",
       rank: 'Menejer',
       description: 'ddddddd'
     },
     {
+      id: 3,
       name: "Кочуланов Александр Сергеевич",
       rank: 'Mutaxassis',
       description: 'ddddddd'
     },
     {
+      id: 4,
       name: "Ismoilov Samar",
       rank: 'Mutaxassis',
       description: 'ddddddd'
     },
     {
+      id: 5,
       name: "Mirzamaxmudov Jasur",
       rank: 'Mutaxassis',
       description: 'ddddddd'
     },
     {
+      id: 6,
       name: "Xamidov Azizbek",
       rank: 'Mutaxassis',
       description: 'ddddddd'
     },
     {
+      id: 7,
       name: "Xamidov Nurbek",
       rank: 'Mutaxassis',
       description: 'ddddddd'
     },
     {
+      id: 8,
       name: "Xomidov Husniddin",
       rank: 'Mutaxassis',
       description: 'ddddddd'
     }
   ]
 })
+const openStudentsModal = ref<boolean>(false)
+  function clickModal (val:string){
+      if(val == 'close') {
+        openStudentsModal.value = false
+        console.log('closed')
+      }
+  }
+const currentStudent = ref<any>({})
+function getEachStudentInfo(id: number) {
+  for (let i = 0; i < partners.value.length; i++) {
+    if (partners.value[i].id === id) {
+      currentStudent.value = partners.value[i]
 
+      toggleVariable()
+      console.log(partners.value[i])
+      break
+    }
+  }
+}
+function toggleVariable() {
+  openStudentsModal.value = !openStudentsModal.value  
+}
 
 
 </script>
@@ -85,27 +114,40 @@ const partners = computed(() => {
       </div>
     </div>
     <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600  mt-10">Bizning jamoa</p>
-    <div class="mt-5">
-    <div class="flex gap-5 scrollbarActive overflow-scroll p-16" >
-      <BaseUserCard v-for="(person, index) in partners" :key="index" :cardData="person"/>
-    </div>
+    <div class="mt-5 w-full">
+      <swiper :slidesPerView="1" :spaceBetween="10" :pagination="{
+        clickable: true,
+      }" :breakpoints="{
+      '640': {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      '768': {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      '1024': {
+        slidesPerView: 5,
+        spaceBetween: 50,
+      },
+    }" :modules="modules" class="mySwiper">
+        <swiper-slide v-for="(person, index) in partners" :key="index">
+            <BaseUserCard :cardData="person" />
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
+  <BaseModal
+        class="z-50"
+        :isOpen="openStudentsModal"
+        :info="currentStudent"
+        @handleClicked="toggleVariable"
+      />
 </template>
 <style scoped>
-.scrollbarActive::-webkit-scrollbar {
-    @apply ease-in duration-300;
-    width: 0;
-    height: 2px;
-    /* display: none; */
-    opacity: 0;
-}
-
-.scrollbarActive::-webkit-scrollbar-track {
-    @apply bg-inherit opacity-0;
-}
-
-.scrollbarActive::-webkit-scrollbar-thumb {
-    @apply dark:bg-[#252525] bg-slate-400 hover:bg-slate-500 hover:dark:bg-slate-600 opacity-0 ease-in duration-300 transition rounded-md cursor-pointer;
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
 }
 </style>

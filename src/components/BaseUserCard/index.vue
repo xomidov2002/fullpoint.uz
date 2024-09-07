@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const emit = defineEmits(['byInfo'])
 const props = defineProps({
   cardData: {
     type: Object,
@@ -16,14 +17,14 @@ const props = defineProps({
     <div class="blob"></div>
     <div class="z-10 w-full flex flex-col items-center">
       <div class="w-[100px] h-[100px] rounded-full bg-slate-700 overflow-hidden">
-        <img :src="$props.cardData.img" class="w-full h-full object-cover" alt="person">
+        <img :src="$props.cardData.img" class="w-full h-full object-cover">
       </div>
       <div>
         <p class="text-center pt-5 text-[#252B42] font-semibold uppercase">{{ props.cardData.rank }}</p>
-        <p>{{ $props.cardData.name }}</p>
+        <p class="text-black text-center text-base">{{ $props.cardData.name }}</p>
       </div>
       <div class="w-full text-center mt-5">
-        <button class="px-5 py-2 bg-slate-600 rounded-3xl text-white">
+        <button class="px-5 py-2 bg-slate-600 rounded-3xl text-white" @click="$emit('byInfo')">
           batafsil
         </button>
       </div>
@@ -32,11 +33,10 @@ const props = defineProps({
 
 </template>
 <style scoped>
-/* From Uiverse.io by dylanharriscameron */
 .card {
   position: relative;
   width: 200px;
-  height: 250px;
+  height: 320px;
   border-radius: 14px;
   z-index: 3;
   overflow: hidden;
@@ -54,7 +54,7 @@ const props = defineProps({
   top: 5px;
   left: 5px;
   width: 190px;
-  height: 240px;
+  height: 320px;
   z-index: 2;
   background: rgba(255, 255, 255, .95);
   backdrop-filter: blur(24px);
