@@ -21,19 +21,27 @@ const partners = computed(() => {
       id: 2,
       name: "Xabibullayev Alisher",
       rank: 'Menejer',
-      description: 'Xabibullayev'
+      education: 'высшее, бакалавр («Башкирский государственный университет» в г.Уфа ',
+      experience: " 6 yil",
+      project: "«Belissimo», Сеть ресторанов «Farfor» (Россия), АО «O’ZOG’IRSANOATLOYIHA», ООО «Perfect Textile Company» "
+
     },
     {
       id: 3,
       name: "Кочуланов Александр Сергеевич",
       rank: 'Mutaxassis',
-      description: 'Кочуланов'
+      education: 'высшее, бакалавр («Санкт-Петербургский Государственный аграрный университет») ',
+      experience: "4 года ",
+      project: "Сеть ресторанов «Farfor» (Россия) - Фин. модели свыше 10 новых филиалов и Маркетинговое исследование в сфере общепита "
+
     },
     {
       id: 4,
       name: "Ismoilov Samar",
       rank: 'Mutaxassis',
-      description: 'Ismoilov'
+      education: 'высшее, бакалавр («Туринский университет в Ташкенте») ',
+      experience: "5 лет ",
+      certificate: "«POLITECNICO DI TORINO» (Италия) - Mashinasozlik",
     },
     {
       id: 5,
@@ -45,7 +53,10 @@ const partners = computed(() => {
       id: 6,
       name: "Xamidov Azizbek",
       rank: 'Mutaxassis',
-      description: 'Xamidov'
+      education: 'высшее, бакалавр («Туринский университет в Ташкенте») ',
+      experience: "8 лет",
+      certificate: "«POLITECNICO DI TORINO» (Италия) - Mashinasozlik",
+      project: "ООО «Maxsus Metall Sanoat»"
     },
     {
       id: 7,
@@ -57,7 +68,10 @@ const partners = computed(() => {
       id: 8,
       name: "Xomidov Husniddin",
       rank: 'Mutaxassis',
-      description: 'Xomidov'
+      education: 'высшее, бакалавр («Ташкентский государственный транспортный университет») ',
+      experience: "1 лет",
+      certificate: "ITLABS programming acedemy «front-end development»",
+      project: "sunhightech.uz, fpc.uz"
     }
   ]
 })
