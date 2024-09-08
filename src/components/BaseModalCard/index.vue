@@ -26,11 +26,11 @@ function tedt(val: string) {
   >
     <div class="w-1/3 h-auto bg-white rounded-3xl relative p-5">
       <div @click="tedt('close')" class="absolute right-5 top-5">
-        <BaseIcons name="closeGold" class="z-50" />
+        <BaseIcons name="close" class="z-50" />
       </div>
-      <p class="title">dsfdsfsfsdfdsf</p>
+      <p class="title">{{ props.info.name }}</p>
       <div class="scrollbarActive pt-3 h-[30vh] overflow-scroll">
-        <p class="subtitle">sdsdfdsfsdfsdfdsf</p>
+        <p class="subtitle">{{ props.info.description }}</p>
       </div>
     </div>
   </div>

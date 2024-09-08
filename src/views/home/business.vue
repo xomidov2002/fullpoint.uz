@@ -15,49 +15,49 @@ const partners = computed(() => {
       id: 1,
       name: "Shamsiddinov Jo'rabek",
       rank: 'direktor',
-      description: 'ddddddd'
+      description: 'Shamsiddinov'
     },
     {
       id: 2,
       name: "Xabibullayev Alisher",
       rank: 'Menejer',
-      description: 'ddddddd'
+      description: 'Xabibullayev'
     },
     {
       id: 3,
       name: "Кочуланов Александр Сергеевич",
       rank: 'Mutaxassis',
-      description: 'ddddddd'
+      description: 'Кочуланов'
     },
     {
       id: 4,
       name: "Ismoilov Samar",
       rank: 'Mutaxassis',
-      description: 'ddddddd'
+      description: 'Ismoilov'
     },
     {
       id: 5,
       name: "Mirzamaxmudov Jasur",
       rank: 'Mutaxassis',
-      description: 'ddddddd'
+      description: 'Mirzamaxmudov'
     },
     {
       id: 6,
       name: "Xamidov Azizbek",
       rank: 'Mutaxassis',
-      description: 'ddddddd'
+      description: 'Xamidov'
     },
     {
       id: 7,
       name: "Xamidov Nurbek",
       rank: 'Mutaxassis',
-      description: 'ddddddd'
+      description: 'Nurbek'
     },
     {
       id: 8,
       name: "Xomidov Husniddin",
       rank: 'Mutaxassis',
-      description: 'ddddddd'
+      description: 'Xomidov'
     }
   ]
 })
@@ -132,7 +132,7 @@ function toggleVariable() {
       },
     }" :modules="modules" class="mySwiper">
         <swiper-slide v-for="(person, index) in partners" :key="index">
-            <BaseUserCard :cardData="person" />
+            <BaseUserCard :cardData="person"  @byInfo="getEachStudentInfo(person.id)" />
         </swiper-slide>
       </swiper>
     </div>
