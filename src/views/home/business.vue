@@ -14,23 +14,23 @@ const partners = computed(() => {
     {
       id: 1,
       name: "Shamsiddinov Jo'rabek",
-      rank: 'direktor',
+      rank: t('team.director'),
       description: 'Shamsiddinov'
     },
     {
       id: 2,
       name: "Xabibullayev Alisher",
-      rank: 'Menejer',
-      education: 'высшее, бакалавр («Башкирский государственный университет» в г.Уфа ',
-      experience: " 6 yil",
+      rank: t('team.menejer'),
+      education: t('team.alisherUniver'),
+      experience: " 6 лет",
       project: "«Belissimo», Сеть ресторанов «Farfor» (Россия), АО «O’ZOG’IRSANOATLOYIHA», ООО «Perfect Textile Company» "
 
     },
     {
       id: 3,
       name: "Кочуланов Александр Сергеевич",
-      rank: 'Mutaxassis',
-      education: 'высшее, бакалавр («Санкт-Петербургский Государственный аграрный университет») ',
+      rank: t('team.specialist'),
+      education: t('team.aleksandrUniver'),
       experience: "4 года ",
       project: "Сеть ресторанов «Farfor» (Россия) - Фин. модели свыше 10 новых филиалов и Маркетинговое исследование в сфере общепита "
 
@@ -38,22 +38,22 @@ const partners = computed(() => {
     {
       id: 4,
       name: "Ismoilov Samar",
-      rank: 'Mutaxassis',
-      education: 'высшее, бакалавр («Туринский университет в Ташкенте») ',
+      rank: t('team.specialist'),
+      education: t('team.samarUniver'),
       experience: "5 лет ",
       certificate: "«POLITECNICO DI TORINO» (Италия) - Mashinasozlik",
     },
     {
       id: 5,
       name: "Mirzamaxmudov Jasur",
-      rank: 'Mutaxassis',
+      rank: t('team.specialist'),
       description: 'Mirzamaxmudov'
     },
     {
       id: 6,
       name: "Xamidov Azizbek",
-      rank: 'Mutaxassis',
-      education: 'высшее, бакалавр («Туринский университет в Ташкенте») ',
+      rank: t('team.specialist'),
+      education: t('team.azizbekUniver'),
       experience: "8 лет",
       certificate: "«POLITECNICO DI TORINO» (Италия) - Mashinasozlik",
       project: "ООО «Maxsus Metall Sanoat»"
@@ -61,14 +61,14 @@ const partners = computed(() => {
     {
       id: 7,
       name: "Xamidov Nurbek",
-      rank: 'Mutaxassis',
+      rank: t('team.specialist'),
       description: 'Nurbek'
     },
     {
       id: 8,
       name: "Xomidov Husniddin",
-      rank: 'Mutaxassis',
-      education: 'высшее, бакалавр («Ташкентский государственный транспортный университет») ',
+      rank: t('team.specialist'),
+      education: t('team.husniddinUniver'),
       experience: "1 лет",
       certificate: "ITLABS programming acedemy «front-end development»",
       project: "sunhightech.uz, fpc.uz"
@@ -127,7 +127,7 @@ function toggleVariable() {
         </div>
       </div>
     </div>
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600  mt-10">Bizning jamoa</p>
+    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600  mt-10">{{ t("team.ourTeam") }}</p>
     <div class="mt-5 w-full">
       <swiper :slidesPerView="1" :spaceBetween="10" :pagination="{
         clickable: true,

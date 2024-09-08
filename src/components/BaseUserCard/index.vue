@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 const emit = defineEmits(['byInfo'])
 const props = defineProps({
   cardData: {
@@ -24,8 +26,8 @@ const props = defineProps({
         <p class="text-black text-center text-base">{{ $props.cardData.name }}</p>
       </div>
       <div class="w-full text-center mt-5">
-        <button class="px-5 py-2 bg-slate-600 rounded-3xl text-white" @click="$emit('byInfo')">
-          batafsil
+        <button class="px-5 py-2 bg-slate-600 text-base rounded-3xl text-white" @click="$emit('byInfo')">
+          {{ t('mainPage.mainButton') }}
         </button>
       </div>
     </div>

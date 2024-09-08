@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import BaseIcons from '@/components/Icons/index.vue'
 import { toRefs, type PropType } from 'vue'
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
 const props = defineProps({
   info: {
     type: Object,
@@ -36,28 +38,28 @@ function tedt(val: string) {
         <div>
           <div class="flex gap-2 items-center">
             <BaseIcons name="edu" class="w-5"/>
-            <p class="font-semibold">Образование</p>
+            <p class="font-semibold">{{ t('team.education') }}</p>
           </div>
           <p>{{ props.info.education }}</p>
         </div>
         <div>
           <div class="flex gap-2 items-center">
             <BaseIcons name="exp" class="w-5"/>
-            <p class="font-semibold">Стаж работы </p>
+            <p class="font-semibold">{{ t('team.experience') }}</p>
           </div>
           <p>{{ props.info.experience }}</p>
         </div>
         <div v-if="props.info.project">
           <div class="flex gap-2 items-center">
             <BaseIcons name="pro" class="w-5"/>
-            <p class="font-semibold">Проекты </p>
+            <p class="font-semibold">{{ t('team.project') }} </p>
           </div>
           <p>{{ props.info.project }}</p>
         </div>
         <div v-if="props.info.certificate">
           <div class="flex gap-2 items-center">
             <BaseIcons name="cert" class="w-5"/>
-            <p class="font-semibold">сертификаты</p>
+            <p class="font-semibold">{{ t('team.certificate') }}</p>
           </div>
           <p>{{ props.info.certificate }}</p>
         </div>

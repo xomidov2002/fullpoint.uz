@@ -32,6 +32,25 @@
     "ourPro" : "Bizning mijozlarimiz nima deyishadi?",
     "partners" : "Bizning hamkorlarimiz"
   },
+
+  "team" : {
+    "ourTeam" : "Bizning jamoa",
+    "director" : "direktor",
+    "menejer" : "menejer",
+    "specialist" : "mutaxassis",
+    "education" : "Ta'lim",
+    "experience" : "Ish tajribasi",
+    "project" : "loyihalar",
+    "certificate" : "sertifikatlar",
+    "alisherUniver" : "oliy ma'lumot, bakalavr darajasi (Ufadagi Boshqird davlat universiteti",
+    "aleksandrUniver" : "oliy ma'lumot, bakalavriat (Sankt-Peterburg davlat agrar universiteti)",
+    "samarUniver" : "oliy ma'lumot, bakalavriat (Toshkentdagi Turin universiteti)",
+    "azizbekUniver" : "oliy ma'lumot, bakalavriat (Toshkentdagi Turin universiteti)",
+    "husniddinUniver" : "oliy ma’lumot, bakalavriat (Toshkent davlat transport universiteti)"
+  },
+  "mainProject" : {
+    "subtitle" : "Ushbu xat shu kunga qadar “FULL POINT CONSULT” MChJ tashkiloti bilan quyidagi loyihalar bo‘yicha 4 ta shartnoma tuzilganligi bo‘yicha berilgan: “Markaziy korxona bazasida kon-metallurgiya mashinalari va kunalarini ishlab chiqarish va ta’mirlashni tashkil etish. “Olmaliq” AJ mexanik ta’mirlash zavodi “Yangi energiya manbalaridan foydalangan holda avtomobillar ishlab chiqarishni tashkil etish”; “Toshkent viloyati Chirchiq shahrida qishloq xo‘jaligi mashinasozligi klasterini tashkil etish”;  Andijon viloyati Asaka shahridagi “Uzauto Motors” AJ xududida “Yangi shtamplash va payvandlash inshootlarini tashkil etish” texnik-iqtisodiy asoslashning marketing, moliyaviy-iqtisodiy qismi uchun. Ushbu tashkilot yuqoridagi loyihalar ustida professional yondashuv bilan ishlagan, yetarlicha malakali mutaxassislarga ega va biz bilan yaqin hamkorlikda barcha mulohazalar va takliflarni tezkorlik bilan o‘rganib chiqdi va bartaraf etdi. O‘zbekiston Respublikasi Iqtisodiyot va qashshoqlikni qisqartirish vazirligi huzuridagi “Loyihalar va import kontraktlarini kompleks ekspertizadan o‘tkazish markazi” DUKda kompleks ekspertiza o‘tkazishda faol yordam ko‘rsatildi."
+  },
   
 
   "ourServices" : {
