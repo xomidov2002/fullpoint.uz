@@ -18,7 +18,7 @@ const props = defineProps({
   font-family: inherit;
   color: white;
   font-weight: 600;
-  width: 40%;
+  width: 50%;
   background: #080D75;
   border: 1px solid #414141;
   padding: 12px 16px;

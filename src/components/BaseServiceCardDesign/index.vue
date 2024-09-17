@@ -12,18 +12,18 @@ const props = defineProps<{
 }>();
 </script>
 <template>
-  <div class="relative flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+  <div class="relative flex w-80 flex-col rounded-xl bg-[#252525] bg-clip-border text-gray-700 shadow-md">
     <div
       class="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40 bg-gradient-to-r from-blue-500 to-blue-600">
       <img class="w-full h-full object-cover" :src="props.cardData.images[0]" alt="">
     </div>
     <div class="p-6">
       <h5
-        class="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+        class="mb-2 block font-sans text-xl font-semibold text-white leading-snug tracking-normal text-blue-gray-900 antialiased">
         {{ props.cardData.name }}
       </h5>
       <p
-        class="scrollbarActive overflow-scroll h-[100px] block font-sans text-base font-light leading-relaxed text-inherit antialiased">
+        class="scrollbarActive overflow-scroll text-white h-[100px] block font-sans text-base font-light leading-relaxed text-inherit antialiased">
         {{ props.cardData.work }}
       </p>
     </div>
@@ -34,7 +34,7 @@ const props = defineProps<{
         class="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
         {{ t('table.info') }}
       </button>
-      <p class="text-base text-black/50">{{ props.cardData.date }}</p>
+      <p class="text-base text-[#797a7c]">{{ props.cardData.date }}</p>
     </div>
   </div>
 </template>
