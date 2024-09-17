@@ -36,7 +36,7 @@ const navLinks = computed(() => {
   <div class="bg-[#252525] p-5 flex justify-center w-full ">
     <div>
       <div class=" flex justify-center flex-col items-center">
-        <img src="@/assets/logo-1.png" class="w-20" alt="">
+        <img src="/logo-1.png" class="w-28" alt="">
         <p class="flex flex-col items-center font-[semibold] text-white tracking-widest">
           <span>Full Point Consult</span>
           <span>est. 2022</span>

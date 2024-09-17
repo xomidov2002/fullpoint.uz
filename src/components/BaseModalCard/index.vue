@@ -26,42 +26,42 @@ function tedt(val: string) {
     v-if="props.isOpen"
     class="z-0 fixed top-0 left-0 px-5 w-full h-full overflow-hidden backdrop-blur-[12.5px] bg-black/30 flex justify-center items-center"
   >
-    <div class="w-1/2 h-auto bg-white rounded-3xl relative p-5">
-      <div @click="tedt('close')" class="absolute right-5 top-5 p-2 rounded-md bg-[#f5f8f3]">
+    <div class="w-1/2 h-auto bg-[#252525] rounded-3xl relative p-5">
+      <div @click="tedt('close')" class="absolute right-5 top-5 p-2 rounded-md bg-[#252525]">
         <BaseIcons name="close" class="z-50" />
       </div>
       <div class="flex gap-6 items-center">
-        <img :src="props.info.img" class="rounded-full w-[100px] h-[100px] bg-slate-600">
+        <img src="/main.png" class="rounded-full w-[100px] h-[100px] bg-slate-600">
         <p class="title">{{ props.info.name }}</p>
       </div>
-      <div class="scrollbarActive pl-5 pt-5 h-[30vh] overflow-scroll">
+      <div class="scrollbarActive flex flex-col gap-2 pl-5 pt-5 h-[30vh] overflow-scroll">
         <div>
           <div class="flex gap-2 items-center">
-            <BaseIcons name="edu" class="w-5"/>
-            <p class="font-semibold">{{ t('team.education') }}</p>
+            <BaseIcons name="education" class="w-5 text-[#080D75]"/>
+            <p class="text-white font-semibold">{{ t('team.education') }}</p>
           </div>
-          <p>{{ props.info.education }}</p>
+          <p class="text-white pl-6">{{ props.info.education }}</p>
         </div>
         <div>
           <div class="flex gap-2 items-center">
-            <BaseIcons name="exp" class="w-5"/>
-            <p class="font-semibold">{{ t('team.experience') }}</p>
+            <BaseIcons name="experience" class="w-5 text-[#080D75]"/>
+            <p class="text-white font-semibold">{{ t('team.experience') }}</p>
           </div>
-          <p>{{ props.info.experience }}</p>
+          <p class="text-white pl-6">{{ props.info.experience }}</p>
         </div>
         <div v-if="props.info.project">
           <div class="flex gap-2 items-center">
-            <BaseIcons name="pro" class="w-5"/>
-            <p class="font-semibold">{{ t('team.project') }} </p>
+            <BaseIcons name="pro" class="w-5 text-[#080D75]"/>
+            <p class="text-white font-semibold">{{ t('team.project') }} </p>
           </div>
-          <p>{{ props.info.project }}</p>
+          <p class="text-white pl-6">{{ props.info.project }}</p>
         </div>
         <div v-if="props.info.certificate">
           <div class="flex gap-2 items-center">
-            <BaseIcons name="cert" class="w-5"/>
-            <p class="font-semibold">{{ t('team.certificate') }}</p>
+            <BaseIcons name="cert" class="w-5 text-[#080D75]"/>
+            <p class="text-white font-semibold">{{ t('team.certificate') }}</p>
           </div>
-          <p>{{ props.info.certificate }}</p>
+          <p class="text-white pl-6">{{ props.info.certificate }}</p>
         </div>
       </div>
     </div>
@@ -69,10 +69,10 @@ function tedt(val: string) {
 </template>
 <style scoped>
 .title {
-  @apply text-zinc-950 text-lg font-semibold uppercase leading-relaxed tracking-wide;
+  @apply text-white text-lg font-semibold uppercase leading-relaxed tracking-wide;
 }
 .subtitle{
-  @apply text-neutral-500 text-xs font-normal font-['Inter'] leading-[18.89px] tracking-wide
+  @apply text-white text-xs font-normal font-['Inter'] leading-[18.89px] tracking-wide
 }
 .scrollbarActive::-webkit-scrollbar {
     @apply ease-in duration-300 ;

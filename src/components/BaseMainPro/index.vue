@@ -7,18 +7,11 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="bg-[#f5f8f3] border-l-8 border-l-[#FFA726] rounded-3xl w-full flex flex-col sm:flex-row  overflow-hidden">
-    <div class="sm:w-1/2 p-4 ">
-      <p class="text-[#8A9C93]">{{ $props.cardData.date }}</p>
-      <p class="text-[#252525] sm:text-3xl font-bold">{{ $props.cardData.name }}</p>
-      <div class="overflow-scroll scrollbarActive h-[300px] p-4">
-        <p class="text-[#252525] text-xs sm:text-base">{{ $props.cardData.info }}</p>
-      </div>
-    </div>
-    <div class="sm:w-1/2 h-[400px] w-full">
-      <img :src="$props.cardData.img" alt="" class="object-cover object-center w-full h-full overflow-hidden">
-    </div>
-  </div>
+<div class="px-24">
+  <p class="text-[#080d75] uppercase text-center text-3xl">{{ props.cardData.title }}</p>
+  <p class="text-white text-center py-5">{{ props.cardData.subtitle }}</p>
+  <p class="text-[#797a7c] text-base text-center">{{ props.cardData.info }}</p>
+</div>
 </template>
 <style scoped>
 .scrollbarActive::-webkit-scrollbar {

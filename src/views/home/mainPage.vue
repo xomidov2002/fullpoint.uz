@@ -11,25 +11,33 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <div
-      class="bg-[url(/main.jpg)] w-full h-[90vh] bg-no-repeat bg-center bg-cover overflow-hidden relative flex justify-start flex-cols items-center">
-      <div
-        class="diagonal-bg lg:w-[40%] w-[200%] left-[-200px] sm:w-[70%] select-none bg-white/65 h-[200vh] absolute md:left-[4%]  lg:left-[5%] 2xl:left-[10%]">
-      </div>
-      <div class="container relative mx-auto px-5 select-none">
+  <div
+    class="bg-[url(/main.png)] w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center">
+    <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
+      <div>
         <p
-          class="2xl:text-6xl lg:text-4xl  text-[#252525] font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl  lg:pl-10 2xl:pl-0">
-          {{ t('mainPage.mainTitle') }}</p>
-        <p class="2xl:text-xl text-lg sm:w-[40%] lg:pl-10 2xl:pl-0 text-[#252525] font-[montserrat500] pb-5">{{ t('mainPage.mainSubtitle') }}</p>
-        <!-- HTML !-->
-        <RouterLink to="/contact">
-          <button class="button-86" role="button">{{ t('mainPage.mainButton') }}</button>
-        </RouterLink>
+        class="2xl:text-6xl lg:text-4xl  text-white font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl 2xl:pl-0">
+        {{ t('mainPage.mainTitle') }}</p>
+      <p class="2xl:text-xl text-lg sm:w-[40%] 2xl:pl-0 text-[#797a7c] font-[montserrat500] pb-5">{{
+        t('mainPage.mainSubtitle') }}</p>
+      <!-- HTML !-->
+      <RouterLink to="/contact">
+        <button class="button-86" role="button">{{ t('mainPage.mainButton') }}</button>
+      </RouterLink>
+      </div>
+      <div>
+
       </div>
     </div>
+
+    <div class="w-full absolute flex justify-center bottom-[-70px] z-[1]">
+      <div class="w-[80%] h-[140px] rounded-3xl bg-[#252525]">
+        
+      </div>
+    </div>
+
   </div>
-  <div class="bg-[#fafafa] py-11">
+  <div class="py-11">
     <Advices id="advice" />
     <BaseCards id="services" />
     <BusinessPage id="product" />
@@ -50,7 +58,7 @@ const { t } = useI18n()
 }
 
 .mainButton:hover {
-  background-color: #252525;
+  background-color: #080D75;
   color: white;
   transition: all 0.5s ease-out;
 }
@@ -60,6 +68,7 @@ const { t } = useI18n()
     margin-top: 10px;
   }
 }
+
 /* CSS */
 .button-86 {
   all: unset;
@@ -96,7 +105,7 @@ const { t } = useI18n()
   transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #28282d;
+  background: #080D75;
   border-radius: 10px;
 }
 

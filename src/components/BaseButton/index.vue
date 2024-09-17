@@ -16,10 +16,10 @@ const props = defineProps({
   justify-content: center;
   align-self: flex-start;
   font-family: inherit;
-  color: #ffffff;
+  color: white;
   font-weight: 600;
   width: 40%;
-  background: #313131;
+  background: #080D75;
   border: 1px solid #414141;
   padding: 12px 16px;
   font-size: inherit;
@@ -29,9 +29,9 @@ const props = defineProps({
   border-radius: 6px;
 }
 .form-submit-btn:hover {
-  background-color: #fff;
-  border-color: #fff;
-  color: #252525;
+  background-color: #252525;
+  border-color: #080D75;
+  color: white;
 }
 .form-submit-btn:hover{
   @apply shadow-xl

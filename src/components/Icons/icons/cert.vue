@@ -32,10 +32,10 @@
 </template>
 <style>
 .cls-1 {
-  fill: #1d75b8;
+  fill: currentColor;
 }
 
 .cls-2 {
-  fill: #2d3e50;
+  fill: currentColor;
 }
 </style>

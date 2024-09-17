@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import BaseCardUser from '@/components/BaseCardUser/index.vue'
 const modules = [Pagination]
 const { t } = useI18n()
 const partners = computed(() => {
@@ -102,14 +103,14 @@ function toggleVariable() {
 </script>
 <template>
   <div class="container mx-auto px-5 pb-14">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.businessTitle') }}</p>
-    <p class="text-lg font-[montserrat400] pt-5 w-full md:w-1/2">{{ t('mainPage.businessSubtitle') }}</p>
+    <p class="text-3xl font-semibold px-5 border-l-2 text-white py-5 border-l-blue-600">{{ t('mainPage.businessTitle') }}</p>
+    <p class="text-lg font-[montserrat400] pt-5 text-white w-full md:w-1/2">{{ t('mainPage.businessSubtitle') }}</p>
     <div class="flex flex-wrap md:flex-nowrap items-center pt-11">
       <div class="md:w-3/5 w-full   h-auto">
         <img class="object-cover" src="/business/cover.jpg" alt="">
       </div>
       <div class="md:w-2/5 w-full md:ml-32">
-        <p class=" text-4xl font-bold tracking-widest text-[#252B42]">{{ t('mainPage.businessMain') }}</p>
+        <p class=" text-4xl font-bold tracking-widest text-white">{{ t('mainPage.businessMain') }}</p>
         <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ t('mainPage.businessText') }}</p>
         <div>
           <div class="flex gap-3">
@@ -127,8 +128,8 @@ function toggleVariable() {
         </div>
       </div>
     </div>
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600  mt-10">{{ t("team.ourTeam") }}</p>
-    <div class="mt-5 w-full">
+    <p class="text-3xl font-semibold px-5 border-l-2 text-white py-5 border-l-blue-600  mt-10">{{ t("team.ourTeam") }}</p>
+    <div class="mt-8 w-full gap-6 px-10">
       <swiper :slidesPerView="1" :spaceBetween="10" :pagination="{
         clickable: true,
       }" :breakpoints="{
@@ -137,18 +138,19 @@ function toggleVariable() {
         spaceBetween: 20,
       },
       '768': {
-        slidesPerView: 4,
+        slidesPerView: 3,
         spaceBetween: 40,
       },
       '1024': {
-        slidesPerView: 5,
+        slidesPerView: 4,
         spaceBetween: 50,
       },
     }" :modules="modules" class="mySwiper">
         <swiper-slide v-for="(person, index) in partners" :key="index">
-            <BaseUserCard :cardData="person"  @byInfo="getEachStudentInfo(person.id)" />
+            <BaseCardUser :cardData="person"  @byInfo="getEachStudentInfo(person.id)" />
         </swiper-slide>
       </swiper>
+
     </div>
   </div>
   <BaseModal

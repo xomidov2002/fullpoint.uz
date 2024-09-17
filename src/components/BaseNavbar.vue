@@ -67,28 +67,27 @@ const langs = reactive<language[]>([
 </script>
 
 <template>
-  <div class="backdrop-blur-md bg-white nav">
+  <div class="bg-black backdrop-blur-sm nav">
     <div class="md:block hidden container mx-auto my-0 py-6 px-5">
       <div>
         <div class="flex items-center justify-between">
           <!-- -------------------------LOGO---------------------------- -->
           <RouterLink to="/">
             <div class="cursor-pointer select-none flex items-center gap-3">
-              <div class="w-10 h-10">
+              <div class="w-28 h-10 flex items-center">
                 <img src="/logo-1.png" class="object-cover w-full" alt="">
               </div>
-              <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">Full Point Consult</span>
+              <!-- <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">Full Point Consult</span> -->
             </div>
           </RouterLink>
           <!-- --------------------------MENUS------------------------------ -->
-          <div class="flex gap-8 menus">
-
-            <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
+          <div class="flex item-center gap-8 menus">
+            <div class="cursor-pointer flex items-center select-none" v-for="(navlink, index) in navLinks" :key="index">
               <RouterLink :to="navlink.path">
-                <p class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]">{{ navlink.name }}</p>
+                <p class="all-submenu text-lg text-white hover:text-[#080D75] 2xl:text-2xl font-[semibold]">{{ navlink.name }}</p>
               </RouterLink>
             </div>
-            <BaseSelect color="black" :options="langs" v-model="$i18n.locale" @change="changeLanguage"/>
+            <BaseSelect color="white" :options="langs" v-model="$i18n.locale" @change="changeLanguage"/>
           </div>
         </div>
       </div>
@@ -166,7 +165,7 @@ const langs = reactive<language[]>([
   content: '';
   width: 0;
   height: 2px;
-  background-color: #252B42;
+  background-color: #080D75;
   left: 0;
   bottom: 0;
   transition: all 0.2s linear;
@@ -197,13 +196,6 @@ const langs = reactive<language[]>([
   background: var(--body-color);
   transition: .3s;
   z-index: 100;
-}
-
-option {
-  padding: 10px;
-  color: #252B42;
-  font-weight: 500px;
-
 }
 
 .burger {

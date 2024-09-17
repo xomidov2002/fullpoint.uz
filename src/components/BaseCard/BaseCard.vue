@@ -18,7 +18,7 @@ const props = defineProps({
 
       <div class="face face2">
         <div class="content">
-          <p class="font-[bold] text-black uppercase text-xl tracking-widest">{{ props.cardData.title }}
+          <p class="font-[bold] text-white uppercase text-xl tracking-widest">{{ props.cardData.title }}
           </p>
         </div>
       </div>
@@ -55,7 +55,7 @@ const props = defineProps({
 }
 
 .div .card:hover .face.face1 {
-  background: #ffffff;
+  background: black;
   transform: translateY(0);
 }
 
@@ -75,7 +75,7 @@ const props = defineProps({
 }
 .div .card .face.face2 {
   position: relative;
-  background: #fff;
+  background: #252525;
   display: flex;
   justify-content: center;
   align-items: center;

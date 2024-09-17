@@ -36,7 +36,7 @@ const partners = computed(() => {
 </script>
 <template>
   <div class="container mx-auto px-5 pt-14">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.partners') }}</p>
+    <p class="text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.partners') }}</p>
     <swiper :slidesPerView="4" :spaceBetween="30" :pagination="{
       clickable: true,
     }" :modules="modules" class="mySwiper" :autoplay="{
@@ -44,14 +44,14 @@ const partners = computed(() => {
       disableOnInteraction: false,
     }">
       <swiper-slide v-for="img in partners">
-        <img :src="img.img" alt="" class="object-cover object-center">
+        <img :src="img.img" alt="" class="object-cover object-center select-none">
       </swiper-slide>
     </swiper>
   </div>
 </template>
 <style scoped>
 .swiper-slide {
-  @apply h-[150px] bg-[#252525] shadow-xl overflow-hidden border-l-4 border-l-[#FFA726]
+  @apply h-[150px] bg-[#252525] shadow-xl overflow-hidden border-l-4 border-l-[#080D75]
 }
 
 .swiper {

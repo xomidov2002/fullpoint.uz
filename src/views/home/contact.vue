@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import BaseButton from '@/components/BaseButton/index.vue'
+import BaseIcon from '@/components/Icons/index.vue'
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 const email = ref('');
@@ -45,21 +46,21 @@ const sendMessage = async () => {
 </script>
 <template>
   <div class="container mx-auto px-5 py-11">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-5">{{ t('mainPage.contact') }}</p>
+    <p class="text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-5">{{ t('mainPage.contact') }}</p>
     <div class="w-full h-auto p-5 shadow-xl flex flex-wrap lg:flex-nowrap justify-center lg:justify-evenly contact items-center">
       <div>
-        <p class="font-[semibold] text-2xl tracking-widest pb-11">{{ t('mainPage.contact') }}</p>
-        <div class="flex gap-5">
-          <div class="w-[30px]"><img src="@/assets/icons/email.png" alt=""></div>
-          <p class="tracking-widest">example@gmail.com</p>
+        <p class="font-[semibold] text-white text-2xl tracking-widest pb-11">{{ t('mainPage.contact') }}</p>
+        <div class="flex items-center gap-5">
+          <BaseIcon name="message" class="w-10 h-10 text-[#080D75]"/>
+          <p class="text-white tracking-widest">example@gmail.com</p>
         </div>
-        <div class="flex gap-5">
-          <div class="w-[30px]"><img src="@/assets/icons/telephone.png" alt=""></div>
-          <p class="tracking-widest">+998 93 378 63 61</p>
+        <div class="flex py-5 items-center gap-5">
+          <BaseIcon name="phone" class="w-10 h-10 text-[#080D75]"/>
+          <p class="text-white tracking-widest">+998 93 378 63 61</p>
         </div>
-        <div class="flex gap-5">
-          <div class="w-[30px]"><img src="@/assets/icons/location.png" alt=""></div>
-          <p class="tracking-widest">Toshkent, Chilonzor tumani Olmazor massivi 15/10</p>
+        <div class="flex items-center gap-5">
+          <BaseIcon name="location" class="w-10 h-10 text-[#080D75]"/>
+          <p class="text-white tracking-widest">Toshkent, Chilonzor tumani Olmazor massivi 15/10</p>
         </div>
       </div>
       <div>
@@ -91,8 +92,8 @@ const sendMessage = async () => {
 <style scoped>
 .contact{
   width: 100%;
-  background: linear-gradient(#ffffff, #ffffff) padding-box,
-    linear-gradient(145deg, transparent 35%, #ffd700, #ffffff) border-box;
+  background: linear-gradient(#252525, #252525) padding-box,
+    linear-gradient(145deg, transparent 35%, #080D75, #252525) border-box;
   border: 2px solid transparent;
   box-sizing: border-box;
   background-size: 200% 100%;
@@ -141,7 +142,7 @@ const sendMessage = async () => {
 .form-container .form-group label {
   display: block;
   margin-bottom: 5px;
-  color: #717171;
+  color: rgb(155, 151, 151);
   font-weight: 600;
   font-size: 12px;
 }
@@ -150,7 +151,7 @@ const sendMessage = async () => {
   width: 100%;
   padding: 12px 16px;
   border-radius: 8px;
-  color: #252525;
+  color: white;
   font-family: inherit;
   background-color: transparent;
   border: 1px solid #414141;
@@ -161,7 +162,7 @@ const sendMessage = async () => {
   padding: 12px 16px;
   border-radius: 8px;
   resize: none;
-  color: #252525;
+  color: white;
   height: 96px;
   border: 1px solid #414141;
   background-color: transparent;
@@ -174,11 +175,11 @@ const sendMessage = async () => {
 
 .form-container .form-group input:focus {
   outline: none;
-  border-color: #252525;
+  border-color: white;
 }
 
 .form-container .form-group textarea:focus {
   outline: none;
-  border-color: #252525;
+  border-color: white;
 }
 </style>
