@@ -10,7 +10,7 @@ const props = defineProps({
 <template>
   <div :class="`bg-[url(${props.CardData.img})]`" class="card bg-cover bg-center">
     <div class="card-details">
-      <p class="text-title text-center p-2">{{ props.CardData.title }}</p>
+      <p class="text-title text-white text-center p-2">{{ props.CardData.title }}</p>
     </div>
     <button @click="$emit('byInfoAppeal')" class="card-button">Batafsil</button>
   </div>

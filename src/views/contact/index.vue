@@ -44,7 +44,7 @@ const sendMessage = async () => {
 </script>
 <template>
   <div class="bg-[url('/images/contact.jfif')] bg-center bg-cover bg-no-repeat">
-    <div class="container mx-auto px-5 py-11">
+    <div class="container mx-auto px-5 py-11 pt-24">
       <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-white mb-5 text-white">{{ t('mainPage.contact') }}</p>
       <div
         class="backdrop-blur-md bg-white/40 w-full h-auto p-5 shadow-xl flex flex-wrap lg:flex-nowrap justify-center lg:justify-evenly contact items-center">

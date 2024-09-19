@@ -10,11 +10,6 @@ export const routers = [
         component: () => import('../views/home/mainPage.vue')
       },
       {
-        path: 'clients',
-        name: 'Our clients',
-        component: () => import('@/views/clients/index.vue')
-      },
-      {
         path: '',
         name: 'Services',
         component: () => import('@/views/services/main.vue'),

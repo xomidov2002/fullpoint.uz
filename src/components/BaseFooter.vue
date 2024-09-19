@@ -20,11 +20,6 @@ const navLinks = computed(() => {
       path: '/services',
     },
     {
-      id: 4,
-      name: t('navbar.clients'),
-      path: '/clients',
-    },
-    {
       id: 5,
       name: t('navbar.contact'),
       path: '/contact',

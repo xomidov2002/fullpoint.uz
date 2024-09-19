@@ -6,48 +6,48 @@ export function useServiceCard() {
     {
       id: 0,
       title: t('ourServices.marketing'),
-      img: '/service/marketing.jpg',
+      icon: 'marketing',
       info1: t('services.marketing')
     },
     {
       id: 1,
       title: t('ourServices.moliya'),
-      img: '/service',
+      icon: 'finance',
       info1: t('services.finance.info1'),
       info2: t('services.finance.info2')
     },
     {
       id: 2,
       title: t('ourServices.buxgalteriya'),
-      img: '/service',
+      icon: 'accounting',
       info1: t('services.accounting.info1'),
       info2: t('services.accounting.info2')
     },
     {
       id: 3,
       title: t('ourServices.arxitektura'),
-      img: '/service',
+      icon: 'teo',
       info1: t('services.architecture.info1'),
       info2: t('services.architecture.info2')
     },
     {
       id: 4,
       title: t('ourServices.qurilish'),
-      img: '/service',
+      icon: 'sale',
       info1: t('services.construction.info1'),
       info2: t('services.construction.info2')
     },
     {
       id: 5,
       title: t('ourServices.it'),
-      img: '/service',
+      icon: 'it',
       info1: t('services.it.info1'),
       info2: t('services.it.info2')
     },
     {
       id: 6,
       title: t('ourServices.kamera'),
-      img: '/service',
+      icon: 'business',
       info1: t('services.camera.info1')
     }
   ])
