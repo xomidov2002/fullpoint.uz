@@ -84,10 +84,11 @@ const langs = reactive<language[]>([
           <div class="flex item-center gap-8 menus">
             <div class="cursor-pointer flex items-center select-none" v-for="(navlink, index) in navLinks" :key="index">
               <RouterLink :to="navlink.path">
-                <p class="all-submenu text-lg text-white hover:text-[#080D75] 2xl:text-2xl font-[semibold]">{{ navlink.name }}</p>
+                <p class="all-submenu text-lg text-white hover:text-[#080D75] 2xl:text-2xl font-[semibold]">{{
+                  navlink.name }}</p>
               </RouterLink>
             </div>
-            <BaseSelect color="white" :options="langs" v-model="$i18n.locale" @change="changeLanguage"/>
+            <BaseSelect color="white" :options="langs" v-model="$i18n.locale" @change="changeLanguage" />
           </div>
         </div>
       </div>
@@ -95,15 +96,14 @@ const langs = reactive<language[]>([
   </div>
 
   <!-- ---------------------FOR MODILE--------------------- -->
-  <div class="block md:hidden fixed top-0 right-0 w-full z-50 bg-white">
+  <div class="block md:hidden fixed top-0 right-0 w-full z-50 bg-[#252525]">
     <div class="container mx-auto px-5 py-5 flex justify-between items-center">
       <div class="cursor-pointer select-none flex items-center gap-3">
         <RouterLink to="/">
           <div class="cursor-pointer select-none flex items-center gap-3">
-            <div class="w-10 h-10">
+            <div class="w-24 h-10 flex items-center">
               <img src="/logo-1.png" class="object-cover w-full" alt="">
             </div>
-            <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">FPC</span>
           </div>
         </RouterLink>
       </div>
@@ -117,21 +117,20 @@ const langs = reactive<language[]>([
     </div>
     <Transition>
       <div v-if="isActive"
-        class="fixed top-0 left-0 w-[70%] h-[100vh] bg-white z-50 p-10 gap-5 flex flex-col pb-16 justify-start">
-        <div class="flex justify-between items-center">
-          <RouterLink to="/">
-            <div class="cursor-pointer select-none flex items-center gap-3">
-              <div class="w-10 h-10">
+        class="fixed top-0 left-0 w-[70%] h-[100vh] bg-[#252525] z-50 p-10 gap-5 flex flex-col pb-16 justify-start">
+        <div>
+          <div class="flex justify-between items-center">
+            <RouterLink to="/">
+              <div class="w-20 flex items-center h-10">
                 <img src="/logo-1.png" class="object-cover w-full" alt="">
               </div>
-              <span class="text-xl 2xl:text-3xl 2xl:font-[bold] font-semibold">FPC</span>
-            </div>
-          </RouterLink>
-          <BaseSelect color="black" :options="langs" v-model="$i18n.locale" @change="changeLanguage"/>
+            </RouterLink>
+            <BaseSelect color="white" :options="langs" v-model="$i18n.locale" @change="changeLanguage" />
+          </div>
         </div>
         <div class="cursor-pointer select-none" v-for="(navlink, index) in navLinks" :key="index">
           <RouterLink :to="navlink.path">
-            <p @click="toggleClass" class="all-submenu text-lg text-[#252B42] 2xl:text-2xl font-[semibold]">{{
+            <p @click="toggleClass" class="all-submenu text-lg text-white 2xl:text-2xl font-[semibold]">{{
               navlink.name }}</p>
           </RouterLink>
         </div>
@@ -216,7 +215,7 @@ const langs = reactive<language[]>([
   position: absolute;
   height: 4px;
   width: 100%;
-  background: black;
+  background: white;
   border-radius: 9px;
   opacity: 1;
   left: 0;

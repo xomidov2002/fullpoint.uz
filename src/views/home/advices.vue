@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import BasePhoneCard from '@/components/BasePhoneCard/index.vue' 
 import { Pagination, Autoplay } from 'swiper/modules';
 const modules = [Pagination, Autoplay];
 import { computed, ref, onMounted, onBeforeUnmount } from 'vue';
@@ -37,13 +38,12 @@ const practiceCards = computed(() => {
 
 // Ref to store current slidesPerView value
 const slidesPerView = ref(4);
-
 // Function to update slidesPerView based on window width
 const updateSlidesPerView = () => {
   const width = window.innerWidth;
-  if (width >= 1024) {
+  if (width >= 1124) {
     slidesPerView.value = 4;
-  } else if (width >= 768) {
+  } else if (width >= 968) {
     slidesPerView.value = 3;
   } else if (width >= 640) {
     slidesPerView.value = 2;
@@ -66,22 +66,37 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="container mx-auto px-5 pt-14">
-    <p class="text-white text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.practiceTitle') }}</p>
-    <p class="text-white text-lg font-[montserrat400] pt-5 w-full md:w-1/2">{{ t('mainPage.practiceSubtitle') }}</p>
+    <p class="text-white text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold px-5 border-l-2 md:py-5 border-l-blue-600">{{ t('mainPage.practiceTitle') }}</p>
+    <p class="text-white text-xs sm:text-lg font-[montserrat400] pt-5 w-full md:w-1/2">{{ t('mainPage.practiceSubtitle') }}</p>
     
-    <swiper 
+    <div class="w-full hidden lg:flex justify-center">
+      <swiper 
       :slidesPerView="slidesPerView" 
       :spaceBetween="30" 
       :pagination="{ clickable: true }" 
       :modules="modules" 
-      class="mySwiper grid justify-center" 
+      class="mySwiper flex justify-center" 
       :autoplay="{ delay: 2000, disableOnInteraction: false }">
       
       <swiper-slide v-for="(card, index) in practiceCards" :key="index">
-        <BaseCard :card-data="card" />
+        <BaseCard class="hidden md:block" :card-data="card" />
+        <!-- <BasePhoneCard :card-data="card" /> -->
       </swiper-slide>
     </swiper>
+    </div>
+    <div class="block lg:hidden">
+      <swiper 
+      :slidesPerView="slidesPerView" 
+      :spaceBetween="30" 
+      :pagination="{ clickable: true }" 
+      :modules="modules" 
+      class="mySwiper flex justify-center" 
+      :autoplay="{ delay: 2000, disableOnInteraction: false }">
+      
+      <swiper-slide v-for="(card, index) in practiceCards" :key="index">
+        <BasePhoneCard :card-data="card" />
+      </swiper-slide>
+    </swiper>
+    </div>
   </div>
 </template>
-
-<style scoped></style>

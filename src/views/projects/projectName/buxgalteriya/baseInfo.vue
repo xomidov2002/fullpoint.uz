@@ -17,9 +17,9 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="container mx-auto px-5">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ buxgalteriyaWorks[currentNewsId].name }}</p>
-    <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ buxgalteriyaWorks[currentNewsId].info }}</p>
+  <div class="container mx-auto pt-20 px-5">
+    <p class="text-3xl text-white font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ buxgalteriyaWorks[currentNewsId].name }}</p>
+    <p class="text-white text-sm font-medium tracking-widest mt-5 mb-14">{{ buxgalteriyaWorks[currentNewsId].info }}</p>
     <div class="mb-11">
       <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{
       delay: 2500,

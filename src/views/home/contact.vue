@@ -46,7 +46,7 @@ const sendMessage = async () => {
 </script>
 <template>
   <div class="container mx-auto px-5 py-11">
-    <p class="text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-5">{{ t('mainPage.contact') }}</p>
+    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-5">{{ t('mainPage.contact') }}</p>
     <div class="w-full h-auto p-5 shadow-xl flex flex-wrap lg:flex-nowrap justify-center lg:justify-evenly contact items-center">
       <div>
         <p class="font-[semibold] text-white text-2xl tracking-widest pb-11">{{ t('mainPage.contact') }}</p>

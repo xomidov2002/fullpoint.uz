@@ -17,8 +17,8 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div class="container mx-auto px-5">
-    <p class="text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-11">{{ marketingWorks[currentNewsId].name }}</p>
+  <div class="container mx-auto px-5 pt-24">
+    <p class="text-3xl font-semibold px-5 text-white border-l-2 py-5 border-l-blue-600 mb-11">{{ marketingWorks[currentNewsId].name }}</p>
     <div class="mb-11">
       <swiper :spaceBetween="30" :centeredSlides="true" :autoplay="{
       delay: 2500,

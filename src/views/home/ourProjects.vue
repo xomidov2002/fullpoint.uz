@@ -29,7 +29,7 @@ const projects = computed(() => {
 </script>
 <template>
   <div class="container mx-auto px-5 pb-14">
-    <p class="text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.ourPro') }}</p>
+    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.ourPro') }}</p>
     <div class="mt-11">
       <swiper :navigation="true" :modules="modules" class="mySwiper">
         <swiper-slide  v-for="(pro, index) in projects" :key="index">

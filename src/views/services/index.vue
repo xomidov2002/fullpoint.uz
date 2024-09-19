@@ -38,7 +38,7 @@ function clicking(id: any) {
           <BaseServiceCardInfo @by-info-appeal="clicking(item.id)" :-card-data="item" />
         </div>
       </div> -->
-      <div class="px-10 grid grid-cols-3 gap-6">
+      <div class="px-10 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
         <BaseServiceCard @click-by-id="clicking(item.id)" v-for="(item, index) in serviceCards" :key="index"
           :card-data="item" />
       </div>

@@ -2,6 +2,7 @@
 import { RouterView } from 'vue-router';
 import TheHeader from '@/components/BaseNavbar.vue';
 import TheFooter from '@/components/BaseFooter.vue';
+import BaseIcon from "@/components/Icons/index.vue"
 </script>
 <template>
   <div>
@@ -9,9 +10,11 @@ import TheFooter from '@/components/BaseFooter.vue';
     <div class="">
       <RouterView></RouterView>
       <div class="fixed bottom-10 right-10 sm:w-16 sm:h-16 w-10 h-10 z-50 cursor-pointer">
-        <routerLink to="/contact">
-          <img src="/icons/contact-us.png" alt="" class="w-full h-full object-cover ">
+        <div class="w-16 h-16 rounded-[100%] bg-[#080D75] flex items-center justify-center"> 
+          <routerLink to="/contact">
+          <BaseIcon name="phone" class="w-10 h-10 object-cover text-white" />
         </routerLink>
+        </div>
       </div>
     </div>
     <TheFooter />

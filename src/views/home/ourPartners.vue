@@ -36,7 +36,7 @@ const partners = computed(() => {
 </script>
 <template>
   <div class="container mx-auto px-5 pt-14">
-    <p class="text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.partners') }}</p>
+    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.partners') }}</p>
     <swiper :slidesPerView="4" :spaceBetween="30" :pagination="{
       clickable: true,
     }" :modules="modules" class="mySwiper" :autoplay="{

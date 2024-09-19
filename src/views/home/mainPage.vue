@@ -16,7 +16,7 @@ const { t } = useI18n()
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
       <div>
         <p
-        class="2xl:text-6xl lg:text-4xl  text-white font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5 w-4/5 text-3xl 2xl:pl-0">
+        class="2xl:text-6xl lg:text-4xl md:text-2xl  text-white font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5  text-2xl 2xl:pl-0">
         {{ t('mainPage.mainTitle') }}</p>
       <p class="2xl:text-xl text-lg sm:w-[40%] 2xl:pl-0 text-[#797a7c] font-[montserrat500] pb-5">{{
         t('mainPage.mainSubtitle') }}</p>

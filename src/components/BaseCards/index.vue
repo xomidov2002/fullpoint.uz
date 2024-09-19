@@ -56,8 +56,8 @@ const services = computed(() => {
 })
 </script>
 <template>
-  <div class="container mx-auto px-5">
-    <p class="text-3xl text-white font-semibold px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.serviceTitle') }}
+  <div class="container mx-auto mt-10 px-5">
+    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl text-white font-semibold px-5 border-l-2 sm:py-5 border-l-blue-600">{{ t('mainPage.serviceTitle') }}
     </p>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center px-16 py-10">
       <div v-for="i in services"
