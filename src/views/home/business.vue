@@ -153,7 +153,7 @@ function toggleVariable() {
 
     </div>
   </div>
-  <BaseModal
+  <Base Modal
         class="z-50"
         :isOpen="openStudentsModal"
         :info="currentStudent"

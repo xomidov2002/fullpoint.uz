@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import 'swiper/css/navigation'
-import { Navigation } from 'swiper/modules';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
 import OurProjects from '@/components/BaseMainPro/index.vue'
 import { useI18n } from 'vue-i18n'
 import { computed } from 'vue'
-const modules = [Navigation]
+const modules = [Pagination]
 const { t } = useI18n()
 const projects = computed(() => {
   return [
@@ -28,14 +28,24 @@ const projects = computed(() => {
 })
 </script>
 <template>
-  <div class="container mx-auto px-5 pb-14">
+  <div class="container mx-auto px-5 pb-14 relative">
     <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.ourPro') }}</p>
-    <div class="mt-11">
-      <swiper :navigation="true" :modules="modules" class="mySwiper">
-        <swiper-slide  v-for="(pro, index) in projects" :key="index">
-          <OurProjects :card-data="pro" />
+    <div class="mt-11 relative">
+      <div class="absolute left-1/2 top-12 opacity-55 -translate-x-1/2">
+        <img src="/robot.png" alt="" class="w-full">
+      </div>
+      <swiper :slidesPerView="1" :spaceBetween="10" :pagination="{
+        clickable: true,
+      }" :breakpoints="{
+      '900': {
+        slidesPerView: 2,
+      }
+    }" :modules="modules" class="mySwiper">
+        <swiper-slide v-for="(person, index) in projects" :key="index">
+            <OurProjects :cardData="person" />
         </swiper-slide>
       </swiper>
+
     </div>
   </div>
 </template>

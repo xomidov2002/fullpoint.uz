@@ -23,7 +23,7 @@ function tedt(val: string) {
 </script>
 <template>
   <div
-    v-if="props.isOpen" @click="tedt('close')"
+    v-if="props.isOpen" 
     class="z-0 fixed top-0 left-0 px-5 w-full h-full overflow-hidden backdrop-blur-[12.5px] bg-black/30 flex justify-center items-center"
   >
     <div class="md:w-1/2 h-auto bg-[#252525] rounded-3xl relative p-5">
