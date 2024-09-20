@@ -109,7 +109,8 @@ function toggleVariable() {
       <div class="md:w-3/5 w-full   h-auto">
         <img class="object-cover" src="/business/cover.jpg" alt="">
       </div>
-      <div class="md:w-2/5 w-full md:ml-32">
+      <div class="md:w-2/5 w-full md:ml-32 relative">
+        <img src="/robot.png" alt="" class="absolute top-0 opacity-20">
         <p class="text-xl sm:text-2xl md:text-4xl font-bold tracking-widest text-white">{{ t('mainPage.businessMain') }}</p>
         <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ t('mainPage.businessText') }}</p>
         <div>
@@ -153,7 +154,7 @@ function toggleVariable() {
 
     </div>
   </div>
-  <Base Modal
+  <BaseModal
         class="z-50"
         :isOpen="openStudentsModal"
         :info="currentStudent"

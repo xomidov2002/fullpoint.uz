@@ -31,9 +31,6 @@ const projects = computed(() => {
   <div class="container mx-auto px-5 pb-14 relative">
     <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600">{{ t('mainPage.ourPro') }}</p>
     <div class="mt-11 relative">
-      <div class="absolute left-1/2 top-12 opacity-55 -translate-x-1/2">
-        <img src="/robot.png" alt="" class="w-full">
-      </div>
       <swiper :slidesPerView="1" :spaceBetween="10" :pagination="{
         clickable: true,
       }" :breakpoints="{
