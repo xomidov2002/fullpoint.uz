@@ -20,7 +20,7 @@ const props = defineProps({
   font-weight: 600;
   width: 65%;
   background: #080D75;
-  border: 1px solid #414141;
+  border: 1px solid #14151B;
   padding: 12px 16px;
   font-size: inherit;
   gap: 8px;
@@ -29,7 +29,7 @@ const props = defineProps({
   border-radius: 6px;
 }
 .form-submit-btn:hover {
-  background-color: #252525;
+  background-color: #0A0A0E;
   border-color: #080D75;
   color: white;
 }

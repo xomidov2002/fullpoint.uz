@@ -57,13 +57,16 @@ const services = computed(() => {
 </script>
 <template>
   <div class="container mx-auto mt-10 px-5">
-    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl text-white font-semibold px-5 border-l-2 sm:py-5 border-l-blue-600">{{ t('mainPage.serviceTitle') }}
+    <p
+      class="text-xl sm:text-xl md:text-2xl lg:text-3xl text-white font-semibold px-5 border-l-2 sm:py-5 border-l-blue-600">
+      {{ t('mainPage.serviceTitle') }}
     </p>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center px-16 py-10">
-      <div v-for="i in services"
-        class="card transition duration-300 ease-in-out p-5 bg-[#252525] border-b-2 border-b-white">
-        <BaseIcon :name="i.icon" class="icon transition duration-300 ease-in-out w-10 h-10 text-blue-700" />
-        <p class="text-2xl font-semibold text-white py-5">
+      <div v-for="i in services" class="card h-[200px] overflow-hidden border-[#252525] relative p-5 bg-[#14151B] border-2 border-b-white">
+        <div class="absolute top-2 left-1/2 -translate-x-1/2">
+          <BaseIcon :name="i.icon" class="icon w-10 h-10 text-blue-700" />
+        </div>
+        <p class="text-2xl font-semibold pt-10 text-white py-5">
           {{ i.name }}
         </p>
         <p class="text-[#797a7c]">{{ i.num }}</p>
@@ -73,11 +76,7 @@ const services = computed(() => {
 </template>
 <style scoped>
 .card:hover {
-  @apply bg-[#080D75]
-}
-
-.card:hover .icon {
-  @apply text-white
+  @apply border-[#080D75]
 }
 
 .scrollbarActive::-webkit-scrollbar {

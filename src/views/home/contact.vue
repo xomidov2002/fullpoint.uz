@@ -35,9 +35,9 @@ const sendMessage = async () => {
     console.log('Javob:', responseData);
     alert('Xabar muvaffaqiyatli jo\'natildi');
     email.value = '',
-    name.value = '',
-    phone.value = '',
-    message.value = ''
+      name.value = '',
+      phone.value = '',
+      message.value = ''
   } catch (error) {
     console.error('Xatolik:', error);
     alert('Xabar jo\'natishda xatolik yuz berdi');
@@ -46,29 +46,18 @@ const sendMessage = async () => {
 </script>
 <template>
   <div class="container mx-auto px-5 py-11">
-    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-5">{{ t('mainPage.contact') }}</p>
-    <div class="w-full h-auto p-5 shadow-xl flex flex-wrap lg:flex-nowrap justify-center lg:justify-evenly contact items-center">
-      <div>
-        <p class="font-[semibold] text-white text-2xl tracking-widest pb-11">{{ t('mainPage.contact') }}</p>
-        <div class="flex items-center gap-5">
-          <BaseIcon name="message" class="w-10 h-10 text-[#080D75]"/>
-          <p class="text-white tracking-widest">example@gmail.com</p>
-        </div>
-        <div class="flex py-5 items-center gap-5">
-          <BaseIcon name="phone" class="w-10 h-10 text-[#080D75]"/>
-          <p class="text-white tracking-widest">+998 93 378 63 61</p>
-        </div>
-        <div class="flex items-center gap-5">
-          <BaseIcon name="location" class="w-10 h-10 text-[#080D75]"/>
-          <p class="text-white tracking-widest">Toshkent, Chilonzor tumani Olmazor massivi 15/10</p>
-        </div>
-      </div>
-      <div>
-        <div class="form-container">
+    <p
+      class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-5">
+      {{ t('mainPage.contact') }}</p>
+    <div
+      class="bg-[url(/contact.jpg)] bg-cover bg-no-repeat bg-center w-full h-auto p-5 shadow-xl flex flex-wrap lg:flex-nowrap lg:justify-evenly items-center relative">
+      <div class="absolute w-full h-full bg-[#252525]/50"></div>
+      <div class="p-4 border-[7px] border-[#14151B]">
+        <div class="form-container bg-[#14151B]">
           <div class="form">
             <div class="form-group">
               <label for="email">{{ t('mainPage.contactMail') }}</label>
-              <input v-model="email"  name="email" id="email" type="text">
+              <input v-model="email" name="email" id="email" type="text">
             </div>
             <div class="form-group">
               <label for="text">{{ t('mainPage.contactName') }}</label>
@@ -80,25 +69,40 @@ const sendMessage = async () => {
             </div>
             <div class="form-group">
               <label for="textarea">{{ t('mainPage.contactText') }}</label>
-              <textarea v-model="message" required cols="50" rows="10" id="textarea" name="textarea">          </textarea>
+              <textarea v-model="message" required cols="50" rows="10" id="textarea"
+                name="textarea">          </textarea>
             </div>
-            <BaseButton @click="sendMessage" :name="t('mainPage.Submit')"/>
+            <BaseButton @click="sendMessage" :name="t('mainPage.Submit')" />
           </div>
+        </div>
+      </div>
+      <div>
+        <p class="font-[semibold] text-white text-2xl tracking-widest pb-11">{{ t('mainPage.contact') }}</p>
+        <div class="flex items-center gap-5">
+          <BaseIcon name="message" class="w-10 h-10 text-[#080D75]" />
+          <p class="text-white tracking-widest">example@gmail.com</p>
+        </div>
+        <div class="flex py-5 items-center gap-5">
+          <BaseIcon name="phone" class="w-10 h-10 text-[#080D75]" />
+          <p class="text-white tracking-widest">+998 93 378 63 61</p>
+        </div>
+        <div class="flex items-center gap-5">
+          <BaseIcon name="location" class="w-10 h-10 text-[#080D75]" />
+          <p class="text-white tracking-widest">Toshkent, Chilonzor tumani Olmazor massivi 15/10</p>
         </div>
       </div>
     </div>
   </div>
 </template>
 <style scoped>
-.contact{
+.contact {
   width: 100%;
-  background: linear-gradient(#252525, #252525) padding-box,
-    linear-gradient(145deg, transparent 35%, #080D75, #252525) border-box;
   border: 2px solid transparent;
   box-sizing: border-box;
   background-size: 200% 100%;
   animation: gradient 5s ease infinite;
 }
+
 .form-container {
   width: 100%;
   padding: 32px 24px;

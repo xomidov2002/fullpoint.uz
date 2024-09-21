@@ -15,7 +15,7 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="bg-[#252525] hover:bg-[#080D75] transition duration-300 ease-in-out w-full h-[250px] rounded-2xl pt-[70px] relative p-5">
+  <div class="bg-[#14151B] hover:bg-[#080D75] transition duration-300 ease-in-out w-full h-[250px] rounded-2xl pt-[70px] relative p-5">
     <div
       class="rounded-[100%] absolute -top-[20%] left-1/2 -translate-x-1/2  overflow-hidden p-1 bg-black w-[100px] h-[100px]">
       <img src="/main.png" alt="" class="w-full h-full rounded-[100%] object-cover select-none">

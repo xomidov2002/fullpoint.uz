@@ -7,15 +7,15 @@ const props = defineProps({
 })
 </script>
 <template>
-  <div class="w-full bg-[#252525] p-5 border-b-2 border-b-white">
-    <div class="flex items-center gap-5 pb-5">
+  <div class="w-full px-28">
+    <div class="flex items-center justify-center gap-5 pb-5">
       <img :src="props.cardData.img" class="sm:w-[100px] sm:h-[100px] w-[50px] h-[50px] rounded-[100%] overflow-hidden object-cover">
       <div>
         <p class="text-white text-base md:text-2xl">{{ props.cardData.title }}</p>
         <p class="text-[#797a7c] text-xs sm:text-base">{{ props.cardData.subtitle }}</p>
       </div>
     </div>
-    <p class="scrollbarActive text-base overflow-scroll h-[200px]">{{ props.cardData.info }}</p>
+    <p class="scrollbarActive text-[#797a7c] text-base overflow-scroll h-[200px]">{{ props.cardData.info }}</p>
   </div>
 </template>
 <style scoped>

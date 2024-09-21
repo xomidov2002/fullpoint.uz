@@ -77,12 +77,12 @@ const partners = computed(() => {
   ]
 })
 const openStudentsModal = ref<boolean>(false)
-  function clickModal (val:string){
-      if(val == 'close') {
-        openStudentsModal.value = false
-        console.log('closed')
-      }
+function clickModal(val: string) {
+  if (val == 'close') {
+    openStudentsModal.value = false
+    console.log('closed')
   }
+}
 const currentStudent = ref<any>({})
 function getEachStudentInfo(id: number) {
   for (let i = 0; i < partners.value.length; i++) {
@@ -96,22 +96,34 @@ function getEachStudentInfo(id: number) {
   }
 }
 function toggleVariable() {
-  openStudentsModal.value = !openStudentsModal.value  
+  openStudentsModal.value = !openStudentsModal.value
 }
 
 
 </script>
 <template>
   <div class="container mx-auto px-5 pb-14">
-    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold px-5 border-l-2 text-white sm:py-5 border-l-blue-600">{{ t('mainPage.businessTitle') }}</p>
-    <p class="text-xs sm:text-lg font-[montserrat400] pt-5 text-white w-full md:w-1/2">{{ t('mainPage.businessSubtitle') }}</p>
+    <p
+      class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold px-5 border-l-2 text-white sm:py-5 border-l-blue-600">
+      {{ t('mainPage.businessTitle') }}</p>
+    <p class="text-xs sm:text-lg font-[montserrat400] pt-5 text-white w-full md:w-1/2">{{ t('mainPage.businessSubtitle')
+      }}</p>
     <div class="flex flex-wrap md:flex-nowrap items-center pt-11">
       <div class="md:w-3/5 w-full   h-auto">
-        <img class="object-cover" src="/business/cover.jpg" alt="">
+        <div>
+          <div class="w-full h-[200px] pb-5 overflow-hidden">
+            <img src="/images/about-3.jpg" alt="" class="transition duration-300 grayscale hover:grayscale-0 rounded-2xl overflow-hidden w-full h-full object-cover">
+          </div>
+          <div class="flex gap-5">
+            <img class="transition duration-300 grayscale hover:grayscale-0 rounded-2xl overflow-hidden w-1/2 " src="/images/about-1.jpg" alt="">
+            <img class="transition duration-300 grayscale hover:grayscale-0 rounded-2xl overflow-hidden w-1/2" src="/images/about-2.jpg" alt="">
+          </div>
+        </div>
       </div>
       <div class="md:w-2/5 w-full md:ml-32 relative">
         <img src="/robot.png" alt="" class="absolute top-0 opacity-20">
-        <p class="text-xl sm:text-2xl md:text-4xl font-bold tracking-widest text-white">{{ t('mainPage.businessMain') }}</p>
+        <p class="text-xl sm:text-2xl md:text-4xl font-bold tracking-widest text-white">{{ t('mainPage.businessMain') }}
+        </p>
         <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ t('mainPage.businessText') }}</p>
         <div>
           <div class="flex gap-3">
@@ -129,37 +141,34 @@ function toggleVariable() {
         </div>
       </div>
     </div>
-    <p class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold px-5 border-l-2 text-white sm:py-5 border-l-blue-600  mt-10">{{ t("team.ourTeam") }}</p>
+    <p
+      class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold px-5 border-l-2 text-white sm:py-5 border-l-blue-600  mt-10">
+      {{ t("team.ourTeam") }}</p>
     <div class="mt-8 w-full gap-6 lg:px-10">
       <swiper :slidesPerView="1" :spaceBetween="10" :pagination="{
         clickable: true,
       }" :breakpoints="{
-      '640': {
-        slidesPerView: 2,
-        spaceBetween: 20,
-      },
-      '768': {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      '1024': {
-        slidesPerView: 4,
-        spaceBetween: 50,
-      },
-    }" :modules="modules" class="mySwiper">
+        '640': {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        '768': {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        '1024': {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      }" :modules="modules" class="mySwiper">
         <swiper-slide v-for="(person, index) in partners" :key="index">
-            <BaseCardUser :cardData="person"  @byInfo="getEachStudentInfo(person.id)" />
+          <BaseCardUser :cardData="person" @byInfo="getEachStudentInfo(person.id)" />
         </swiper-slide>
       </swiper>
 
     </div>
   </div>
-  <BaseModal
-        class="z-50"
-        :isOpen="openStudentsModal"
-        :info="currentStudent"
-        @handleClicked="toggleVariable"
-      />
+  <BaseModal class="z-50" :isOpen="openStudentsModal" :info="currentStudent" @handleClicked="toggleVariable" />
 </template>
 <style scoped>
 .swiper {

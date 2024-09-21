@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BaseIcon from '@/components/Icons/index.vue'
 import BusinessPage from '@/views/home/business.vue'
 import BaseCards from '@/components/BaseCards/index.vue'
 import ContactPage from '@/views/home/contact.vue'
@@ -12,27 +13,39 @@ const { t } = useI18n()
 
 <template>
   <div
-    class="bg-[url(/main.png)] w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center">
+    class="bg-[url(/lion.jpg)] w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center">
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
       <div>
         <p
-        class="2xl:text-6xl lg:text-4xl md:text-2xl  text-white font-[semibold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5  text-2xl 2xl:pl-0">
-        {{ t('mainPage.mainTitle') }}</p>
-      <p class="2xl:text-xl text-lg sm:w-[40%] 2xl:pl-0 text-[#797a7c] font-[montserrat500] pb-5">{{
-        t('mainPage.mainSubtitle') }}</p>
-      <!-- HTML !-->
-      <RouterLink to="/contact">
-        <button class="button-86" role="button">{{ t('mainPage.mainButton') }}</button>
-      </RouterLink>
-      </div>
-      <div>
+          class="2xl:text-6xl lg:text-4xl md:text-2xl  text-white font-[bold] uppercase tracking-widest leading-normal  2xl:w-3/5 lg:w-2/5  text-2xl 2xl:pl-0">
+          {{ t('mainPage.mainTitle') }}</p>
+        <p class="2xl:text-xl text-lg sm:w-[40%] 2xl:pl-0 text-[#797a7c] font-[montserrat500] pb-5">{{
+          t('mainPage.mainSubtitle') }}</p>
+        <!-- HTML !-->
 
+        <button class="button-86" role="button">
+          <RouterLink to="/contact">{{ t('mainPage.mainButton') }}</RouterLink>
+        </button>
+      </div>
+
+      <div>
       </div>
     </div>
 
     <div class="w-full absolute flex justify-center bottom-[-70px] z-[1]">
-      <div class="w-[80%] h-[140px] rounded-3xl bg-[#252525]">
-        
+      <div class="w-[80%] h-[140px] flex justify-around items-center rounded-3xl shadow-lg shadow-[#080D75] bg-[#0A0A0E] p-5">
+        <div class="flex flex-col gap-2 items-center">
+          <BaseIcon name="future" class="w-10 h-10 text-[#080D75]"/>
+          <p class="text-white font-semibold">Future Concept.</p>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <BaseIcon name="brain" class="w-10 h-10 text-[#080D75]"/>
+          <p class="text-white font-semibold">The big ideas</p>
+        </div>
+        <div class="flex flex-col gap-2 items-center">
+          <BaseIcon name="creative" class="w-10 h-10 text-[#080D75]"/>
+          <p class="text-white font-semibold">Creative solutions</p>
+        </div>
       </div>
     </div>
 
