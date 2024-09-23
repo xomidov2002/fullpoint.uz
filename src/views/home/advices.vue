@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import BasePhoneCard from '@/components/BasePhoneCard/index.vue' 
+import BasePhoneCard from '@/components/BasePhoneCard/index.vue'
 import { Pagination, Autoplay } from 'swiper/modules';
 const modules = [Pagination, Autoplay];
 import { computed, ref, onMounted, onBeforeUnmount } from 'vue';
@@ -66,37 +66,78 @@ onBeforeUnmount(() => {
 
 <template>
   <div class="container mx-auto px-5 pt-14 relative">
-    <p class="text-white text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold px-5 border-l-2 md:py-5 border-l-blue-600">{{ t('mainPage.practiceTitle') }}</p>
-    <p class="text-white text-xs sm:text-lg font-[montserrat400] pt-5 w-full md:w-1/2">{{ t('mainPage.practiceSubtitle') }}</p>
-    
-    <div class="w-full hidden lg:flex justify-center">
-      <swiper 
-      :slidesPerView="slidesPerView" 
-      :spaceBetween="30" 
-      :pagination="{ clickable: true }" 
-      :modules="modules" 
-      class="mySwiper flex justify-center" 
-      :autoplay="{ delay: 2000, disableOnInteraction: false }">
-      
-      <swiper-slide v-for="(card, index) in practiceCards" :key="index">
-        <BaseCard class="hidden md:block" :card-data="card" />
-        <!-- <BasePhoneCard :card-data="card" /> -->
-      </swiper-slide>
-    </swiper>
-    </div>
-    <div class="block lg:hidden">
-      <swiper 
-      :slidesPerView="slidesPerView" 
-      :spaceBetween="30" 
-      :pagination="{ clickable: true }" 
-      :modules="modules" 
-      class="mySwiper flex justify-center" 
-      :autoplay="{ delay: 2000, disableOnInteraction: false }">
-      
-      <swiper-slide v-for="(card, index) in practiceCards" :key="index">
-        <BasePhoneCard :card-data="card" />
-      </swiper-slide>
-    </swiper>
+    <p
+      class="text-white text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold px-5 border-l-2 md:py-5 border-l-blue-600">
+      {{ t('mainPage.practiceTitle') }}</p>
+    <p class="text-white text-xs sm:text-lg font-[montserrat400] pt-5 w-full md:w-1/2">{{ t('mainPage.practiceSubtitle')
+      }}</p>
+    <div class="flex gap-5 sm:flex-row flex-col mt-10 relative">
+      <div class="sm:w-3/5 flex flex-col gap-5">
+        <div class="flex md:flex-row flex-col gap-5 w-full">
+          <div class="flex flex-col gap-5  md:w-1/2">
+            <div class="images bg-[url('/images/advice-1.jpg')] h-[300px] sm:h-[500px] ">
+              <div class="shadow"></div>
+              <div class="box">
+                <p class="text">{{ t('advices.first') }}</p>
+              </div>
+            </div>
+            <div class="images bg-[url('/images/advice-2.jpg')]  h-[200px] ">
+              <div class="shadow"></div>
+              <div class="box">
+                <p class="text">{{ t('advices.second') }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col gap-5  md:w-1/2">
+            <div class="images bg-[url('/images/advice-3.jpg')]  h-[200px] ">
+              <div class="shadow"></div>
+              <div class="box">
+                <p class="text">{{ t('advices.third') }}</p>
+              </div>
+            </div>
+            <div class="images bg-[url('/images/advice-4.jpg')] h-[300px] sm:h-[500px] ">
+              <div class="shadow"></div>
+              <div class="box">
+                <p class="text">{{ t('advices.fourth') }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="images bg-[url('/images/advice-5.jpg')]   h-[300px]">
+            <div class="shadow"></div>
+            <div class="box">
+              <p class="text">{{ t('advices.fifth') }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sm:w-2/5">
+        <p class="text-white sticky top-24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, velit
+          eum? Culpa
+          placeat suscipit quasi quae porro voluptatum, hic, cum aperiam blanditiis doloribus perspiciatis id, numquam
+          unde saepe odit dolorum.</p>
+      </div>
     </div>
   </div>
 </template>
+<style scoped>
+.images {
+  @apply flex items-end justify-center bg-no-repeat bg-center bg-cover w-full rounded-2xl overflow-hidden relative cursor-pointer transition duration-300
+}
+
+.box {
+  @apply border-t border-t-white p-5 mx-5
+}
+
+.text {
+  @apply text-white text-base
+}
+
+.shadow {
+  @apply absolute w-full h-full bg-black/35 transition duration-300
+}
+.images:hover .shadow{
+  @apply bg-black/50
+}
+</style>

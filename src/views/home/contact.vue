@@ -49,12 +49,10 @@ const sendMessage = async () => {
     <p
       class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-5">
       {{ t('mainPage.contact') }}</p>
-    <div
-      class="bg-[url(/contact.jpg)] bg-cover bg-no-repeat bg-center w-full h-auto p-5 shadow-xl flex flex-wrap lg:flex-nowrap lg:justify-evenly items-center relative">
-      <div class="absolute w-full h-full bg-[#252525]/50"></div>
-      <div class="p-4 border-[7px] border-[#14151B]">
+    <div class="w-full p-5 flex flex-wrap lg:flex-nowrap lg:justify-evenly items-center relative">
+      <div class="p-4 border-[7px] border-[#080D75]">
         <div class="form-container bg-[#14151B]">
-          <div class="form">
+          <div class="form">x
             <div class="form-group">
               <label for="email">{{ t('mainPage.contactMail') }}</label>
               <input v-model="email" name="email" id="email" type="text">
@@ -95,13 +93,6 @@ const sendMessage = async () => {
   </div>
 </template>
 <style scoped>
-.contact {
-  width: 100%;
-  border: 2px solid transparent;
-  box-sizing: border-box;
-  background-size: 200% 100%;
-  animation: gradient 5s ease infinite;
-}
 
 .form-container {
   width: 100%;

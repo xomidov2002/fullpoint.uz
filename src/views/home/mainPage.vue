@@ -24,7 +24,7 @@ const { t } = useI18n()
         <!-- HTML !-->
 
         <button class="button-86" role="button">
-          <RouterLink to="/contact">{{ t('mainPage.mainButton') }}</RouterLink>
+          <RouterLink class="uppercase font-bold" to="/contact">{{ t('mainPage.mainButton') }}</RouterLink>
         </button>
       </div>
 
@@ -32,18 +32,18 @@ const { t } = useI18n()
       </div>
     </div>
 
-    <div class="w-full absolute flex justify-center bottom-[-70px] z-[1]">
-      <div class="w-[80%] h-[140px] flex justify-around items-center rounded-3xl shadow-lg shadow-[#080D75] bg-[#0A0A0E] p-5">
+    <div class="w-full hidden sm:flex absolute justify-center bottom-[-70px] z-[1]">
+      <div class="w-[80%] flex justify-around items-center rounded-3xl shadow-lg shadow-[#080D75] bg-[#0A0A0E] p-10">
         <div class="flex flex-col gap-2 items-center">
           <BaseIcon name="future" class="w-10 h-10 text-[#080D75]"/>
           <p class="text-white font-semibold">Future Concept.</p>
         </div>
         <div class="flex flex-col gap-2 items-center">
-          <BaseIcon name="brain" class="w-10 h-10 text-[#080D75]"/>
+          <BaseIcon name="brain" class="sm:w-10 sm:h-10 w-5 h-5 text-[#080D75]"/>
           <p class="text-white font-semibold">The big ideas</p>
         </div>
         <div class="flex flex-col gap-2 items-center">
-          <BaseIcon name="creative" class="w-10 h-10 text-[#080D75]"/>
+          <BaseIcon name="creative" class="sm:w-10 sm:h-10 w-5 h-5 text-[#080D75]"/>
           <p class="text-white font-semibold">Creative solutions</p>
         </div>
       </div>
@@ -85,7 +85,7 @@ const { t } = useI18n()
 /* CSS */
 .button-86 {
   all: unset;
-  width: 100px;
+  width: 130px;
   height: 30px;
   font-size: 16px;
   background: transparent;
