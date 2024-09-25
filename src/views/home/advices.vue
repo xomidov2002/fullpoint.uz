@@ -113,10 +113,7 @@ onBeforeUnmount(() => {
         </div>
       </div>
       <div class="sm:w-2/5">
-        <p class="text-white sticky top-24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, velit
-          eum? Culpa
-          placeat suscipit quasi quae porro voluptatum, hic, cum aperiam blanditiis doloribus perspiciatis id, numquam
-          unde saepe odit dolorum.</p>
+        <p class="text-white sticky top-24 text-xl tracking-widest  ">{{ t('advices.title') }}</p>
       </div>
     </div>
   </div>

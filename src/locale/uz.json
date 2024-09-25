@@ -11,10 +11,11 @@
   
 
   "mainPage": {
-    "mainTitle" : "Sizning biznesingiz uchun keng qamrovli konsalting echimlari",
+    "mainTitle" : "Sizning biznesingiz uchun",
+    "mainSecondTitle" : "xizmatlari",
     "mainSubtitle" : "Bajarilgan ishlarning yuqori sifati uchun mas'ul bo'lgan yuqori malakali mutaxassislarga ega tez rivojlanayotgan kompaniya! Biz bilan ishonchli!",
     "mainButton" : "Batafsil",
-    "businessTitle" : "Biz eng yaxshi biznes xizmatini taqdim etamiz",
+    "businessTitle" : "Nima uchun Full Point consult ?",
     "businessSubtitle" : "Biz rasman, shartnoma asosida ishlaymiz, shuningdek, qonun doirasida to'liq javob beramiz, bu sizga kafolat va xotirjamlik beradi!",
     "businessMain" : "Bizning sohada eng ishonchli",
     "businessText" : "Biz har bir mijozga alohida yondashamiz, kelajakda buxgalteriya hisobi haqida o'ylamasligingiz uchun barcha masalalarni eng kichik detallarigacha o'rganamiz!",
@@ -49,7 +50,7 @@
     "husniddinUniver" : "oliy ma’lumot, bakalavriat (Toshkent davlat transport universiteti)"
   },
   "mainProject" : {
-    "subtitle" : "Ushbu xat shu kunga qadar “FULL POINT CONSULT” MChJ tashkiloti bilan quyidagi loyihalar bo‘yicha 4 ta shartnoma tuzilganligi bo‘yicha berilgan: “Markaziy korxona bazasida kon-metallurgiya mashinalari va kunalarini ishlab chiqarish va ta’mirlashni tashkil etish. “Olmaliq” AJ mexanik ta’mirlash zavodi “Yangi energiya manbalaridan foydalangan holda avtomobillar ishlab chiqarishni tashkil etish”; “Toshkent viloyati Chirchiq shahrida qishloq xo‘jaligi mashinasozligi klasterini tashkil etish”;  Andijon viloyati Asaka shahridagi “Uzauto Motors” AJ xududida “Yangi shtamplash va payvandlash inshootlarini tashkil etish” texnik-iqtisodiy asoslashning marketing, moliyaviy-iqtisodiy qismi uchun. Ushbu tashkilot yuqoridagi loyihalar ustida professional yondashuv bilan ishlagan, yetarlicha malakali mutaxassislarga ega va biz bilan yaqin hamkorlikda barcha mulohazalar va takliflarni tezkorlik bilan o‘rganib chiqdi va bartaraf etdi. O‘zbekiston Respublikasi Iqtisodiyot va qashshoqlikni qisqartirish vazirligi huzuridagi “Loyihalar va import kontraktlarini kompleks ekspertizadan o‘tkazish markazi” DUKda kompleks ekspertiza o‘tkazishda faol yordam ko‘rsatildi."
+    "subtitle" : "'FULL POINT CONSULT' MChJ bilan bir necha yirik loyihalar bo‘yicha hamkorlik qildik. Jumladan, kon-metallurgiya, avtomobil ishlab chiqarish, qishloq xo‘jaligi mashinasozligi va yangi shtamplash inshootlarini tashkil etish bo‘yicha ishlar amalga oshirildi. Tashkilot mutaxassislari o‘z ishini yuqori darajada bajarishdi, barcha taklif va mulohazalarni tezkorlik bilan ko‘rib chiqishdi. 'FULL POINT CONSULT' o‘zining professional yondashuvi va malakali jamoasi bilan hamkorlikda katta yordam ko‘rsatdi."
   },
   
 
@@ -76,7 +77,8 @@
     "second" : "Moliyaviy buxgalteriya hisobi murakkab va foyda aniq emasmi?",
     "third" : "Biznes jarayonlarini tizimlashtirish va avtomatlashtirish bilan bog'liq qiyinchiliklar?",
     "fourth" : "Savdo bo'limi o'z maqsadlariga erishmayaptimi?",
-    "fifth" : "Samarali veb-sayt yoki mobil ilovangiz yo'qmi?"
+    "fifth" : "Samarali veb-sayt yoki mobil ilovangiz yo'qmi?",
+    "title" : "Biz sizning biznesingizga mavjud muammolarni yechishga va yangi marralarni zabt etishga yordam berishga tayyormiz."
   },
 
   "table" : {

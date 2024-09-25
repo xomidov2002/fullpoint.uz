@@ -109,14 +109,28 @@ function toggleVariable() {
     <p class="text-xs sm:text-lg font-[montserrat400] pt-5 text-white w-full md:w-1/2">{{ t('mainPage.businessSubtitle')
       }}</p>
     <div class="flex flex-wrap md:flex-nowrap items-center pt-11">
-      <div class="md:w-3/5 w-full   h-auto">
-        <div>
-          <div class="w-full h-[200px] pb-5 overflow-hidden">
-            <img src="/images/about-3.jpg" alt="" class="transition duration-300 grayscale hover:grayscale-0 rounded-2xl overflow-hidden w-full h-full object-cover">
+      <div class="md:w-3/5 w-full h-auto flex flex-col gap-5">
+        <div class="bg-[url('/images/about-1.jpg')] bgimage w-full h-[200px]">
+          <div class="shadow"></div>
+         <div>
+          <p class="p-3 border-b border-b-white">Individual yondashuv.</p>
+          <p>Biz sizning biznes jarayonlaringizni batafsil o'rganib chiqamiz va sizning o'ziha xos ehtiyojingizga mos alohida yechimlar beramiz.</p>
+         </div>
+        </div>
+        <div class="flex gap-5">
+          <div class="bg-[url('/images/about-2.jpg')] bgimage w-1/2 h-[400px]">
+            <div class="shadow"></div>
+            <div>
+              <p class="p-3 border-b border-b-white">Professionallik va tajriba.</p>
+            <p>Bizning jamoamiz turli sohalardagi malakali mutaxassislardan iborat bo'lib bu bizga har qanday vazifa uchun kompleks yechimlarni taqdim etish imkonini beradi.</p>
+            </div>
           </div>
-          <div class="flex gap-5">
-            <img class="transition duration-300 grayscale hover:grayscale-0 rounded-2xl overflow-hidden w-1/2 " src="/images/about-1.jpg" alt="">
-            <img class="transition duration-300 grayscale hover:grayscale-0 rounded-2xl overflow-hidden w-1/2" src="/images/about-2.jpg" alt="">
+          <div class="bg-[url('/images/about-3.jpg')] bgimage w-1/2 h-[400px]">
+            <div class="shadow"></div>
+            <div>
+              <p class="p-3 border-b border-b-white">Natijaga yo'naltirilganlik.</p>
+            <p>Biz biznesingizning o'sishi va rivojlanishiga olib keladigan aniq natijalarga erishishga e'tibor qaratamiz</p>
+            </div>
           </div>
         </div>
       </div>
@@ -171,9 +185,25 @@ function toggleVariable() {
   <BaseModal class="z-50" :isOpen="openStudentsModal" :info="currentStudent" @handleClicked="toggleVariable" />
 </template>
 <style scoped>
+p {
+  @apply text-white mb-5
+}
+
 .swiper {
   width: 100%;
   height: 100%;
   padding: 40px;
+}
+
+.bgimage {
+  @apply bg-no-repeat bg-center bg-cover rounded-2xl overflow-hidden relative p-5 cursor-pointer flex items-end justify-center
+}
+
+.shadow {
+  @apply absolute w-full h-full bg-black/35 top-0 left-0
+}
+
+.bgimage:hover .shadow {
+  @apply bg-black/50
 }
 </style>
