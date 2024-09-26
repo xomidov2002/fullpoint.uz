@@ -1,15 +1,46 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import BaseButton from '@/components/BaseButton/index.vue'
-import BaseIcon from '@/components/Icons/index.vue'
-import { useI18n } from 'vue-i18n'
-const { t } = useI18n()
+import { ref, watch } from 'vue';
+import BaseButton from '@/components/BaseButton/index.vue';
+import BaseIcon from '@/components/Icons/index.vue';
+import { useI18n } from 'vue-i18n';
+const { t } = useI18n();
+
 const email = ref('');
 const phone = ref('');
 const name = ref('');
 const message = ref('');
 
+const errorMessage = ref('');
+const successMessage = ref('');
+const isSubmitting = ref(false);
+
+// Reactive property to control the visibility of the message
+const showSuccessMessage = ref(false);
+const showErrorMessage = ref(false);
+
+const validateFields = () => {
+  if (!email.value || !phone.value || !name.value || !message.value) {
+    errorMessage.value = t('mainPage.fillAllFields');
+    showErrorMessage.value = true;
+    setTimeout(() => {
+      showErrorMessage.value = false;
+    }, 2000); // Error message disappears after 2 seconds
+    return false;
+  }
+  return true;
+};
+
 const sendMessage = async () => {
+  if (!validateFields()) {
+    return;
+  }
+
+  isSubmitting.value = true;
+  errorMessage.value = '';
+  successMessage.value = '';
+  showSuccessMessage.value = false;
+  showErrorMessage.value = false;
+
   const url = 'https://api.telegram.org/bot6760739912:AAFVrqguAFvYZ1cDFjCCJyK2cFSoTTatgIM/sendMessage';
   const data = {
     chat_id: '-4102543534',
@@ -20,57 +51,78 @@ const sendMessage = async () => {
     const response = await fetch(url, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
     });
 
     if (!response.ok) {
       throw new Error('Xatolik yuz berdi');
     }
-    else if (phone.value = '') {
-      alert('Iltimos kataklarni toldiring')
-    }
+
     const responseData = await response.json();
     console.log('Javob:', responseData);
-    alert('Xabar muvaffaqiyatli jo\'natildi');
-    email.value = '',
-      name.value = '',
-      phone.value = '',
-      message.value = ''
+    successMessage.value = t('mainPage.messageSent');
+    showSuccessMessage.value = true; // Show the success message
+    email.value = '';
+    name.value = '';
+    phone.value = '';
+    message.value = '';
+
+    // Hide the success message after 2 seconds
+    setTimeout(() => {
+      showSuccessMessage.value = false;
+    }, 2000);
   } catch (error) {
     console.error('Xatolik:', error);
-    alert('Xabar jo\'natishda xatolik yuz berdi');
+    errorMessage.value = t('mainPage.messageError');
+    showErrorMessage.value = true;
+
+    // Hide the error message after 2 seconds
+    setTimeout(() => {
+      showErrorMessage.value = false;
+    }, 2000);
+  } finally {
+    isSubmitting.value = false;
   }
-}
+};
 </script>
+
 <template>
   <div class="container mx-auto px-5 py-11">
     <p
       class="text-xl sm:text-xl md:text-2xl lg:text-3xl font-semibold text-white px-5 border-l-2 py-5 border-l-blue-600 mb-5">
-      {{ t('mainPage.contact') }}</p>
+      {{ t('mainPage.contact') }}
+    </p>
     <div class="w-full p-5 flex flex-wrap lg:flex-nowrap lg:justify-evenly items-center relative">
       <div class="p-4 border-[7px] border-[#080D75]">
         <div class="form-container bg-[#14151B]">
-          <div class="form">x
+          <div class="form">
             <div class="form-group">
               <label for="email">{{ t('mainPage.contactMail') }}</label>
-              <input v-model="email" name="email" id="email" type="text">
+              <input v-model="email" name="email" id="email" type="text" />
             </div>
             <div class="form-group">
-              <label for="text">{{ t('mainPage.contactName') }}</label>
-              <input v-model="name" required name="name" id="text" type="text">
+              <label for="name">{{ t('mainPage.contactName') }}</label>
+              <input v-model="name" name="name" id="name" type="text" />
             </div>
             <div class="form-group">
-              <label for="text">{{ t('mainPage.contactNumber') }}</label>
-              <input required v-model="phone" name="phone" id="text" type="text">
+              <label for="phone">{{ t('mainPage.contactNumber') }}</label>
+              <input v-model="phone" name="phone" id="phone" type="text" />
             </div>
             <div class="form-group">
-              <label for="textarea">{{ t('mainPage.contactText') }}</label>
-              <textarea v-model="message" required cols="50" rows="10" id="textarea"
-                name="textarea">          </textarea>
+              <label for="message">{{ t('mainPage.contactText') }}</label>
+              <textarea v-model="message" name="message" id="message" cols="50" rows="10"></textarea>
             </div>
-            <BaseButton @click="sendMessage" :name="t('mainPage.Submit')" />
+            <BaseButton @click="sendMessage" :name="isSubmitting ? t('mainPage.sending') : t('mainPage.Submit')" />
+            <!-- Notification Messages -->
+            <transition name="fade">
+              <div class="absolute uppercase -bottom-[30%] -right-[11%] p-5 border-r-8 border-r-[#080D75] bg-[#14151B]"
+                v-if="showErrorMessage || showSuccessMessage">
+                <p v-if="showErrorMessage" class="text-red-500">{{ errorMessage }}</p>
+                <p v-if="showSuccessMessage" class="text-green-500">{{ successMessage }}</p>
+              </div>
+            </transition>
           </div>
         </div>
       </div>
@@ -92,8 +144,8 @@ const sendMessage = async () => {
     </div>
   </div>
 </template>
-<style scoped>
 
+<style scoped>
 .form-container {
   width: 100%;
   padding: 32px 24px;
@@ -176,5 +228,16 @@ const sendMessage = async () => {
 .form-container .form-group textarea:focus {
   outline: none;
   border-color: white;
+}
+
+/* Animation for fade effect */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

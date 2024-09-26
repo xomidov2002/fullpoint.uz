@@ -113,23 +113,23 @@ function toggleVariable() {
         <div class="bg-[url('/images/about-1.jpg')] bgimage w-full h-[200px]">
           <div class="shadow"></div>
          <div>
-          <p class="p-3 border-b border-b-white">Individual yondashuv.</p>
-          <p>Biz sizning biznes jarayonlaringizni batafsil o'rganib chiqamiz va sizning o'ziha xos ehtiyojingizga mos alohida yechimlar beramiz.</p>
+          <p class="p-3 border-b border-b-white font-bold tracking-widest">{{ t('mainPage.busSolution1') }}</p>
+          <p>{{ t('mainPage.Solution1') }}</p>
          </div>
         </div>
         <div class="flex gap-5">
           <div class="bg-[url('/images/about-2.jpg')] bgimage w-1/2 h-[400px]">
             <div class="shadow"></div>
             <div>
-              <p class="p-3 border-b border-b-white">Professionallik va tajriba.</p>
-            <p>Bizning jamoamiz turli sohalardagi malakali mutaxassislardan iborat bo'lib bu bizga har qanday vazifa uchun kompleks yechimlarni taqdim etish imkonini beradi.</p>
+              <p class="p-3 border-b border-b-white font-bold tracking-widest">{{ t('mainPage.busSolution2') }}</p>
+            <p>{{ t('mainPage.Solution2') }}</p>
             </div>
           </div>
           <div class="bg-[url('/images/about-3.jpg')] bgimage w-1/2 h-[400px]">
             <div class="shadow"></div>
             <div>
-              <p class="p-3 border-b border-b-white">Natijaga yo'naltirilganlik.</p>
-            <p>Biz biznesingizning o'sishi va rivojlanishiga olib keladigan aniq natijalarga erishishga e'tibor qaratamiz</p>
+              <p class="p-3 border-b border-b-white font-bold tracking-widest">{{ t('mainPage.busSolution3') }}</p>
+            <p>{{ t('mainPage.Solution3') }}</p>
             </div>
           </div>
         </div>
@@ -200,7 +200,7 @@ p {
 }
 
 .shadow {
-  @apply absolute w-full h-full bg-black/35 top-0 left-0
+  @apply absolute w-full h-full bg-black/35 top-0 left-0 transition duration-300
 }
 
 .bgimage:hover .shadow {

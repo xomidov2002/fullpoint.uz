@@ -21,7 +21,7 @@
         <h1 class="2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal">
           {{ t('mainPage.mainSecondTitle') }}
         </h1>
-        <p class="2xl:text-xl text-lg sm:w-[40%] 2xl:pl-0 text-[#797a7c] font-[montserrat500] pb-5">
+        <p class="2xl:text-xl text-lg sm:w-[40%] 2xl:pl-0 text-[#a8a8a8] font-[montserrat500] pb-5">
           {{ t('mainPage.mainSubtitle') }}
         </p>
 
@@ -34,16 +34,16 @@
     <div class="w-full hidden sm:flex absolute justify-center bottom-[-70px] z-[1]">
       <div class="w-[80%] flex justify-around items-center rounded-3xl shadow-lg shadow-[#080D75] bg-[#0A0A0E] p-10">
         <div class="flex flex-col gap-2 items-center">
-          <BaseIcon name="future" class="w-10 h-10 text-[#080D75]" />
-          <p class="text-white font-semibold">Future Concept.</p>
+          <BaseIcon name="future" class="w-10 h-10 text-white" />
+          <p class="text-white font-semibold">{{ t('mainPage.block1') }}</p>
         </div>
         <div class="flex flex-col gap-2 items-center">
-          <BaseIcon name="brain" class="sm:w-10 sm:h-10 w-5 h-5 text-[#080D75]" />
-          <p class="text-white font-semibold">The big ideas</p>
+          <BaseIcon name="brain" class="sm:w-10 sm:h-10 w-5 h-5 text-white" />
+          <p class="text-white font-semibold">{{ t('mainPage.block2') }}</p>
         </div>
         <div class="flex flex-col gap-2 items-center">
-          <BaseIcon name="creative" class="sm:w-10 sm:h-10 w-5 h-5 text-[#080D75]" />
-          <p class="text-white font-semibold">Creative solutions</p>
+          <BaseIcon name="creative" class="sm:w-10 sm:h-10 w-5 h-5 text-white" />
+          <p class="text-white font-semibold">{{ t('mainPage.block3') }}</p>
         </div>
       </div>
     </div>
