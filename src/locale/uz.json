@@ -125,29 +125,30 @@
   },
   "services" : {
     "service" : "xizmatimiz",
-    "marketing" : "maxsus tayyorgarlik koʻrgan marketologlar guruhi, uyushmasi, boʻlimi va boshqarmasining faoliyat majmui. Marketing xizmatlari isteʼmolchilarga xizmat qiladi va ularning manfaatlarini koʻzlab ish yuritadi. Xoʻjalik koʻrsatkichlarini yaxshilash; korxonaning yuqori foyda olish yoʻllarini topish; bozorlar sigʻimi va imkoniyatlarini tahlil qilish; talab va taklif muvozanati, baho, soliqlar tizimi va bozor elementlari toʻgʻrisida maʼlumotlar yigʻish, tovarlarni takomillashtirish, reklamalarni uyushtirish marketing xizmatlarining asosiy faoliyat yoʻnalishi hisoblanadi. Shuningdek, Marketing xizmatlari jonli va umumlashgan mehnat resurslaridan foydalanish normativlarini aniqlashda ishtirok etadi; tovarlarni oqilona sotishni tashkil qiladi, moddiytexnika taʼminoti masalalarini hal etadi; sanoat, qishloq xoʻjaligi va boshqa tarmoqlarni iqtisodiy va texnikaviy holatini tahlil qiladi; korxonaning yaqin va uzoq istiqbolini belgilashda ishtirok etadi, ishlab chiqarishni marketing nuqtai nazaridan operativ tarzda tashkil etadi; mehnatni va unga haq toʻlashni yuqori darajada olib borish bilan shugʻullanadi.",
+    "marketing" : {
+      "info1" : "Zamonaviy ishbilarmonlik muhiti kompaniyalarga yuqori talablarni qo'yadi va ulardan ko'pchiligi bir biriga o'zaro bog'liq bo'lgan kompleks muammolarga duch kelishadi. Brendning yetarli darajada taniqli bo'lmasligi va samarasiz marketing strategiyasi yangi mijozlar oqimini pasaytiradi va raqobatbardosh pozitsiyalarning zaiflashishiga olib keladi.",
+      "info2" : "Biz sizga brend taniqliligini oshiradigan va yangi mijozlarni jalb qiladigan samarali marketing strategiyasini ishlab chiqishda va amalga oshirishda yordam beramiz. Sizning bozordagi ulushingizni oshiradigan samarali reklama kanallarini taklif qilish uchun biz bozorni, raqobatchilarni va maqsadli auditoriyani tahlil qilamiz."
+    },
     "finance" : {
-      "info1" : "Biznesni rejalashtirish: Bizning puxta tayyorlangan biznes rejamizga asosan raqiblaringiz orasida birinchilar qatorida bo'ling. Biz faoliyatingizning bozordagi moliyaviy ahvolini baholab beramiz va tavakkalchilikni hisoblab beramiz. Bunda siz maqsadlaringizni o'zingizga ishonch bilan amalga oshirasiz. Dadil harakatlanishingiz uchun esa korxonangizni ilg'orlar safiga chiqarish maqsadida butun bir individual strategiya ishlab chiqamiz.",
-      "info2" : "TIA ishlab chiqish: Pul mablag'laridan qanday foydalanishini aniq izohlab bera olmagan mijozga hech bir bank kredit ajratmaydi. Shuning uchun ham TIA ishlab chiqish har qanday kompaniya uchun uning bozordagi o'rnidan qat'iy nazar o'ta zarurdir. Ba'zilarning fikricha, biznes reja va TIA (Texnik-iqtisodiy asoslar) - bir xil turdagi o'xshash hujjatlar. Lekin bu yanglish fikrdir. Asosiy farq shundaki, TIAda kompaniyangizning keyingi rejalari aniqroq va chuqurroq aks ettiriladi. Barcha detallarni chuqur o'rganib hamma shartlarni ko'ra oladigan mutaxassislar juda kam uchraydi. Shu sababdan TIA ishlab chiqish uchun bizga murojat qilishingizni tavsiya qilamiz. Bizning yordamimiz bilan biznesingiz aniq asoslantirib berilganligi sababli Sizga kredit ajratilishi kafolatlanadi."
+      "info1" : "Biz sizning moliyaviy hisobingiz va soliq majburiyatlaringizni optimallashtiramiz. Mutaxassislarimiz aniq buxgalteriya hisobini o'rnatadilar va to'g'ri moliyaviy hisobotlarni tayyorlaydilar, bu jarimalar xavfini kamaytiradi va moliyaviy shaffoflikni ta'minlaydi. Biz sizga xarajatlarni kamaytirishga va resurslarni samarali boshqarishga yordam beramiz.",
+      "info2" : "Biznesni rejalashtirish: Bizning puxta tayyorlangan biznes rejamizga asosan raqiblaringiz orasida birinchilar qatorida bo'ling. Biz faoliyatingizning bozordagi moliyaviy ahvolini baholab beramiz va tavakkalchilikni hisoblab beramiz. Bunda siz maqsadlaringizni o'zingizga ishonch bilan amalga oshirasiz. Dadil harakatlanishingiz uchun esa korxonangizni ilg'orlar safiga chiqarish maqsadida butun bir individual strategiya ishlab chiqamiz."
     },
     "accounting" : {
       "info1" : "Biz bilan hamkorlik qilishning afzalliklari: Shubhasiz, bu buxgalteriya xizmatini amalga oshirishdagi ko'p yillik tajriba; Zarur ma'lumotga ega bo'lish, sifatli xizmat va tezkorlik; Soliqqa tortish sohasi bo'yicha himoyalanganlik hamda xodimlarimizning o'z vazifalarini bajarishda yuqori mas'uliyatliligi. Zarur ma'lumotga ega bo'lish, sifatli xizmat va tezkorlik; Soliqqa tortish sohasi bo'yicha himoyalanganlik hamda xodimlarimizning o'z vazifalarini bajarishda yuqori mas'uliyatliligi.",
       "info2" : "«Buxgalteriya xizmati» xizmat turiga nimalar kiradi: Buxgalteriya hujjatlarining yuritilishi, xodimlar bilan ishlash bo'yicha hujjatlarning yuritilishi, soliq va boshqa davlat organlariga tegishli hisobotlarning o'z vaqtida taqdim etilishi; Bankka oid hujjatlarning yuritilishi; Hujjatlarning saqlanishini ta'minlash hamda Sizning ruxsatingizsiz ularning mazmuni oshkor etilmasligi; Soliq inspeksiyalari va boshqa davlat organlari bilan o'zaro munosabatlarda buyurtmachining manfaatlarini himoya qilish."
     },
     "architecture" : {
-      "info1" : "Full Point kompaniyasi O'zbekistondagi mijozlar uchun arxitektura dizayn xizmatlarini taklif etadi. Xususiy uy, dacha, jamoat, savdo, ofis yoki sanoat binolarini qurish yoki rekonstruksiya qilish rejasini bizdan buyurtma qilishingiz mumkin. Kompaniyaning arxitektura xizmatlariga saytni chuqur o'rganish, kontseptual yechim va ishchi chizmalarni tayyorlash kiradi. Biz binolarga qo'yiladigan barcha talablarni hisobga olamiz va belgilangan vazifalarga erishish uchun maqbul echimlarni taklif qilamiz.",
-      "info2" : "Arxitektura ishlari portfeli turli xil murakkablikdagi loyihalar namunalarini taqdim etadi. Biz yashash, dam olish yoki mehnat vazifalarini bajarish uchun qanday qulay sharoit yaratishni bilamiz. Ishni boshlashda biz mavjud qonuniy talablar va sizning afzalliklaringizni hisobga olishimizga ishonch hosil qilamiz."
+      "info1" : "Biz sizning loyihalaringiz uchun professional texnik-iqtisodiy asosnoma yaratamiz, shu jumladan xarajatlar va risklarni tahlil qilish, daromadlarni prognozlash va mumkin bo'lgan istiqbollarni baholash. Bu sizga ko'proq asosli qarorlar qabul qilish va resurslardan samarali foydalanish imkonini beradi."
     },
     "construction" : {
-      "info1" : "",
-      "info2" : ""
+      "info1" : "strategiyani ishlab chiqish va xodimlarni zamonaviy savdo usullariga o'rgatishda yordam beramiz. Bu sizga sotish hajmini, mijozlar bazasini ko'paytirishni va natijada daromadni oshirishni ta'minlaydi."
     },
     "it" : {
-      "info1" : "Full Point loyihasi O'zbekiston bo'yicha IT-xizmatlar xizmatlarini buyurtma qilish istagidagilar uchun eng maqbul yechimdir. IT-xizmatlar bo’yicha xizmatlar O'zbekiston bo'yichagi arzon narxlar va  yetakchi kompaniyalardan keng tanlov bizning katalogda.",
+      "info1" : "Biz siz uchun imidjingizni yaxshilaydigan va biznesingizga ishonchni oshiradigan zamonaviy va foydalanuvchilarga qulay veb-sayt yoki mobil ilovani ishlab chiqamiz. Biz sizning biznes ehtiyojlaringizga mos keladigan, oson kengaytiriladigan va mijozlaringiz uchun ishlatish uchun qulay yechim yaratamiz.",
       "info2" : "Veb-saytlarni yaratish, yutirish va optimallashtirish, Dasturiy ta'minotni o'rnatish va sozlash"
     },
     "camera" : {
-      "info1": "Korxonada AKT yechimlarni joriy qilish, shuningdek videokuzatuv tizimini to'liq ta'minlash(loyihalash, xarid qilish, o'rnatish va foydalanishga topshirish)"
+      "info1": "Asosiy biznes jarayonlarini avtomatlashtirish: masalan, savdo yoki mijozlarga xizmat ko’rsatishni boshqarish. Bunday holda, u to’g’ridan-to’g’ri sotish hajmini, ishlab chiqarilgan mahsulot sonini oshirish va butun biznesning rentabelligini oshirish uchun amalga oshiriladi."
     }
   }
 }

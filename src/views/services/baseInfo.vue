@@ -23,7 +23,7 @@ onMounted(() => {
     <div class="container mx-auto px-5 my-11">
       <p class="text-white text-3xl font-semibold px-5 border-l-2 py-5 border-l-blue-600 mb-10"> {{ serviceCards[currentServiceId].title }} {{ t('services.service') }} </p>
       <p class="text-lg font-[montserrat400] pt-5 w-full text-white"> <span class="font-bold">{{ serviceCards[currentServiceId].title }}</span> - {{ serviceCards[currentServiceId].info1 }} </p>
-      <p v-if="serviceCards[currentServiceId].info2" class="text-lg font-[montserrat400] pt-5 w-full">{{ serviceCards[currentServiceId].info2 }}</p>
+      <p v-if="serviceCards[currentServiceId].info2" class="text-lg font-[montserrat400] text-white pt-5 w-full">{{ serviceCards[currentServiceId].info2 }}</p>
     </div>
   </div>
 </template>

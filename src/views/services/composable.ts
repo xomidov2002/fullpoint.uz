@@ -7,7 +7,8 @@ export function useServiceCard() {
       id: 0,
       title: t('ourServices.marketing'),
       icon: 'marketing',
-      info1: t('services.marketing')
+      info1: t('services.marketing.info1'),
+      info2: t('services.marketing.info2')
     },
     {
       id: 1,
@@ -27,15 +28,13 @@ export function useServiceCard() {
       id: 3,
       title: t('ourServices.arxitektura'),
       icon: 'teo',
-      info1: t('services.architecture.info1'),
-      info2: t('services.architecture.info2')
+      info1: t('services.architecture.info1')
     },
     {
       id: 4,
       title: t('ourServices.qurilish'),
       icon: 'sale',
-      info1: t('services.construction.info1'),
-      info2: t('services.construction.info2')
+      info1: t('services.construction.info1')
     },
     {
       id: 5,

@@ -29,7 +29,7 @@ const navLinks = computed(() => {
 })
 </script>
 <template>
-  <div class="bg-[#14151B] p-5 w-full py-24">
+  <div class="bg-[#14151B] p-5 w-full py-24 mt-24">
     <div class="flex justify-between md:justify-around flex-wrap gap-5 items-start border-b border-b-white pb-5 container">
       <div>
         <img src="/logo-1.png" class="w-28">

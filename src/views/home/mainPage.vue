@@ -1,29 +1,31 @@
 <template>
-  <div class="bg-[url(/lion.jpg)] w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center">
+  <div
+    class="bg-[url(/lion.jpg)] w-full h-[100vh] bg-no-repeat bg-center bg-cover relative flex justify-start flex-cols items-center">
     <div class="container flex justify-between items-center relative mx-auto px-5 select-none">
       <div>
-        <h1 class="2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal">
+        <h1
+          class="2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal">
           {{ t('mainPage.mainTitle') }}:
         </h1>
         <div class="service-container py-5">
-          <transition-group name="letter-fade" tag="span" class="text-2xl bg-[#080D75] p-2 rounded-xl">
-            <span 
-              v-for="(letter, index) in currentLetters" 
-              :key="currentService + index" 
-              class="letter text-white uppercase font-extrabold"
-            >
+          <transition-group name="letter-fade" tag="span" class="sm:text-2xl bg-[#080D75] p-2 rounded-xl">
+            <span v-for="(letter, index) in currentLetters" :key="currentService + index"
+              class="letter text-white uppercase font-extrabold">
               <!-- Ensure spaces are properly rendered -->
               <span v-if="letter === ' '">&nbsp;</span>
               <span v-else>{{ letter }}</span>
             </span>
           </transition-group>
         </div>
-        <h1 class="2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal">
+        <h1
+          class="2xl:text-6xl lg:text-4xl md:text-2xl text-white font-[bold] uppercase tracking-widest leading-normal">
           {{ t('mainPage.mainSecondTitle') }}
         </h1>
-        <p class="2xl:text-xl text-lg sm:w-[40%] 2xl:pl-0 text-[#a8a8a8] font-[montserrat500] pb-5">
-          {{ t('mainPage.mainSubtitle') }}
-        </p>
+        <div class="backdrop-blur-sm sm:w-[35%] p-2 m-5 rounded-2xl">
+          <p class="2xl:text-xl text-lg 2xl:pl-0 text-white font-[montserrat500] pb-5">
+            {{ t('mainPage.mainSubtitle') }}
+          </p>
+        </div>
 
         <button class="button-86" role="button">
           <RouterLink class="uppercase font-bold" to="/contact">{{ t('mainPage.mainButton') }}</RouterLink>
@@ -72,7 +74,7 @@ const { t } = useI18n()
 import { ref, onMounted, onUnmounted, computed } from "vue";
 
 // Services list
-const services = computed(() =>[
+const services = computed(() => [
   t('ourServices.marketing'),
   t('ourServices.moliya'),
   t('ourServices.buxgalteriya'),

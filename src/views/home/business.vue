@@ -117,15 +117,15 @@ function toggleVariable() {
           <p>{{ t('mainPage.Solution1') }}</p>
          </div>
         </div>
-        <div class="flex gap-5">
-          <div class="bg-[url('/images/about-2.jpg')] bgimage w-1/2 h-[400px]">
+        <div class="flex gap-5 sm:flex-row flex-col">
+          <div class="bg-[url('/images/about-2.jpg')] bgimage sm:w-1/2 h-[400px]">
             <div class="shadow"></div>
             <div>
               <p class="p-3 border-b border-b-white font-bold tracking-widest">{{ t('mainPage.busSolution2') }}</p>
             <p>{{ t('mainPage.Solution2') }}</p>
             </div>
           </div>
-          <div class="bg-[url('/images/about-3.jpg')] bgimage w-1/2 h-[400px]">
+          <div class="bg-[url('/images/about-3.jpg')] bgimage sm:w-1/2 h-[400px]">
             <div class="shadow"></div>
             <div>
               <p class="p-3 border-b border-b-white font-bold tracking-widest">{{ t('mainPage.busSolution3') }}</p>
