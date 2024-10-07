@@ -8,7 +8,7 @@
           {{ t('mainPage.mainTitle') }}:
         </h1>
         <div class="service-container py-5">
-          <transition-group name="letter-fade" tag="span" class="sm:text-2xl bg-[#080D75] p-2 rounded-xl">
+          <transition-group name="letter-fade" tag="span" class="sm:text-2xl p-2 rounded-xl">
             <span v-for="(letter, index) in currentLetters" :key="currentService + index"
               class="letter text-white uppercase font-extrabold">
               <!-- Ensure spaces are properly rendered -->
@@ -34,7 +34,7 @@
     </div>
 
     <div class="w-full hidden sm:flex absolute justify-center bottom-[-70px] z-[1]">
-      <div class="w-[80%] flex justify-around items-center rounded-3xl shadow-lg shadow-[#080D75] bg-[#0A0A0E] p-10">
+      <div class="w-[80%] flex justify-around border border-white items-center rounded-3xl shadow-lg shadow-[#080D75] bg-[#0A0A0E] p-10">
         <div class="flex flex-col gap-2 items-center">
           <BaseIcon name="future" class="w-10 h-10 text-white" />
           <p class="text-white font-semibold">{{ t('mainPage.block1') }}</p>

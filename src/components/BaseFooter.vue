@@ -33,11 +33,11 @@ const navLinks = computed(() => {
     <div class="flex justify-between md:justify-around flex-wrap gap-5 items-start border-b border-b-white pb-5 container">
       <div>
         <img src="/logo-1.png" class="w-28">
-        <p class="text-white font-bold">Full Point Consult</p>
+        <p class="text-white font-bold tracking-widest">Full Point Consult</p>
         <p class="text-white">est. 2022</p>
       </div>
       <div>
-        <p class="text-white uppercase font-bold pb-5">Biz bilan bog'laning</p>
+        <p class="text-white uppercase font-bold pb-5 tracking-widest">Biz bilan bog'laning</p>
         <div class="flex flex-col gap-3">
           <div class="box">
             <BaseIcon name="message" class="w-5 h-5 text-[#080D75]"/>

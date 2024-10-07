@@ -53,15 +53,15 @@ interface language {
 const langs = reactive<language[]>([
   {
     id: 1,
-    title: 'UZ',
-    icon: 'uzb',
-    value: 'uz'
-  },
-  {
-    id: 2,
     title: 'RU',
     icon: 'rus',
     value: 'ru'
+  },
+  {
+    id: 2,
+    title: 'UZ',
+    icon: 'uzb',
+    value: 'uz'
   }
 ])
 </script>

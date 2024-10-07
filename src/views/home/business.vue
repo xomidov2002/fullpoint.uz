@@ -136,8 +136,6 @@ function toggleVariable() {
       </div>
       <div class="md:w-2/5 w-full md:ml-32 relative">
         <img src="/robot.png" alt="" class="absolute top-0 opacity-20">
-        <p class="text-xl sm:text-2xl md:text-4xl font-bold tracking-widest text-white">{{ t('mainPage.businessMain') }}
-        </p>
         <p class="text-[#737373] text-sm font-medium tracking-widest mt-5 mb-14">{{ t('mainPage.businessText') }}</p>
         <div>
           <div class="flex gap-3">

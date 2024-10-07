@@ -11,7 +11,7 @@ const app = createApp(App)
 
 const i18n = createI18n({
   legacy: false,
-  locale:'uz',
+  locale:'ru',
   messages: {
     uz,
     ru

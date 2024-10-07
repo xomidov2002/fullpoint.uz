@@ -5,7 +5,6 @@ import BaseIcon from '@/components/Icons/index.vue';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n();
 
-const email = ref('');
 const phone = ref('');
 const name = ref('');
 const message = ref('');
@@ -19,7 +18,7 @@ const showSuccessMessage = ref(false);
 const showErrorMessage = ref(false);
 
 const validateFields = () => {
-  if (!email.value || !phone.value || !name.value || !message.value) {
+  if (!phone.value || !name.value || !message.value) {
     errorMessage.value = t('mainPage.fillAllFields');
     showErrorMessage.value = true;
     setTimeout(() => {
@@ -44,7 +43,7 @@ const sendMessage = async () => {
   const url = 'https://api.telegram.org/bot6760739912:AAFVrqguAFvYZ1cDFjCCJyK2cFSoTTatgIM/sendMessage';
   const data = {
     chat_id: '-4102543534',
-    text: `New client: \nFull name - ${name.value}, \nPhone number - ${phone.value}, \nemail - ${email.value} \nMessage - ${message.value}`
+    text: `New client: \nFull name - ${name.value}, \nPhone number - ${phone.value}, \nMessage - ${message.value}`
   };
 
   try {
@@ -64,7 +63,6 @@ const sendMessage = async () => {
     console.log('Javob:', responseData);
     successMessage.value = t('mainPage.messageSent');
     showSuccessMessage.value = true; // Show the success message
-    email.value = '';
     name.value = '';
     phone.value = '';
     message.value = '';
@@ -98,10 +96,6 @@ const sendMessage = async () => {
       <div class="p-4 border-[7px] border-[#080D75]">
         <div class="form-container bg-[#14151B]">
           <div class="form">
-            <div class="form-group">
-              <label for="email">{{ t('mainPage.contactMail') }}</label>
-              <input v-model="email" name="email" id="email" type="text" />
-            </div>
             <div class="form-group">
               <label for="name">{{ t('mainPage.contactName') }}</label>
               <input v-model="name" name="name" id="name" type="text" />
